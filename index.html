@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elena Donini</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#b509ac; --text:#212529; --muted:#6c757d; --bg:#ffffff;
+    --line:#e5e5e5; --soft:#f6f6f8; --code:#f3f3f5;
+  }
+  html[data-theme="dark"]{
+    --accent:#2698ba; --text:#e8e8e8; --muted:#a0a0a0; --bg:#1c1c1d;
+    --line:#3a3a3c; --soft:#262628; --code:#2a2a2c;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Roboto,system-ui,sans-serif;font-weight:300;color:var(--text);background:var(--bg);line-height:1.6;transition:background .2s,color .2s}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  b,strong{font-weight:500}
+
+  /* navbar */
+  nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .nav-inner{max-width:930px;margin:0 auto;padding:.7rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .brand{font-size:1.15rem;color:var(--text);font-weight:400}
+  .brand b{font-weight:700}
+  .links{display:flex;gap:1.3rem;align-items:center;list-style:none;margin:0;padding:0}
+  .links a{color:var(--text);font-weight:400}
+  .links a.active,.links a:hover{color:var(--accent);text-decoration:none}
+  .theme-btn{background:none;border:0;cursor:pointer;color:var(--text);font-size:1.05rem;padding:.2rem}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:.25rem .55rem;cursor:pointer;font-size:1rem}
+  @media(max-width:720px){
+    .menu-btn{display:block}
+    .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--bg);border-bottom:1px solid var(--line);padding:.8rem 1.25rem;gap:.7rem}
+    .links.open{display:flex}
+  }
+
+  main{max-width:930px;margin:0 auto;padding:2.2rem 1.25rem 3rem}
+  h1{font-family:"Roboto Slab",serif;font-weight:300;font-size:2.6rem;margin:0 0 .2rem}
+  h1 b{font-weight:500}
+  .desc{margin:0 0 1.6rem;color:var(--muted)}
+  h2{font-family:"Roboto Slab",serif;font-weight:400;font-size:1.55rem;color:var(--accent);margin:2.6rem 0 1rem;scroll-margin-top:70px}
+  h2 a{color:inherit}
+
+  /* about */
+  .about{overflow:hidden}
+  .profile{float:right;width:30%;max-width:240px;margin:0 0 1rem 1.6rem;text-align:center}
+  .profile .photo{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+  .profile .photo svg{width:100%;height:100%;display:block}
+  .profile .addr{font-size:.85rem;color:var(--muted);margin-top:.6rem;line-height:1.4}
+  @media(max-width:600px){.profile{float:none;width:60%;margin:0 auto 1.2rem}}
+  .socials{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2rem 0 .5rem}
+  .socials a{display:inline-flex;align-items:center;gap:.4rem;color:var(--text);font-weight:400;font-size:.95rem}
+  .socials a:hover{color:var(--accent);text-decoration:none}
+  .socials svg{width:20px;height:20px;fill:currentColor}
+
+  /* news */
+  table.news{width:100%;border-collapse:collapse}
+  table.news td{padding:.5rem .4rem;vertical-align:top;border-bottom:1px solid var(--line)}
+  table.news td.date{white-space:nowrap;font-weight:500;width:120px}
+
+  /* publications */
+  .year{font-family:"Roboto Slab",serif;color:var(--line);font-size:2.2rem;text-align:right;margin:1.4rem 0 .2rem;font-weight:500}
+  html[data-theme="dark"] .year{color:#4a4a4c}
+  ol.pubs{list-style:none;margin:0;padding:0;counter-reset:pub}
+  .pub{display:grid;grid-template-columns:180px 1fr;gap:1.2rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+  @media(max-width:600px){.pub{grid-template-columns:1fr}}
+  .thumb{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/10;background:var(--soft);border:1px solid var(--line)}
+  .thumb svg{width:100%;height:100%;display:block}
+  .badge{position:absolute;top:6px;left:6px;background:var(--accent);color:#fff;font-size:.7rem;font-weight:500;padding:.1rem .45rem;border-radius:3px}
+  .ptitle{font-weight:500;font-size:1.02rem}
+  .authors{font-size:.93rem}
+  .authors em{font-style:normal;font-weight:500;text-decoration:underline}
+  .venue{font-size:.9rem;color:var(--muted);font-style:italic}
+  .btns{margin-top:.45rem;display:flex;flex-wrap:wrap;gap:.4rem}
+  .btns a,.btns button{font:inherit;font-size:.75rem;font-weight:400;text-transform:uppercase;border:1px solid var(--text);color:var(--text);background:none;border-radius:3px;padding:.05rem .5rem;cursor:pointer}
+  .btns a:hover,.btns button:hover,.btns button.on{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  .hidden-box{display:none;margin-top:.6rem;font-size:.9rem}
+  .hidden-box.show{display:block}
+  .abstract{border-left:3px solid var(--accent);padding:.3rem .8rem;background:var(--soft)}
+  pre.bib{background:var(--code);padding:.7rem .9rem;border-radius:4px;overflow:auto;font-size:.8rem;margin:0}
+
+  /* cv / teaching */
+  .cv-item{display:grid;grid-template-columns:120px 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--line)}
+  .cv-item .when{font-weight:500}
+  .cv-item .what small{color:var(--muted);display:block}
+  .cv-h{font-weight:500;margin:1.4rem 0 .3rem;font-size:1.05rem}
+
+  footer{border-top:1px solid var(--line);text-align:center;font-size:.82rem;color:var(--muted);padding:1.2rem}
+  .ph{background:rgba(181,9,172,.08);border-radius:3px;padding:0 .2rem}
+  html[data-theme="dark"] .ph{background:rgba(38,152,186,.15)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#about"><b>Elena</b> Donini</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <ul class="links" id="links">
+      <li><a href="#about" class="active">about</a></li>
+      <li><a href="#news">news</a></li>
+      <li><a href="#publications">publications</a></li>
+      <li><a href="#cv">cv</a></li>
+      <li><button class="theme-btn" id="themeBtn" title="Cambia tema">◐</button></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h1><b>Elena</b> Donini</h1>
+    <p class="desc">Researcher @ <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth, Fondazione Bruno Kessler</a></p>
+
+    <div class="profile">
+      <div class="photo">
+        <!-- Sostituisci con: <img src="foto.jpg" alt="..." style="width:100%;height:100%;object-fit:cover"> -->
+        <svg viewBox="0 0 200 200" aria-label="Foto profilo">
+          <rect width="200" height="200" fill="#d9d4dc"/>
+          <circle cx="100" cy="80" r="38" fill="#a99fae"/>
+          <ellipse cx="100" cy="185" rx="70" ry="55" fill="#a99fae"/>
+        </svg>
+      </div>
+      <div class="addr">Fondazione Bruno Kessler<br>Via Sommarive 18, Povo<br>38123 Trento, Italy</div>
+    </div>
+
+    <p>I am a researcher in the <b>Remote Sensing for Digital Earth</b> unit at Fondazione Bruno Kessler (FBK) in Trento, Italy, and I collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento.</p>
+    <p>My research focuses on the <b>automatic analysis of terrestrial and planetary radar sounder data</b> with machine learning and deep learning — segmentation, denoising, super-resolution and content-based retrieval of radargrams, from the ice sheets of Greenland and Antarctica to the subsurface of Mars.</p>
+    <p>I am a member of the science teams of <b>RIME</b> (Radar for Icy Moon Exploration) on ESA's <b>JUICE</b> mission to the Jupiter system, and of the <b>Subsurface Radar Sounder (SRS)</b> on ESA's upcoming <b>EnVision</b> mission to Venus.</p>
+    <p>I received my B.Sc., M.Sc. (cum laude) and Ph.D. (cum laude) from the University of Trento in 2015, 2017 and 2021. I am happy to discuss collaborations — feel free to reach out by email.</p>
+
+    <div class="socials">
+      <a href="mailto:edonini@fbk.eu" title="edonini@fbk.eu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.4l8 5 8-5V7zm16 2.7-8 5-8-5V17h16z"/></svg>edonini@fbk.eu</a>
+      <a href="https://rsde.fbk.eu/author/elenadonini/" title="FBK"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5zM4 10.5V16l8 4 8-4v-5.5l-8 4z"/></svg>FBK profile</a>
+      <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 2 1 9l11 7 9-5.7V17h2V9zM5 13.2V17c0 2 3.1 4 7 4s7-2 7-4v-3.8l-7 4.5z"/></svg>Scholar</a>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section>
+    <h2 id="news"><a href="#news">news</a></h2>
+    <table class="news">
+      <tr><td class="date">2024</td><td>🛰️ Selected as visiting scientist in ESA's <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">Archival Research Visitor Programme</a> — three months at ESTEC working on <b>Fast CARS</b> (Fast Content-based Radar soundEr Data Retrieval).</td></tr>
+      <tr><td class="date">2023</td><td>📝 “Deep Learning for Unsupervised Denoising of Radar Sounder Data” presented at IGARSS 2023, Pasadena — validated on SHARAD radargrams of Mars.</td></tr>
+      <tr><td class="date">2022</td><td>🏆 Awarded the <b>2022 Best Italian Ph.D. Thesis</b> in remote sensing by the IEEE GRSS Italy Chapter.</td></tr>
+      <tr><td class="date">2021</td><td>🎓 Ph.D. (cum laude) in ICT, University of Trento.</td></tr>
+    </table>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section>
+    <h2 id="publications"><a href="#publications">selected publications</a></h2>
+    <div id="pubList"></div>
+  </section>
+
+  <!-- CV -->
+  <section>
+    <h2 id="cv"><a href="#cv">cv</a></h2>
+    <div class="cv-h">Position</div>
+    <div class="cv-item"><div class="when">now</div><div class="what">Researcher, Remote Sensing for Digital Earth unit<small>Fondazione Bruno Kessler, Trento — in collaboration with the Remote Sensing Laboratory, University of Trento</small></div></div>
+    <div class="cv-item"><div class="when">2024</div><div class="what">Visiting scientist, ESA Archival Research Visitor Programme<small>ESTEC, Noordwijk, The Netherlands</small></div></div>
+    <div class="cv-h">Education</div>
+    <div class="cv-item"><div class="when">2021</div><div class="what">Ph.D. (cum laude) in Information and Communication Technologies<small>University of Trento</small></div></div>
+    <div class="cv-item"><div class="when">2017</div><div class="what">M.Sc. (cum laude) in Telecommunication Engineering<small>University of Trento</small></div></div>
+    <div class="cv-item"><div class="when">2015</div><div class="what">B.Sc. in Electronics and Telecommunication Engineering<small>University of Trento</small></div></div>
+    <div class="cv-h">Missions</div>
+    <div class="cv-item"><div class="when">JUICE</div><div class="what">Science team, RIME — Radar for Icy Moon Exploration<small>ESA JUpiter ICy moons Explorer</small></div></div>
+    <div class="cv-item"><div class="when">EnVision</div><div class="what">Science team, SRS — Subsurface Radar Sounder<small>ESA mission to Venus</small></div></div>
+    <div class="cv-h">Awards &amp; service</div>
+    <div class="cv-item"><div class="when">2022</div><div class="what">Best Italian Ph.D. Thesis in remote sensing<small>IEEE GRSS Italy Chapter</small></div></div>
+    <div class="cv-item"><div class="when">2018</div><div class="what">Best Italian Master Thesis in remote sensing<small>IEEE GRSS Italy Chapter</small></div></div>
+    <div class="cv-item"><div class="when">Reviewer</div><div class="what">IEEE Transactions on Geoscience and Remote Sensing, Astronomy &amp; Astrophysics, and others</div></div>
+  </section>
+</main>
+
+<footer>© 2026 Elena Donini. Last updated: November 2026.</footer>
+
+<script>
+  // ---- Pubblicazioni: modifica qui la lista ----
+  const pubs = [
+    {year:2023, badge:"IGARSS", title:"Deep Learning for Unsupervised Denoising of Radar Sounder Data",
+     authors:"<em>E. Donini</em>, A. Zuech, L. Bruzzone, F. Bovolo", venue:"IEEE International Geoscience and Remote Sensing Symposium (IGARSS), Pasadena, 2023",
+     abs:"An unsupervised deep learning approach to reduce the noise that degrades radargrams, validated on raw SHARAD EDR data acquired over Mars.",
+     pdf:"https://doi.org/10.1109/igarss52108.2023.10282302", code:"", html:"",
+     bib:"@inproceedings{donini2023denoising,\n  title={Deep Learning for Unsupervised Denoising of Radar Sounder Data},\n  author={Donini, Elena and Zuech, Alessandro and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2023},\n  pages={7804--7807},\n  year={2023},\n  doi={10.1109/IGARSS52108.2023.10282302}\n}", hue:20},
+    {year:2022, badge:"IEEE TGRS", title:"A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data",
+     authors:"<em>E. Donini</em>, F. Bovolo, L. Bruzzone", venue:"IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
+     abs:"A deep network that segments ice-sheet radargrams into englacial layers, bedrock, basal units and noise-limited regions (including the echo-free zone), tested on MCoRDS3 data from north Greenland and west Antarctica.",
+     pdf:"https://rslab.disi.unitn.it/web/wp-content/uploads/2022/03/Donini_TGRS_2022.pdf", code:"", html:"https://doi.org/10.1109/TGRS.2021.3125773",
+     bib:"@article{donini2022segmentation,\n  title={A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={60},\n  pages={1--14},\n  year={2022},\n  doi={10.1109/TGRS.2021.3125773}\n}", hue:200},
+    {year:2022, badge:"IGARSS", title:"An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data",
+     authors:"<em>E. Donini</em>, A. Kasibovic, M. Hoyo Garcia, L. Bruzzone, F. Bovolo", venue:"IEEE IGARSS, Kuala Lumpur, 2022",
+     abs:"An unsupervised method that synthesizes super-resolved radargrams, validated on high-resolution airborne data and lower-resolution simulated data.",
+     pdf:"https://doi.org/10.1109/IGARSS46834.2022.9884343", code:"", html:"",
+     bib:"@inproceedings{donini2022superres,\n  title={An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data},\n  author={Donini, Elena and Kasibovic, Amar and Hoyo Garcia, Miguel and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2022},\n  pages={1696--1699},\n  year={2022}\n}", hue:250},
+    {year:2021, badge:"IGARSS", title:"An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data",
+     authors:"<em>E. Donini</em>, F. Bovolo, L. Bruzzone", venue:"IEEE IGARSS, 2021",
+     abs:"A three-step unsupervised technique: a coarse statistical segmentation of the radargram, deep-learning refinement to detect target reflections, and analysis of the learned features.",
+     pdf:"", code:"", html:"https://iris.unitn.it/handle/11572/322995",
+     bib:"@inproceedings{donini2021unsupervised,\n  title={An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2021},\n  year={2021}\n}", hue:290},
+    {year:2021, badge:"PhD Thesis", title:"Advanced Methods for Simulation-Based Performance Assessment and Analysis of Radar Sounder Data",
+     authors:"<em>E. Donini</em> — advisors: F. Bovolo, L. Bruzzone", venue:"Ph.D. thesis, University of Trento, 2021 — Best Italian Ph.D. Thesis in remote sensing 2022 (IEEE GRSS Italy)",
+     abs:"Two contributions: metrics to assess the detectability of subsurface targets in simulated orbital radargrams to guide radar sounder design, and automatic analysis methods based on fuzzy logic (e.g. lava tube detection) and deep learning.",
+     pdf:"https://iris.unitn.it/bitstream/11572/304147/6/ED_PhD_Tesis_IRIS.pdf", code:"", html:"https://iris.unitn.it/handle/11572/304147",
+     bib:"@phdthesis{donini2021phd,\n  title={Advanced methods for simulation-based performance assessment and analysis of radar sounder data},\n  author={Donini, Elena},\n  school={University of Trento},\n  year={2021},\n  doi={10.15168/11572_304147}\n}", hue:140},
+  ];
+
+  function thumb(h){ // segnaposto stile "radargramma"
+    let lines="";
+    for(let i=0;i<7;i++){const y=40+i*16;lines+=`<path d="M0 ${y} Q 60 ${y-10+i*2} 120 ${y+4} T 240 ${y-3}" stroke="hsl(${h} 40% ${35+i*6}%)" stroke-width="${3-i*0.3}" fill="none" opacity=".8"/>`;}
+    return `<svg viewBox="0 0 240 150" preserveAspectRatio="none"><rect width="240" height="150" fill="hsl(${h} 25% 14%)"/>${lines}</svg>`;
+  }
+  const el=document.getElementById("pubList");
+  let lastYear=null, html="";
+  pubs.forEach((p,i)=>{
+    if(p.year!==lastYear){ if(lastYear!==null) html+="</ol>"; html+=`<div class="year">${p.year}</div><ol class="pubs">`; lastYear=p.year; }
+    html+=`<li class="pub">
+      <div class="thumb">${thumb(p.hue)}<span class="badge">${p.badge}</span></div>
+      <div>
+        <div class="ptitle">${p.title}</div>
+        <div class="authors">${p.authors}</div>
+        <div class="venue">${p.venue}</div>
+        <div class="btns">
+          <button data-t="abs${i}">Abs</button>
+          <button data-t="bib${i}">Bib</button>
+          ${p.html?`<a href="${p.html}">HTML</a>`:""}
+          ${p.pdf?`<a href="${p.pdf}">PDF</a>`:""}
+          ${p.code?`<a href="${p.code}">Code</a>`:""}
+        </div>
+        <div class="hidden-box" id="abs${i}"><div class="abstract">${p.abs}</div></div>
+        <div class="hidden-box" id="bib${i}"><pre class="bib">${p.bib}</pre></div>
+      </div></li>`;
+  });
+  el.innerHTML=html+"</ol>";
+  el.addEventListener("click",e=>{
+    const b=e.target.closest("button[data-t]"); if(!b) return;
+    const box=document.getElementById(b.dataset.t);
+    box.classList.toggle("show"); b.classList.toggle("on");
+  });
+
+  // menu mobile
+  const links=document.getElementById("links");
+  document.getElementById("menuBtn").onclick=()=>links.classList.toggle("open");
+  links.addEventListener("click",e=>{ if(e.target.tagName==="A") links.classList.remove("open"); });
+
+  // tema chiaro/scuro
+  const root=document.documentElement;
+  try{ const t=localStorage.getItem("theme"); if(t) root.dataset.theme=t; }catch(e){}
+  document.getElementById("themeBtn").onclick=()=>{
+    root.dataset.theme = root.dataset.theme==="dark" ? "light" : "dark";
+    try{ localStorage.setItem("theme",root.dataset.theme); }catch(e){}
+  };
+
+  // evidenzia la sezione attiva
+  const navA=[...document.querySelectorAll(".links a")];
+  const secs=navA.map(a=>document.querySelector(a.getAttribute("href")));
+  addEventListener("scroll",()=>{
+    let cur=0; secs.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top<120) cur=i; });
+    navA.forEach((a,i)=>a.classList.toggle("active",i===cur));
+  },{passive:true});
+</script>
+</body>
+</html>
