@@ -70,7 +70,7 @@
   ol.pubs{list-style:none;margin:0;padding:0;counter-reset:pub}
   .pub{display:grid;grid-template-columns:180px 1fr;gap:1.2rem;padding:1rem 0;border-bottom:1px solid var(--line)}
   @media(max-width:600px){.pub{grid-template-columns:1fr}}
-  .thumb{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/10;background:var(--soft);border:1px solid var(--line)}
+  .thumb{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/10;background:var(--bg);border:1px solid var(--line)}
   .thumb svg{width:100%;height:100%;display:block}
   .badge{position:absolute;top:6px;left:6px;background:var(--accent);color:#fff;font-size:.7rem;font-weight:500;padding:.1rem .45rem;border-radius:3px}
   .ptitle{font-weight:500;font-size:1.02rem}
@@ -132,6 +132,12 @@
   .vcap small{color:var(--muted)}
   h3.cat{font-family:"Roboto Slab",serif;font-weight:400;font-size:1.35rem;color:var(--accent);margin:2.2rem 0 0;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
   h3.cat span{font-family:Roboto,sans-serif;font-size:.8rem;color:var(--muted);font-weight:400;margin-left:.3rem}
+  .au{color:var(--muted);font-size:.92em}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;background:#fff}
+  .tile{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;
+        background:linear-gradient(135deg,rgba(181,9,172,.10),rgba(181,9,172,.03));}
+  .tile .tv{font-family:"Roboto Slab",serif;font-size:1.25rem;font-weight:500;color:var(--accent);text-align:center;padding:0 .5rem;line-height:1.2}
+  .tile .ty{font-size:.85rem;color:var(--muted);letter-spacing:.08em}
 </style>
 </head>
 <body>
@@ -190,7 +196,7 @@
       </div>
     </div>
 
-    <p>I am a researcher at the <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth (RSDE)</a> unit of <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> and collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento. I develop <b>machine learning methods for radar sounder data</b>, to explore the subsurface of the Earth's ice sheets, Mars, the Moon and the icy moons of Jupiter. I am a member of the science teams of <b>RIME</b> on ESA's <b>JUICE</b> mission and of the subsurface radar sounder on ESA's <b>EnVision</b> mission to Venus. I received my Ph.D. cum laude from the University of Trento in 2021, and I love science communication — I organize <a href="https://www.pintofscience.it/team/Team%20Trento/">Pint of Science Trento-Rovereto</a> and <a href="https://www.tedxtrento.com/">TEDx Trento</a>.</p>
+    <p>I am a researcher at the <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth (RSDE)</a> unit of <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> and collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento. I develop <b>machine learning methods for radar sounder data</b>, to explore the subsurface of the Earth's ice sheets, Mars, the Moon and the icy moons of Jupiter. I am a member of the science teams of <a href="https://rslab.disi.unitn.it/rime/"><b>RIME</b></a> on ESA's <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice"><b>JUICE</b></a> mission and of the subsurface radar sounder on ESA's <a href="https://www.cosmos.esa.int/web/envision"><b>EnVision</b></a> mission to Venus. I received my Ph.D. cum laude from the University of Trento in 2021, and I love science communication — I organize <a href="https://www.pintofscience.it/team/Team%20Trento/">Pint of Science Trento-Rovereto</a> and <a href="https://www.tedxtrento.com/">TEDx Trento</a>.</p>
     <p>I work and live in Trento, Italy. I am always happy to start new collaborations — <a href="mailto:edonini@fbk.eu">drop me an email</a>!</p>
 
     <div class="socials">
@@ -219,33 +225,40 @@
     <header class="page-head"><h1 class="ptitle-big">news</h1><p class="desc">Updates on research, talks and outreach.</p></header>
   <section>
     <table class="news">
-      <tr><td class="date">Sep 2026</td><td>🤖 Talked about the ESA <b>JUICE</b> mission at the <b>FBK Summer Camp</b> robotics course.</td></tr>
-      <tr><td class="date">Jul 2026</td><td>📄 Papers accepted at <a href="https://spie.org/conferences-and-exhibitions/sensors-and-imaging"><b>SPIE Sensors + Imaging 2026</b></a> (Edinburgh, 14–17 Sep) and <a href="https://www.epsc2026.eu"><b>EPSC 2026</b></a> (The Hague, 6–11 Sep).</td></tr>
+      <tr><td class="date">Sep 2026</td><td>🤖 Talked about the ESA <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice"><b>JUICE</b></a> mission at the <b>FBK Summer Camp</b> robotics course.</td></tr>
+      <tr><td class="date">Jul 2026</td><td>📄 Papers accepted at <a href="https://spie.org/conferences-and-exhibitions/sensors-and-imaging"><b>SPIE Sensors + Imaging 2026</b></a> (Edinburgh, 14–17 Sep) and <a href="https://www.epsc2026.eu"><b>EPSC 2026</b></a> (The Hague, 6–11 Sep). Congrats to all the authors! 🎉 See you there! 👋</td></tr>
       <tr><td class="date">May 2026</td><td>📚 Panel <a href="https://www.salonelibro.it/programma-eventi/di_chi_e_la_scienza/20047"><i>“Di chi è la scienza?”</i></a> at the <b>Salone Internazionale del Libro</b> in Turin.</td></tr>
-      <tr><td class="date">May 2026</td><td>📄 Papers accepted at <a href="https://www.grss-ieee.org/event/2026-ieee-international-geoscience-and-remote-sensing-symposium/"><b>IGARSS 2026</b></a> (Washington, D.C., 9–14 Aug).</td></tr>
-      <tr><td class="date">May 2026</td><td>🎧 Guest on the RAI podcast <i>Quo datis</i>.</td></tr>
-      <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <i>A caccia di AI</i>, talking about AI and space exploration.</td></tr>
+      <tr><td class="date">May 2026</td><td>📄 Papers accepted at <a href="https://www.grss-ieee.org/event/2026-ieee-international-geoscience-and-remote-sensing-symposium/"><b>IGARSS 2026</b></a> (Washington, D.C., 9–14 Aug). Congrats to all the authors! 🎉 See you there! 👋</td></tr>
+      <tr><td class="date">May 2026</td><td>🎧 Guest on the RAI podcast <a href="https://www.raiplaysound.it/audio/2026/07/Quo-datis-del-23062026-pt12-6fd8d20e-397a-43ce-ac29-a3e664153fbb.html"><i>Quo datis</i></a> — <a href="https://www.raiplaysound.it/audio/2026/07/Quo-datis-del-23062026-pt12-6fd8d20e-397a-43ce-ac29-a3e664153fbb.html">listen on RaiPlay Sound ▶</a></td></tr>
+      <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <a href="https://www.raiplaysound.it/audio/2026/03/A-caccia-dellIA-del-04032026-pt9-e58d3c58-d6c2-45bb-aadd-ce8d4d3d2b08.html"><i>A caccia dell'IA</i></a>, talking about AI and space exploration — <a href="https://www.raiplaysound.it/audio/2026/03/A-caccia-dellIA-del-04032026-pt9-e58d3c58-d6c2-45bb-aadd-ce8d4d3d2b08.html">listen on RaiPlay Sound ▶</a></td></tr>
       <tr><td class="date">2026</td><td>🎙️ Joined the organizing team of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a>.</td></tr>
       <tr><td class="date">Nov 2025</td><td>🎤 Talk at TEDx Trento 2025: <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i></a> — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk">watch it on YouTube ▶</a></td></tr>
       <tr><td class="date">2025</td><td>✈️ Received an IEEE IGARSS travel grant.</td></tr>
+      <tr><td class="date">2025</td><td>📄 1 paper accepted at <b>MIGARS 2025</b>: <i>“A Preliminary Study on the Detection of Glacial Lake Outburst Flood in Norway Using Sentinel 2 Imagery”</i> <span class="au">(L. Bergamasco, <u>E. Donini</u>, R. Lappe, M. Calovi, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">May 2025</td><td>📄 1 paper accepted at <b>IGARSS 2025</b> (Brisbane): <i>“Co-Registration Analysis of Coherent Multitemporal Radargrams”</i> <span class="au">(<u>E. Donini</u>, M. Hoyo García, J. Paden, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
       <tr><td class="date">Sep 2024</td><td>🗣️ Talk at <a href="https://www.wired.it/article/wired-next-fest-2024-trentino-rovereto-date-ospiti/"><b>Wired Next Fest Trentino 2024</b></a> (Rovereto) — <i>“Aziende in orbita”</i>, on AI and space research.</td></tr>
-      <tr><td class="date">Jul 2024</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2024</b> — multitemporal analysis of cryosphere radar sounder data.</td></tr>
-      <tr><td class="date">May 2024</td><td>📄 1 paper accepted at <b>IGARSS 2024</b> (Athens) — hierarchical learning for unsupervised radargram segmentation.</td></tr>
+      <tr><td class="date">Jul 2024</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2024</b>: <i>“A Preliminary Study on the Multitemporal Analysis of Cryosphere Radar Sounder Data”</i> <span class="au">(<u>E. Donini</u>, M. Hoyo García, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">May 2024</td><td>📄 1 paper accepted at <b>IGARSS 2024</b> (Athens): <i>“Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere”</i> <span class="au">(<u>E. Donini</u>, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
       <tr><td class="date">Apr 2024</td><td>🛰️ Visiting researcher at ESA ESTEC (Noordwijk) through the <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">ESA Archival Research Visitor Programme</a>, working on content-based retrieval of MARSIS radargrams — <a href="https://www.youtube.com/watch?v=zHX4FNCI2ZI">watch the FBK video ▶</a></td></tr>
-      <tr><td class="date">2024</td><td>📰 Paper published in <b>IEEE Transactions on Geoscience and Remote Sensing</b> — super-resolution of radargrams with generative deep learning.</td></tr>
-      <tr><td class="date">May 2023</td><td>📄 2 papers accepted at <b>IGARSS 2023</b> (Pasadena) — unsupervised denoising of radar sounder data and Type-III solar bursts in SHARAD data.</td></tr>
-      <tr><td class="date">2023</td><td>📰 Paper published in <b>IEEE Transactions on Geoscience and Remote Sensing</b> — weakly supervised transfer learning for radargram segmentation.</td></tr>
-      <tr><td class="date">Jul 2022</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2022</b> — unsupervised segmentation of radar sounder data with contrastive learning.</td></tr>
-      <tr><td class="date">May 2022</td><td>📄 1 paper accepted at <b>IGARSS 2022</b> (Kuala Lumpur) — unsupervised super-resolution of radar sounder data.</td></tr>
-      <tr><td class="date">2021</td><td>📰 3 papers published in <b>IEEE Transactions on Geoscience and Remote Sensing</b> — semantic segmentation of radargrams, lava tube detection, and target detectability from satellite radar sounders.</td></tr>
-      <tr><td class="date">Jul 2021</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2021</b> — transfer learning for the segmentation of cryosphere radargrams.</td></tr>
+      <tr><td class="date">2024</td><td>📰 Paper published in <b>Astronomy &amp; Astrophysics</b>: <i>“Observation of Solar Radio Burst Events from Mars Orbit with the Shallow Radar Instrument”</i> <span class="au">(C. Gerekos, G. Steinbrügge, I. C. Jebaraj, A. Casillas, <u>E. Donini</u>, B. Sánchez-Cano, M. Lester, J. Magdalenić, S. T. Peters, A. Romero-Wolf, D. D. Blankenship)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">2024</td><td>📰 Paper published in <b>IEEE Transactions on Geoscience and Remote Sensing</b>: <i>“Super-Resolution of Radargrams With a Generative Deep Learning Model”</i> <span class="au">(<u>E. Donini</u>, L. Bruzzone, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">2023</td><td>📰 Paper published in <b>Systems</b>: <i>“An Infrastructure Cost and Benefits Evaluation Framework for Blockchain-Based Applications”</i> <span class="au">(M. Pincheira, <u>E. Donini</u>, M. Vecchio, R. Giaffreda)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">May 2023</td><td>📄 2 papers accepted at <b>IGARSS 2023</b> (Pasadena): <i>“Deep Learning for Unsupervised Denoising of Radar Sounder Data”</i> <span class="au">(<u>E. Donini</u>, A. Zuech, L. Bruzzone, F. Bovolo)</span> and <i>“A Preliminary Statistical Analysis of Type-III Solar Burst Detections in MRO SHARAD Data”</i> <span class="au">(A. Casillas, S. T. Peters, G. Steinbrügge, <u>E. Donini</u>, I. C. Jebaraj, J. Magdalenić, A. Romero-Wolf, D. D. Blankenship, C. Gerekos)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">2023</td><td>📰 Paper published in <b>IEEE Transactions on Geoscience and Remote Sensing</b>: <i>“A Weakly Supervised Transfer Learning Approach for Radar Sounder Data Segmentation”</i> <span class="au">(M. Hoyo García, <u>E. Donini</u>, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">Nov 2022</td><td>📰 Paper published in <b>Sensors</b>: <i>“A Decentralized Architecture for Trusted Dataset Sharing Using Smart Contracts and Distributed Storage”</i> <span class="au">(M. Pincheira, <u>E. Donini</u>, M. Vecchio, S. Kanhere)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">2022</td><td>📄 1 paper accepted at <b>BLOCKCHAIN 2022</b>: <i>“Towards an Infrastructure Cost Model for Blockchain-Based Applications”</i> <span class="au">(M. Pincheira, <u>E. Donini</u>, M. Vecchio, R. Giaffreda)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">Jul 2022</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2022</b>: <i>“Unsupervised Semantic Segmentation of Radar Sounder Data Using Contrastive Learning”</i> <span class="au">(<u>E. Donini</u>, M. Amico, L. Bruzzone, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">May 2022</td><td>📄 1 paper accepted at <b>IGARSS 2022</b> (Kuala Lumpur): <i>“An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data”</i> <span class="au">(<u>E. Donini</u>, A. Kasibovic, M. Hoyo García, L. Bruzzone, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">2021</td><td>📰 3 papers published in <b>IEEE Transactions on Geoscience and Remote Sensing</b>: <i>“A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data”</i> <span class="au">(<u>E. Donini</u>, F. Bovolo, L. Bruzzone)</span>, <i>“An Unsupervised Fuzzy System for the Automatic Detection of Candidate Lava Tubes in Radar Sounder Data”</i> <span class="au">(<u>E. Donini</u>, L. Carrer, C. Gerekos, L. Bruzzone, F. Bovolo)</span> and <i>“An Approach to the Assessment of Detectability of Subsurface Targets in Polar Ice From Satellite Radar Sounders”</i> <span class="au">(S. Thakur, <u>E. Donini</u>, F. Bovolo, L. Bruzzone)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">Jul 2021</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2021</b>: <i>“Transfer Learning for the Semantic Segmentation of Cryosphere Radargrams”</i> <span class="au">(M. Hoyo García, <u>E. Donini</u>, F. Bovolo)</span>. Congrats to all the authors! 🎉</td></tr>
       <tr><td class="date">May 2021</td><td>🎓 Ph.D. (cum laude) in ICT at the University of Trento and FBK.</td></tr>
-      <tr><td class="date">May 2021</td><td>📄 3 papers accepted at <b>IGARSS 2021</b> (Brussels) — subsurface target detection, ice shelf segmentation, and the STRATUS mission concept.</td></tr>
-      <tr><td class="date">May 2020</td><td>📄 1 paper accepted at <b>IGARSS 2020</b> — subsurface radar sounding for the EnVision mission to Venus.</td></tr>
-      <tr><td class="date">2020</td><td>📰 Paper published in <b>IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control</b> — COVID-19 scoring from lung ultrasound data.</td></tr>
-      <tr><td class="date">Jul 2019</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2019</b> — mapping refreezing ice in radar sounder data.</td></tr>
-      <tr><td class="date">May 2019</td><td>📄 1 paper accepted at <b>IGARSS 2019</b> (Yokohama) — detection performance on icy targets from an orbiting radar sounder.</td></tr>
-      <tr><td class="date">May 2018</td><td>📄 1 paper accepted at <b>IGARSS 2018</b> (Valencia) — lava tube detection in radar sounder data of the Moon.</td></tr>
+      <tr><td class="date">May 2021</td><td>📄 3 papers accepted at <b>IGARSS 2021</b> (Brussels): <i>“An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data”</i> <span class="au">(<u>E. Donini</u>, F. Bovolo, L. Bruzzone)</span>, <i>“Automatic Segmentation of Ice Shelves with Deep Learning”</i> <span class="au">(M. Hoyo García, <u>E. Donini</u>, F. Bovolo)</span> and <i>“STRATUS: A New Mission Concept for Monitoring the Subsurface of Polar and Arid Regions”</i> <span class="au">(L. Bruzzone, F. Bovolo, L. Carrer, <u>E. Donini</u>, S. Thakur)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">Oct 2020</td><td>📄 Paper published in the <b>ISPRS Annals</b>: <i>“A Blockchain-Based Approach to Enable Remote Sensing Trusted Data”</i> <span class="au">(M. Pincheira, <u>E. Donini</u>, R. Giaffreda, M. Vecchio)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">May 2020</td><td>📄 1 paper accepted at <b>IGARSS 2020</b>: <i>“EnVision Mission to Venus: Subsurface Radar Sounding”</i> <span class="au">(L. Bruzzone, F. Bovolo, S. Thakur, L. Carrer, <u>E. Donini</u>, C. Gerekos, S. Paterna, M. Santoni, E. Sbalchiero)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">2020</td><td>📰 Paper published in <b>IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control</b>: <i>“Automatic Pleural Line Extraction and COVID-19 Scoring from Lung Ultrasound Data”</i> <span class="au">(L. Carrer, <u>E. Donini</u>, D. Marinelli, M. Zanetti, F. Mento, E. Torri, A. Smargiassi, R. Inchingolo, G. Soldati, L. Demi, F. Bovolo, L. Bruzzone)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">Jul 2019</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2019</b>: <i>“An Automatic Approach to Map Refreezing Ice in Radar Sounder Data”</i> <span class="au">(<u>E. Donini</u>, S. Thakur, F. Bovolo, L. Bruzzone)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">May 2019</td><td>📄 1 paper accepted at <b>IGARSS 2019</b> (Yokohama): <i>“Assessing the Detection Performance on Icy Targets Acquired by an Orbiting Radar Sounder”</i> <span class="au">(<u>E. Donini</u>, S. Thakur, F. Bovolo, L. Bruzzone)</span>. Congrats to all the authors! 🎉</td></tr>
+      <tr><td class="date">May 2018</td><td>📄 1 paper accepted at <b>IGARSS 2018</b> (Valencia): <i>“An Approach to Lava Tube Detection in Radar Sounder Data of the Moon”</i> <span class="au">(<u>E. Donini</u>, F. Bovolo, C. Gerekos, L. Carrer, L. Bruzzone)</span>. Congrats to all the authors! 🎉</td></tr>
       <tr><td class="date">Nov 2017</td><td>🚀 Started my Ph.D. at the University of Trento and FBK.</td></tr>
     </table>
   </section>
@@ -270,8 +283,8 @@
   
   <section>
     <div class="cv-item"><div class="when">2025 – 2026</div><div class="what">Scientific activities for a radar sounder for the moons of Uranus<small>ASI &amp; NASA — target identification, EM signature definition and detection methods in radargrams</small></div></div>
-    <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for JUICE (RIME)<small>ASI &amp; ESA — automatic analysis of radargrams acquired in icy areas</small></div></div>
-    <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for the EnVision subsurface radar sounder<small>ASI &amp; ESA — automatic analysis of radargrams acquired in arid areas</small></div></div>
+    <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice"><b>JUICE</b></a> (<a href="https://rslab.disi.unitn.it/rime/">RIME</a>)<small>ASI &amp; ESA — automatic analysis of radargrams acquired in icy areas</small></div></div>
+    <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for the <a href="https://www.cosmos.esa.int/web/envision"><b>EnVision</b></a> subsurface radar sounder<small>ASI &amp; ESA — automatic analysis of radargrams acquired in arid areas</small></div></div>
     <div class="cv-item"><div class="when">2018 – 2023</div><div class="what">STRATUS — SaTellite Radar sounder for eArTh sUb-surface Sensing<small>ASI &amp; ESA — scientific objectives, radargram analysis in icy areas, target detectability assessment, ESA EO-10 and EO-11 proposals</small></div></div>
     <div class="cv-item"><div class="when">2018</div><div class="what">Sistema radar in banda P<small>ASI — automatic analysis of P-band radar sounder data acquired in Morocco</small></div></div>
   </section>
@@ -297,18 +310,18 @@
   <section>
         <div class="cv-item"><div class="when">2026 – now</div><div class="what">Organizer of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a></div></div>
     <div class="cv-item"><div class="when">2020 – now</div><div class="what">Organizer of <a href="https://www.pintofscience.it/team/Team%20Trento/"><b>Pint of Science</b> Trento-Rovereto</a></div></div>
-    <div class="cv-item"><div class="when">2020 – now</div><div class="what">European Researchers' Night, Trento</div></div>
     <div class="cv-item"><div class="when">2018 – now</div><div class="what">Talks on AI and space missions in middle and high schools</div></div>
-    <div class="cv-item"><div class="when">Aug – Sep 2026</div><div class="what"><b>FBK Summer Camp</b> — the ESA JUICE mission<small>Activity on JUICE within the robotics course of the FBK summer camp (31 Aug – 4 Sep 2026)</small></div></div>
+    <div class="cv-item"><div class="when">Aug – Sep 2026</div><div class="what"><b>FBK Summer Camp</b> — the ESA <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice">JUICE</a> mission<small>Activity on JUICE within the robotics course of the FBK summer camp (31 Aug – 4 Sep 2026)</small></div></div>
     <div class="cv-item"><div class="when">May 2026</div><div class="what"><a href="https://magazine.fbk.eu/en/news/when-science-meets-the-next-generation-sparkle-science-day-at-fbk/"><b>SPARKLE Science Day</b></a> at FBK<small>Hands-on science day for about 100 middle-school students</small></div></div>
     <div class="cv-item"><div class="when">May 2026</div><div class="what">Panel <a href="https://www.salonelibro.it/programma-eventi/di_chi_e_la_scienza/20047"><i>“Di chi è la scienza?”</i></a> at the <b>Salone Internazionale del Libro</b>, Turin<small>With Feltrinelli Education — how science communication connects research and society</small></div></div>
-    <div class="cv-item"><div class="when">May 2026</div><div class="what">Guest on the RAI podcast <i>Quo datis</i></div></div>
-    <div class="cv-item"><div class="when">Feb 2026</div><div class="what">Media: <i>Mattino Insieme</i> (Trentino TV), podcast <i>A caccia di AI</i> (RAI)</div></div>
+    <div class="cv-item"><div class="when">May 2026</div><div class="what">Guest on the RAI podcast <a href="https://www.raiplaysound.it/audio/2026/07/Quo-datis-del-23062026-pt12-6fd8d20e-397a-43ce-ac29-a3e664153fbb.html"><i>Quo datis</i> ▶</a></div></div>
+    <div class="cv-item"><div class="when">Feb 2026</div><div class="what">Media: <i>Mattino Insieme</i> (Trentino TV), podcast <a href="https://www.raiplaysound.it/audio/2026/03/A-caccia-dellIA-del-04032026-pt9-e58d3c58-d6c2-45bb-aadd-ce8d4d3d2b08.html"><i>A caccia dell'IA</i> ▶</a> (RAI)</div></div>
     <div class="cv-item"><div class="when">Nov 2025</div><div class="what">Talk at TEDx Trento 2025 — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i> ▶</a></div></div>
     <div class="cv-item"><div class="when">May 2025</div><div class="what"><a href="https://magazine.fbk.eu/it/news/nexgen-il-futuro-delle-donne-nella-scienza/"><b>NEXGEN</b> — the future of women in science</a><small>FBK women researchers sharing their career paths with high-school students</small></div></div>
-    <div class="cv-item"><div class="when">Feb 2025</div><div class="what"><a href="https://magazine.fbk.eu/it/news/donne-e-ragazze-nella-scienza-il-percorso-di-michela-milano-tra-mentor-ai-e-inclusione/">Women and Girls in Science</a> — conversation with Michela Milano<small>On mentoring, AI and inclusion, for the International Day of Women and Girls in Science</small></div></div>
+    <div class="cv-item"><div class="when">Feb 2025</div><div class="what"><a href="https://magazine.fbk.eu/it/news/donne-e-ragazze-nella-scienza-il-percorso-di-michela-milano-tra-mentor-ai-e-inclusione/">Women and Girls in Science</a> — conversation with Michela Milano, Director of the Digital Society Center at FBK<small>On mentoring, AI and inclusion, for the International Day of Women and Girls in Science</small></div></div>
     <div class="cv-item"><div class="when">Sep 2024</div><div class="what">Talk at <a href="https://www.wired.it/article/wired-next-fest-2024-trentino-rovereto-date-ospiti/">Wired Next Fest Trentino 2024</a> — <i>“Aziende in orbita”</i></div></div>
     <div class="cv-item"><div class="when">Feb 2024</div><div class="what"><a href="https://magazine.fbk.eu/it/news/fbk-per-una-ia-human-centered/"><b>FBK for Human-Centered AI</b></a> — one of eight experts in the video series</div></div>
+    <div class="cv-item"><div class="when">2018 – 2020</div><div class="what">European Researchers' Night, Trento</div></div>
   </section>
 
   </div>
@@ -364,17 +377,60 @@
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
   const pubs = [
  {
+  "year": 2025,
+  "type": "proceedings",
+  "badge": "IGARSS",
+  "title": "Co-Registration Analysis of Coherent Multitemporal Radargrams",
+  "authors": "<em>E. Donini</em>, M. Hoyo García, J. Paden, F. Bovolo",
+  "venue": "IEEE IGARSS 2025, Brisbane",
+  "abs": "",
+  "html": "https://doi.org/10.1109/IGARSS55030.2025.11243308",
+  "pdf": "",
+  "bib": "@inproceedings{donini2025coregistration,\n  title={Co-Registration Analysis of Coherent Multitemporal Radargrams},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Paden, John and Bovolo, Francesca},\n  booktitle={IGARSS 2025},\n  pages={9258--9262},\n  year={2025},\n  doi={10.1109/IGARSS55030.2025.11243308}\n}",
+  "hue": 215,
+  "img": ""
+ },
+ {
+  "year": 2025,
+  "type": "proceedings",
+  "badge": "MIGARS",
+  "title": "A Preliminary Study on the Detection of Glacial Lake Outburst Flood in Norway Using Sentinel 2 Imagery",
+  "authors": "L. Bergamasco, <em>E. Donini</em>, R. Lappe, M. Calovi, F. Bovolo",
+  "venue": "International Conference on Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS), 2025",
+  "abs": "",
+  "html": "https://doi.org/10.1109/MIGARS67156.2025.11232078",
+  "pdf": "",
+  "bib": "@inproceedings{bergamasco2025glof,\n  title={A Preliminary Study on the Detection of Glacial Lake Outburst Flood in Norway Using Sentinel 2 Imagery},\n  author={Bergamasco, Luca and Donini, Elena and Lappe, Ronja and Calovi, Martina and Bovolo, Francesca},\n  booktitle={2025 International Conference on Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS)},\n  pages={1--4},\n  year={2025},\n  doi={10.1109/MIGARS67156.2025.11232078}\n}",
+  "hue": 160,
+  "img": ""
+ },
+ {
   "year": 2024,
   "type": "journal",
   "badge": "IEEE TGRS",
   "title": "Super-Resolution of Radargrams With a Generative Deep Learning Model",
   "authors": "<em>E. Donini</em>, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 62, 2024",
-  "abs": "A CycleGAN-based generative approach to increase the resolution of radar sounder profiles.",
+  "abs": "",
   "html": "https://doi.org/10.1109/TGRS.2024.3378576",
   "pdf": "",
   "bib": "@article{donini2024superres,\n  title={Super-Resolution of Radargrams With a Generative Deep Learning Model},\n  author={Donini, Elena and Bruzzone, Lorenzo and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={62},\n  pages={1--17},\n  year={2024},\n  doi={10.1109/TGRS.2024.3378576}\n}",
-  "hue": 200
+  "hue": 200,
+  "img": ""
+ },
+ {
+  "year": 2024,
+  "type": "journal",
+  "badge": "A&A",
+  "title": "Observation of Solar Radio Burst Events from Mars Orbit with the Shallow Radar Instrument",
+  "authors": "C. Gerekos, G. Steinbrügge, I. C. Jebaraj, A. Casillas, <em>E. Donini</em>, B. Sánchez-Cano, M. Lester, J. Magdalenić, S. T. Peters, A. Romero-Wolf, D. D. Blankenship",
+  "venue": "Astronomy &amp; Astrophysics, vol. 683, A56, 2024",
+  "abs": "",
+  "html": "https://doi.org/10.1051/0004-6361/202347900",
+  "pdf": "",
+  "bib": "@article{gerekos2024solar,\n  title={Observation of solar radio burst events from Mars orbit with the Shallow Radar instrument},\n  author={Gerekos, Christopher and Steinbr{\\\"u}gge, Gregor and Jebaraj, Immanuel C. and Casillas, Andreas and Donini, Elena and others},\n  journal={Astronomy \\& Astrophysics},\n  volume={683},\n  pages={A56},\n  year={2024},\n  doi={10.1051/0004-6361/202347900}\n}",
+  "hue": 45,
+  "img": ""
  },
  {
   "year": 2024,
@@ -383,11 +439,12 @@
   "title": "Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere",
   "authors": "<em>E. Donini</em>, F. Bovolo",
   "venue": "IEEE IGARSS 2024, Athens",
-  "abs": "Unsupervised radargram segmentation based on incremental learning, where cryosphere subsurface targets are first modeled geophysically into a class hierarchy; validated on MCoRDS-3 data from Greenland.",
+  "abs": "",
   "html": "https://doi.org/10.1109/IGARSS53475.2024.10642331",
   "pdf": "",
   "bib": "@inproceedings{donini2024hierarchical,\n  title={Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={IGARSS 2024},\n  pages={10988--10991},\n  year={2024},\n  doi={10.1109/IGARSS53475.2024.10642331}\n}",
-  "hue": 170
+  "hue": 170,
+  "img": ""
  },
  {
   "year": 2024,
@@ -400,7 +457,8 @@
   "html": "",
   "pdf": "",
   "bib": "@inproceedings{donini2024multitemporal,\n  title={A preliminary study on the multitemporal analysis of cryosphere radar sounder data},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXX},\n  publisher={SPIE},\n  year={2024}\n}",
-  "hue": 225
+  "hue": 225,
+  "img": ""
  },
  {
   "year": 2023,
@@ -409,11 +467,26 @@
   "title": "A Weakly Supervised Transfer Learning Approach for Radar Sounder Data Segmentation",
   "authors": "M. Hoyo García, <em>E. Donini</em>, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 61, 2023",
-  "abs": "Two transfer-learning mechanisms for radargram segmentation that reduce the need for labeled data and handle highly unbalanced classes, tested on MCoRDS-1 and MCoRDS-3 data from Antarctica.",
+  "abs": "",
   "html": "https://doi.org/10.1109/TGRS.2023.3252939",
   "pdf": "",
   "bib": "@article{hoyo2023weakly,\n  title={A Weakly Supervised Transfer Learning Approach for Radar Sounder Data Segmentation},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={61},\n  pages={1--18},\n  year={2023},\n  doi={10.1109/TGRS.2023.3252939}\n}",
-  "hue": 230
+  "hue": 230,
+  "img": ""
+ },
+ {
+  "year": 2023,
+  "type": "journal",
+  "badge": "Systems",
+  "title": "An Infrastructure Cost and Benefits Evaluation Framework for Blockchain-Based Applications",
+  "authors": "M. Pincheira, <em>E. Donini</em>, M. Vecchio, R. Giaffreda",
+  "venue": "Systems (MDPI), vol. 11, no. 4, 184, 2023",
+  "html": "https://doi.org/10.3390/systems11040184",
+  "pdf": "https://www.mdpi.com/2079-8954/11/4/184/pdf",
+  "bib": "@article{pincheira2023cost,\n  title={An Infrastructure Cost and Benefits Evaluation Framework for Blockchain-Based Applications},\n  author={Pincheira, Miguel and Donini, Elena and Vecchio, Massimo and Giaffreda, Raffaele},\n  journal={Systems},\n  volume={11},\n  number={4},\n  pages={184},\n  year={2023},\n  doi={10.3390/systems11040184}\n}",
+  "abs": "",
+  "img": "",
+  "hue": 0
  },
  {
   "year": 2023,
@@ -422,11 +495,12 @@
   "title": "Deep Learning for Unsupervised Denoising of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, A. Zuech, L. Bruzzone, F. Bovolo",
   "venue": "IEEE IGARSS 2023, Pasadena",
-  "abs": "An unsupervised deep learning approach to reduce noise in radargrams, validated on raw SHARAD EDR data of Mars.",
+  "abs": "",
   "html": "https://doi.org/10.1109/IGARSS52108.2023.10282302",
   "pdf": "",
   "bib": "@inproceedings{donini2023denoising,\n  title={Deep Learning for Unsupervised Denoising of Radar Sounder Data},\n  author={Donini, Elena and Zuech, Alessandro and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2023},\n  pages={7804--7807},\n  year={2023},\n  doi={10.1109/IGARSS52108.2023.10282302}\n}",
-  "hue": 20
+  "hue": 20,
+  "img": ""
  },
  {
   "year": 2023,
@@ -439,7 +513,8 @@
   "html": "",
   "pdf": "",
   "bib": "@inproceedings{casillas2023typeiii,\n  title={A Preliminary Statistical Analysis of Type-III Solar Burst Detections in Mars Reconnaissance Orbiter (MRO) Shallow Radar (SHARAD) Data},\n  author={Casillas, Andreas and Peters, Sean T. and Steinbr{\\\"u}gge, Gregor and Donini, Elena and others},\n  booktitle={IGARSS 2023},\n  pages={4166--4168},\n  year={2023}\n}",
-  "hue": 40
+  "hue": 40,
+  "img": ""
  },
  {
   "year": 2022,
@@ -448,11 +523,12 @@
   "title": "A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
-  "abs": "A deep network that segments ice-sheet radargrams into englacial layers, bedrock, basal units and noise-limited regions, tested on MCoRDS3 data from north Greenland and west Antarctica.",
+  "abs": "",
   "html": "https://doi.org/10.1109/TGRS.2021.3125773",
   "pdf": "https://rslab.disi.unitn.it/web/wp-content/uploads/2022/03/Donini_TGRS_2022.pdf",
   "bib": "@article{donini2022segmentation,\n  title={A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={60},\n  pages={1--14},\n  year={2022},\n  doi={10.1109/TGRS.2021.3125773}\n}",
-  "hue": 195
+  "hue": 195,
+  "img": ""
  },
  {
   "year": 2022,
@@ -461,11 +537,12 @@
   "title": "An Unsupervised Fuzzy System for the Automatic Detection of Candidate Lava Tubes in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, L. Carrer, C. Gerekos, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
-  "abs": "A fuzzy system built on geometric and electromagnetic models of lava tubes to detect candidate buried cavities in radar sounder data.",
+  "abs": "",
   "html": "https://doi.org/10.1109/TGRS.2021.3062753",
   "pdf": "",
   "bib": "@article{donini2022lavatubes,\n  title={An Unsupervised Fuzzy System for the Automatic Detection of Candidate Lava Tubes in Radar Sounder Data},\n  author={Donini, Elena and Carrer, Leonardo and Gerekos, Christopher and Bruzzone, Lorenzo and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={60},\n  pages={1--19},\n  year={2022},\n  doi={10.1109/TGRS.2021.3062753}\n}",
-  "hue": 10
+  "hue": 10,
+  "img": ""
  },
  {
   "year": 2022,
@@ -474,11 +551,26 @@
   "title": "An Approach to the Assessment of Detectability of Subsurface Targets in Polar Ice From Satellite Radar Sounders",
   "authors": "S. Thakur, <em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
-  "abs": "Performance metrics to assess whether englacial layers and the basal interface would be detectable by a satellite radar sounder, to guide instrument design.",
+  "abs": "",
   "html": "https://doi.org/10.1109/TGRS.2021.3119047",
   "pdf": "",
   "bib": "@article{thakur2022detectability,\n  title={An Approach to the Assessment of Detectability of Subsurface Targets in Polar Ice From Satellite Radar Sounders},\n  author={Thakur, Sanchari and Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={60},\n  pages={1--21},\n  year={2022},\n  doi={10.1109/TGRS.2021.3119047}\n}",
-  "hue": 210
+  "hue": 210,
+  "img": ""
+ },
+ {
+  "year": 2022,
+  "type": "journal",
+  "badge": "Sensors",
+  "title": "A Decentralized Architecture for Trusted Dataset Sharing Using Smart Contracts and Distributed Storage",
+  "authors": "M. Pincheira, <em>E. Donini</em>, M. Vecchio, S. Kanhere",
+  "venue": "Sensors (MDPI), vol. 22, no. 23, 9118, 2022",
+  "html": "https://doi.org/10.3390/s22239118",
+  "pdf": "https://www.mdpi.com/1424-8220/22/23/9118/pdf",
+  "bib": "@article{pincheira2022decentralized,\n  title={A Decentralized Architecture for Trusted Dataset Sharing Using Smart Contracts and Distributed Storage},\n  author={Pincheira, Miguel and Donini, Elena and Vecchio, Massimo and Kanhere, Salil},\n  journal={Sensors},\n  volume={22},\n  number={23},\n  pages={9118},\n  year={2022},\n  doi={10.3390/s22239118}\n}",
+  "abs": "",
+  "img": "",
+  "hue": 0
  },
  {
   "year": 2022,
@@ -487,11 +579,12 @@
   "title": "An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, A. Kasibovic, M. Hoyo García, L. Bruzzone, F. Bovolo",
   "venue": "IEEE IGARSS 2022, Kuala Lumpur",
-  "abs": "An unsupervised method that synthesizes super-resolved radargrams, validated on airborne and simulated data.",
+  "abs": "",
   "html": "https://doi.org/10.1109/IGARSS46834.2022.9884343",
   "pdf": "",
   "bib": "@inproceedings{donini2022superres,\n  title={An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data},\n  author={Donini, Elena and Kasibovic, Amar and Hoyo Garc{\\'i}a, Miguel and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2022},\n  pages={1696--1699},\n  year={2022},\n  doi={10.1109/IGARSS46834.2022.9884343}\n}",
-  "hue": 250
+  "hue": 250,
+  "img": ""
  },
  {
   "year": 2022,
@@ -500,11 +593,40 @@
   "title": "Unsupervised Semantic Segmentation of Radar Sounder Data Using Contrastive Learning",
   "authors": "<em>E. Donini</em>, M. Amico, L. Bruzzone, F. Bovolo",
   "venue": "Proc. SPIE 12267, Image and Signal Processing for Remote Sensing XXVIII, 2022",
-  "abs": "Unsupervised radargram segmentation based on semantically meaningful features extracted from a deep network trained with a contrastive logic, applied to MCoRDS-3 data from Greenland.",
+  "abs": "",
   "html": "https://doi.org/10.1117/12.2636437",
   "pdf": "",
   "bib": "@inproceedings{donini2022contrastive,\n  title={Unsupervised semantic segmentation of radar sounder data using contrastive learning},\n  author={Donini, Elena and Amico, Mattia and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVIII},\n  volume={12267},\n  pages={171--180},\n  publisher={SPIE},\n  year={2022},\n  doi={10.1117/12.2636437}\n}",
-  "hue": 265
+  "hue": 265,
+  "img": ""
+ },
+ {
+  "year": 2022,
+  "type": "proceedings",
+  "badge": "BLOCKCHAIN",
+  "title": "Towards an Infrastructure Cost Model for Blockchain-Based Applications",
+  "authors": "M. Pincheira, <em>E. Donini</em>, M. Vecchio, R. Giaffreda",
+  "venue": "International Congress on Blockchain and Applications (BLOCKCHAIN 2022), pp. 345–355",
+  "html": "",
+  "pdf": "",
+  "bib": "@inproceedings{pincheira2022towards,\n  title={Towards an Infrastructure Cost Model for Blockchain-Based Applications},\n  author={Pincheira, Miguel and Donini, Elena and Vecchio, Massimo and Giaffreda, Raffaele},\n  booktitle={International Congress on Blockchain and Applications (BLOCKCHAIN 2022)},\n  pages={345--355},\n  year={2022}\n}",
+  "abs": "",
+  "img": "",
+  "hue": 0
+ },
+ {
+  "year": 2022,
+  "type": "abstract",
+  "badge": "AGU",
+  "title": "Using Planetary Radar Sounders as Solar Observatories: Characterisation of Type-III Bursts with SHARAD and MARSIS",
+  "authors": "C. Gerekos, <em>E. Donini</em>, I. C. Jebaraj, G. Steinbrügge, J. Magdalenić, A. Romero-Wolf, D. D. Blankenship",
+  "venue": "AGU Fall Meeting 2022, abstract SH22E-2042",
+  "abs": "",
+  "html": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH22E2042G/abstract",
+  "pdf": "",
+  "bib": "@inproceedings{gerekos2022agu,\n  title={Using Planetary Radar Sounders as Solar Observatories: Characterisation of type-III bursts with SHARAD and MARSIS},\n  author={Gerekos, Christopher and Donini, Elena and Jebaraj, Immanuel Christopher and Steinbr{\\\"u}gge, Gregor and Magdalenic, Jasmina and Romero-Wolf, Andrew and Blankenship, Donald D.},\n  booktitle={AGU Fall Meeting Abstracts},\n  pages={SH22E-2042},\n  year={2022}\n}",
+  "hue": 35,
+  "img": ""
  },
  {
   "year": 2021,
@@ -513,11 +635,12 @@
   "title": "An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE IGARSS 2021, Brussels",
-  "abs": "A coarse statistical segmentation of the radargram, refined with deep learning to detect target reflections.",
+  "abs": "",
   "html": "https://iris.unitn.it/handle/11572/322995",
   "pdf": "",
   "bib": "@inproceedings{donini2021unsupervised,\n  title={An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2021},\n  pages={2955--2958},\n  year={2021}\n}",
-  "hue": 290
+  "hue": 290,
+  "img": ""
  },
  {
   "year": 2021,
@@ -530,7 +653,8 @@
   "html": "https://doi.org/10.1109/IGARSS47720.2021.9553610",
   "pdf": "",
   "bib": "@inproceedings{hoyo2021iceshelves,\n  title={Automatic Segmentation of Ice Shelves with Deep Learning},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  booktitle={IGARSS 2021},\n  pages={4833--4836},\n  year={2021},\n  doi={10.1109/IGARSS47720.2021.9553610}\n}",
-  "hue": 185
+  "hue": 185,
+  "img": ""
  },
  {
   "year": 2021,
@@ -543,7 +667,8 @@
   "html": "",
   "pdf": "",
   "bib": "@inproceedings{bruzzone2021stratus,\n  title={STRATUS: A new mission concept for monitoring the subsurface of polar and arid regions},\n  author={Bruzzone, Lorenzo and Bovolo, Francesca and Carrer, Leonardo and Donini, Elena and Thakur, Sanchari},\n  booktitle={IGARSS 2021},\n  pages={661--664},\n  year={2021}\n}",
-  "hue": 150
+  "hue": 150,
+  "img": ""
  },
  {
   "year": 2021,
@@ -556,7 +681,8 @@
   "html": "https://doi.org/10.1117/12.2600237",
   "pdf": "",
   "bib": "@inproceedings{hoyo2021transfer,\n  title={Transfer learning for the semantic segmentation of cryoshpere radargrams},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVII},\n  volume={11862},\n  pages={118620T},\n  publisher={SPIE},\n  year={2021},\n  doi={10.1117/12.2600237}\n}",
-  "hue": 175
+  "hue": 175,
+  "img": ""
  },
  {
   "year": 2020,
@@ -569,7 +695,8 @@
   "html": "",
   "pdf": "",
   "bib": "@article{carrer2020pleural,\n  title={Automatic Pleural Line Extraction and COVID-19 Scoring from Lung Ultrasound Data},\n  author={Carrer, Leonardo and Donini, Elena and others},\n  journal={IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control},\n  year={2020}\n}",
-  "hue": 340
+  "hue": 340,
+  "img": ""
  },
  {
   "year": 2020,
@@ -582,7 +709,36 @@
   "html": "",
   "pdf": "",
   "bib": "@inproceedings{bruzzone2020envision,\n  title={EnVision Mission to Venus: Subsurface Radar Sounding},\n  author={Bruzzone, Lorenzo and Bovolo, Francesca and Thakur, Sanchari and Carrer, Leonardo and Donini, Elena and others},\n  booktitle={IGARSS 2020},\n  pages={5960--5963},\n  year={2020}\n}",
-  "hue": 30
+  "hue": 30,
+  "img": ""
+ },
+ {
+  "year": 2020,
+  "type": "proceedings",
+  "badge": "ISPRS",
+  "title": "A Blockchain-Based Approach to Enable Remote Sensing Trusted Data",
+  "authors": "M. Pincheira, <em>E. Donini</em>, R. Giaffreda, M. Vecchio",
+  "venue": "ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, IV-3/W2-2020",
+  "html": "https://doi.org/10.5194/isprs-annals-IV-3-W2-2020-35-2020",
+  "pdf": "https://isprs-annals.copernicus.org/articles/IV-3-W2-2020/35/2020/isprs-annals-IV-3-W2-2020-35-2020.pdf",
+  "bib": "@article{pincheira2020blockchain,\n  title={A Blockchain-Based Approach to Enable Remote Sensing Trusted Data},\n  author={Pincheira, Miguel and Donini, Elena and Giaffreda, Raffaele and Vecchio, Massimo},\n  journal={ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences},\n  volume={IV-3/W2-2020},\n  pages={35--41},\n  year={2020},\n  doi={10.5194/isprs-annals-IV-3-W2-2020-35-2020}\n}",
+  "abs": "",
+  "img": "",
+  "hue": 0
+ },
+ {
+  "year": 2020,
+  "type": "abstract",
+  "badge": "AGU",
+  "title": "Subsurface Radar Sounder On-board EnVision Mission to Venus",
+  "authors": "L. Bruzzone, F. Bovolo, S. Thakur, E. Pettinelli, D. Plettemeier, W. W. Kofman, L. Carrer, <em>E. Donini</em>, S. Paterna, M. Santoni, E. Sbalchiero",
+  "venue": "AGU Fall Meeting 2020, abstract P026-0004",
+  "abs": "",
+  "html": "https://ui.adsabs.harvard.edu/abs/2020AGUFMP026.0004B/abstract",
+  "pdf": "",
+  "bib": "@inproceedings{bruzzone2020agu,\n  title={Subsurface Radar Sounder On-board EnVision Mission to Venus},\n  author={Bruzzone, Lorenzo and Bovolo, Francesca and Thakur, Sanchari and Pettinelli, Elena and others},\n  booktitle={AGU Fall Meeting Abstracts},\n  pages={P026-0004},\n  year={2020}\n}",
+  "hue": 25,
+  "img": ""
  },
  {
   "year": 2019,
@@ -595,7 +751,8 @@
   "html": "",
   "pdf": "",
   "bib": "@inproceedings{donini2019detection,\n  title={Assessing the Detection Performance on Icy Targets Acquired by an Orbiting Radar Sounder},\n  author={Donini, Elena and Thakur, Sanchari and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2019},\n  pages={997--1000},\n  year={2019}\n}",
-  "hue": 205
+  "hue": 205,
+  "img": ""
  },
  {
   "year": 2019,
@@ -608,7 +765,8 @@
   "html": "https://doi.org/10.1117/12.2533169",
   "pdf": "",
   "bib": "@inproceedings{donini2019refreezing,\n  title={An automatic approach to map refreezing ice in radar sounder data},\n  author={Donini, Elena and Thakur, Sanchari and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={Image and Signal Processing for Remote Sensing XXV},\n  volume={11155},\n  pages={111551B},\n  publisher={SPIE},\n  year={2019},\n  doi={10.1117/12.2533169}\n}",
-  "hue": 190
+  "hue": 190,
+  "img": ""
  },
  {
   "year": 2018,
@@ -621,7 +779,8 @@
   "html": "https://doi.org/10.1109/IGARSS.2018.8519146",
   "pdf": "",
   "bib": "@inproceedings{donini2018lavatube,\n  title={An Approach to Lava Tube Detection in Radar Sounder Data of the Moon},\n  author={Donini, Elena and Bovolo, Francesca and Gerekos, Christopher and Carrer, Leonardo and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2018},\n  pages={8424--8427},\n  year={2018},\n  doi={10.1109/IGARSS.2018.8519146}\n}",
-  "hue": 0
+  "hue": 0,
+  "img": ""
  }
 ];
 
@@ -641,16 +800,17 @@
  }
 ];
 
-  function thumb(h){
-    let l="";
-    for(let i=0;i<7;i++){const y=40+i*16;l+=`<path d="M0 ${y} Q 60 ${y-10+i*2} 120 ${y+4} T 240 ${y-3}" stroke="hsl(${h} 40% ${35+i*6}%)" stroke-width="${3-i*0.3}" fill="none" opacity=".8"/>`;}
-    return `<svg viewBox="0 0 240 150" preserveAspectRatio="none"><rect width="240" height="150" fill="hsl(${h} 25% 14%)"/>${l}</svg>`;
+  // anteprima: se il paper ha "img" (es. "pubs/tgrs2024.png" caricata nel repository) mostra quella,
+  // altrimenti un riquadro pulito con il nome della sede e l'anno
+  function thumb(p){
+    if(p.img) return `<img src="${p.img}" alt="" loading="lazy">`;
+    return `<div class="tile"><span class="tv">${p.badge}</span><span class="ty">${p.year}</span></div>`;
   }
   const CATS=[["journal","Journal articles"],["proceedings","Conference proceedings"],["abstract","Extended abstracts"]];
   const el=document.getElementById("pubList");
   function pubItem(p,k){
     return `<li class="pub">
-      <div class="thumb">${thumb(p.hue)}<span class="badge">${p.badge}</span></div>
+      <div class="thumb${p.img?" has-img":""}">${thumb(p)}${p.img?`<span class="badge">${p.badge}</span>`:""}</div>
       <div>
         <div class="ptitle">${p.title}</div>
         <div class="authors">${p.authors}</div>
