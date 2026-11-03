@@ -402,7 +402,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 16:35</footer>
+<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 16:45</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
@@ -596,7 +596,7 @@
   "title": "A Preliminary Statistical Analysis of Type-III Solar Burst Detections in Mars Reconnaissance Orbiter (MRO) Shallow Radar (SHARAD) Data",
   "authors": "A. Casillas, S. T. Peters, G. Steinbrügge, <em>E. Donini</em>, I. C. Jebaraj, J. Magdalenić, A. Romero-Wolf, D. D. Blankenship, C. Gerekos",
   "venue": "IEEE IGARSS 2023, Pasadena",
-  "abs": "",
+  "abs": "We present the results of a preliminary statistical analysis and classification of solar radio burst candidates detected by the Mars Reconnaissance Orbiter (MRO) Shallow Radar (SHARAD). We first analyze the histograms of the MRO SHARAD burst candidates as a function of MRO-STEREO true anomaly difference and received peak power. We then show the results of performing logistic regression to classify the MRO SHARAD burst candidates. Our results highlight the need for additional burst data to further refine the classifier, additional parameters to determine if bursts are present, and potentially explore a different classification technique to assign burst candidates with improved accuracy. Analyzing SRBs detected by MRO/SHARAD (as a potential additional solar radio-observatory) would enhance our understanding of solar radio burst propagation physics and behavior. We conclude by discussing the potential application, and challenges, of using these bursts as a source for subsurface radio sounding for future terrestrial and Mars missions.",
   "html": "https://doi.org/10.1109/IGARSS52108.2023.10281483",
   "pdf": "",
   "bib": "@inproceedings{casillas2023typeiii,\n  title={A Preliminary Statistical Analysis of Type-III Solar Burst Detections in Mars Reconnaissance Orbiter (MRO) Shallow Radar (SHARAD) Data},\n  author={Casillas, Andreas and Peters, Sean T. and Steinbr{\\\"u}gge, Gregor and Donini, Elena and others},\n  booktitle={IGARSS 2023},\n  pages={4166--4168},\n  year={2023}\n}",
@@ -641,7 +641,7 @@
   "html": "https://doi.org/10.3390/s22239118",
   "pdf": "https://www.mdpi.com/1424-8220/22/23/9118/pdf",
   "bib": "@article{pincheira2022decentralized,\n  title={A Decentralized Architecture for Trusted Dataset Sharing Using Smart Contracts and Distributed Storage},\n  author={Pincheira, Miguel and Donini, Elena and Vecchio, Massimo and Kanhere, Salil},\n  journal={Sensors},\n  volume={22},\n  number={23},\n  pages={9118},\n  year={2022},\n  doi={10.3390/s22239118}\n}",
-  "abs": "",
+  "abs": "The data economy is based on data and information sharing and tremendously impacts society as it facilitates innovative collaborations and decision-making strategies. Nonetheless, most dataset-sharing solutions rely on a centralized authority that rules data ownership, availability, and accessibility. Recent works have explored the integration of distributed storage and blockchain to enhance decentralization, data access, and smart contracts for automating the interactions between actors and data. However, current solutions propose a smart contract design limiting the system’s scalability in terms of actors and shared datasets. Furthermore, little is known about the performance of these architectures when using distributed storage instead of centralized storage approaches. This paper proposes a scalable architecture called DeBlock for data sharing in a trusted way among unreliable actors. The architecture integrates a public blockchain that provides a transparent record of datasets and interactions, with a distributed storage for data storage in a completely decentralized way. Furthermore, the architecture provides a smart-contract design for a transparent catalog of datasets, actors, and interactions with efficient search and retrieval capabilities. To assess the system’s feasibility, robustness, and scalability, we implement a prototype using the Ethereum blockchain and leveraging two decentralized storage protocols, Swarm and IPFS. We evaluate the performance of our proposed system in different scenarios (e.g., varying the amount and size of the shared datasets). Our results demonstrate that our proposal outperforms benchmarks in gas consumption, latency, and resource requirements, especially when increasing the number of actors and shared datasets.",
   "img": "",
   "hue": 0
  },
@@ -792,7 +792,7 @@
   "title": "STRATUS: A New Mission Concept for Monitoring the Subsurface of Polar and Arid Regions",
   "authors": "L. Bruzzone, F. Bovolo, L. Carrer, <em>E. Donini</em>, S. Thakur",
   "venue": "IEEE IGARSS 2021, Brussels",
-  "abs": "",
+  "abs": "This paper presents the SaTellite RAdar sounder for earTh sUbsurface Sensing (STRATUS), which is a satellite mission for Earth Observation (EO) with an onboard instrument capable of probing the Earth's subsurface in polar and arid regions. STRATUS is based on an innovative distributed radar sounder (RS) with the unique capability to obtain continuous and large-scale subsurface measurements, with homogeneous and consistent quality in two of the least characterized and crucial frontiers of Earth: globally on the polar ice sheets, i.e., Greenland and Antarctica (primary objective), and regionally on the arid areas and deserts. STRATUS is a ground-breaking exploratory mission addressing crucial scientific questions. It provides new fundamental data that have not been acquired by any other past or present remote sensing mission on the Earth, with an expected high and genuine scientific return enabling the assessment of the climate change signature in the Earth subsurface.",
   "html": "https://doi.org/10.1109/IGARSS47720.2021.9553877",
   "pdf": "",
   "bib": "@inproceedings{bruzzone2021stratus,\n  title={STRATUS: A new mission concept for monitoring the subsurface of polar and arid regions},\n  author={Bruzzone, Lorenzo and Bovolo, Francesca and Carrer, Leonardo and Donini, Elena and Thakur, Sanchari},\n  booktitle={IGARSS 2021},\n  pages={661--664},\n  year={2021}\n}",
@@ -912,7 +912,7 @@
   "img": ""
  },
  {
-  "abs": "",
+  "abs": "The Italian Space Agency (ASI) has recently entrusted CO.RI.S.T.A. with the development of a radar system that can be mounted onboard small airplanes or helicopters and may operate, at different frequencies belonging to the P-Band, either as Synthetic Aperture Radar (SAR) or as Sounder. In this work, we present preliminary results of the helicopter-borne desert campaign carried out with this system in 2018 over the Erfoud area, Morocco, in the frame of a project that has involved different public Italian Research Institutes and Universities.",
   "img": "",
   "hue": 0,
   "html": "https://doi.org/10.1109/IGARSS.2019.8898502",
@@ -1109,6 +1109,9 @@
     scrollTo(0,0);
   }
   addEventListener("hashchange",route); route();
+
+// open every external link and PDF in a new tab
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');if(!h||h.charAt(0)==='#'||/^(mailto|tel|javascript):/i.test(h))return;a.target='_blank';a.rel='noopener';},true);
 </script>
 </body>
 </html>
