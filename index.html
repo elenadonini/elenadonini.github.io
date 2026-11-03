@@ -130,6 +130,8 @@
   .vcap{padding:.6rem .8rem}
   .vcap b{display:block;font-weight:500}
   .vcap small{color:var(--muted)}
+  h3.cat{font-family:"Roboto Slab",serif;font-weight:400;font-size:1.35rem;color:var(--accent);margin:2.2rem 0 0;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
+  h3.cat span{font-family:Roboto,sans-serif;font-size:.8rem;color:var(--muted);font-weight:400;margin-left:.3rem}
 </style>
 </head>
 <body>
@@ -188,7 +190,7 @@
       </div>
     </div>
 
-    <p>I am a researcher at the <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth (RSDE)</a> unit of <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> and collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento. I develop <b>machine learning methods for radar sounder data</b>, to explore the subsurface of the Earth's ice sheets, Mars, the Moon and the icy moons of Jupiter. I am a member of the science teams of <b>RIME</b> on ESA's <b>JUICE</b> mission and of the subsurface radar sounder on ESA's <b>EnVision</b> mission to Venus. I received my Ph.D. cum laude from the University of Trento in 2021, and I love science communication — I organize Pint of Science Trento-Rovereto and TEDx Trento.</p>
+    <p>I am a researcher at the <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth (RSDE)</a> unit of <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> and collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento. I develop <b>machine learning methods for radar sounder data</b>, to explore the subsurface of the Earth's ice sheets, Mars, the Moon and the icy moons of Jupiter. I am a member of the science teams of <b>RIME</b> on ESA's <b>JUICE</b> mission and of the subsurface radar sounder on ESA's <b>EnVision</b> mission to Venus. I received my Ph.D. cum laude from the University of Trento in 2021, and I love science communication — I organize <a href="https://www.pintofscience.it/team/Team%20Trento/">Pint of Science Trento-Rovereto</a> and <a href="https://www.tedxtrento.com/">TEDx Trento</a>.</p>
     <p>I work and live in Trento, Italy. I am always happy to start new collaborations — <a href="mailto:edonini@fbk.eu">drop me an email</a>!</p>
 
     <div class="socials">
@@ -202,18 +204,12 @@
 
   <section>
     <h2><a href="#news">news</a></h2>
-    <table class="news">
-      <tr><td class="date">Jul 2026</td><td>📄 Papers accepted at <b>SPIE Remote Sensing 2026</b> and <b>EPSC 2026</b>.</td></tr>
-      <tr><td class="date">May 2026</td><td>📄 Papers accepted at <b>IGARSS 2026</b>.</td></tr>
-      <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <i>A caccia di AI</i>, talking about AI and space exploration.</td></tr>
-      <tr><td class="date">2026</td><td>🎙️ Joined the organizing team of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a>.</td></tr>
-      <tr><td class="date">Nov 2025</td><td>🎤 Talk at TEDx Trento 2025: <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i></a> — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk">watch it on YouTube ▶</a></td></tr>
-    </table>
+    <table class="news" id="homeNews"></table>
     <p class="more"><a href="#news">all news →</a></p>
   </section>
 
   <section>
-    <h2><a href="#publications">selected publications</a></h2>
+    <h2><a href="#publications">latest publications</a></h2>
     <div id="selPubs"></div>
     <p class="more"><a href="#publications">all publications →</a></p>
   </section>
@@ -223,13 +219,16 @@
     <header class="page-head"><h1 class="ptitle-big">news</h1><p class="desc">Updates on research, talks and outreach.</p></header>
   <section>
     <table class="news">
-      <tr><td class="date">Jul 2026</td><td>📄 Papers accepted at <b>SPIE Remote Sensing 2026</b> and <b>EPSC 2026</b>.</td></tr>
-      <tr><td class="date">May 2026</td><td>📄 Papers accepted at <b>IGARSS 2026</b>.</td></tr>
+      <tr><td class="date">Sep 2026</td><td>🤖 Talked about the ESA <b>JUICE</b> mission at the <b>FBK Summer Camp</b> robotics course.</td></tr>
+      <tr><td class="date">Jul 2026</td><td>📄 Papers accepted at <a href="https://spie.org/conferences-and-exhibitions/sensors-and-imaging"><b>SPIE Sensors + Imaging 2026</b></a> (Edinburgh, 14–17 Sep) and <a href="https://www.epsc2026.eu"><b>EPSC 2026</b></a> (The Hague, 6–11 Sep).</td></tr>
+      <tr><td class="date">May 2026</td><td>📚 Panel <a href="https://www.salonelibro.it/programma-eventi/di_chi_e_la_scienza/20047"><i>“Di chi è la scienza?”</i></a> at the <b>Salone Internazionale del Libro</b> in Turin.</td></tr>
+      <tr><td class="date">May 2026</td><td>📄 Papers accepted at <a href="https://www.grss-ieee.org/event/2026-ieee-international-geoscience-and-remote-sensing-symposium/"><b>IGARSS 2026</b></a> (Washington, D.C., 9–14 Aug).</td></tr>
+      <tr><td class="date">May 2026</td><td>🎧 Guest on the RAI podcast <i>Quo datis</i>.</td></tr>
       <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <i>A caccia di AI</i>, talking about AI and space exploration.</td></tr>
       <tr><td class="date">2026</td><td>🎙️ Joined the organizing team of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a>.</td></tr>
       <tr><td class="date">Nov 2025</td><td>🎤 Talk at TEDx Trento 2025: <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i></a> — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk">watch it on YouTube ▶</a></td></tr>
       <tr><td class="date">2025</td><td>✈️ Received an IEEE IGARSS travel grant.</td></tr>
-      <tr><td class="date">Sep 2024</td><td>🗣️ Talk at <b>Wired Next Fest Trentino</b>.</td></tr>
+      <tr><td class="date">Sep 2024</td><td>🗣️ Talk at <a href="https://www.wired.it/article/wired-next-fest-2024-trentino-rovereto-date-ospiti/"><b>Wired Next Fest Trentino 2024</b></a> (Rovereto) — <i>“Aziende in orbita”</i>, on AI and space research.</td></tr>
       <tr><td class="date">Jul 2024</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2024</b> — multitemporal analysis of cryosphere radar sounder data.</td></tr>
       <tr><td class="date">May 2024</td><td>📄 1 paper accepted at <b>IGARSS 2024</b> (Athens) — hierarchical learning for unsupervised radargram segmentation.</td></tr>
       <tr><td class="date">Apr 2024</td><td>🛰️ Visiting researcher at ESA ESTEC (Noordwijk) through the <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">ESA Archival Research Visitor Programme</a>, working on content-based retrieval of MARSIS radargrams — <a href="https://www.youtube.com/watch?v=zHX4FNCI2ZI">watch the FBK video ▶</a></td></tr>
@@ -253,7 +252,7 @@
   </div>
 
   <div class="page" data-page="publications">
-    <header class="page-head"><h1 class="ptitle-big">publications</h1><p class="desc">Journal articles and IGARSS papers. Full list on <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en">Google Scholar</a>.</p></header>
+    <header class="page-head"><h1 class="ptitle-big">publications</h1><p class="desc">Journal articles, conference proceedings and extended abstracts. Full list on <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en">Google Scholar</a>.</p></header>
   
   <section>
     <div class="pubfilter" id="pubFilter">
@@ -296,13 +295,20 @@
 
   
   <section>
-    <div class="cv-item"><div class="when">2020 – now</div><div class="what">Organizer of <b>Pint of Science</b> Trento-Rovereto</div></div>
-    <div class="cv-item"><div class="when">2026 – now</div><div class="what">Organizer of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a></div></div>
-    <div class="cv-item"><div class="when">2025</div><div class="what">Talk at TEDx Trento 2025 — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i> ▶</a></div></div>
-    <div class="cv-item"><div class="when">2024</div><div class="what">Talk at Wired Next Fest Trentino</div></div>
+        <div class="cv-item"><div class="when">2026 – now</div><div class="what">Organizer of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a></div></div>
+    <div class="cv-item"><div class="when">2020 – now</div><div class="what">Organizer of <a href="https://www.pintofscience.it/team/Team%20Trento/"><b>Pint of Science</b> Trento-Rovereto</a></div></div>
     <div class="cv-item"><div class="when">2020 – now</div><div class="what">European Researchers' Night, Trento</div></div>
     <div class="cv-item"><div class="when">2018 – now</div><div class="what">Talks on AI and space missions in middle and high schools</div></div>
-    <div class="cv-item"><div class="when">2026</div><div class="what">Media: <i>Mattino Insieme</i> (Trentino TV), podcast <i>A caccia di AI</i> (RAI)</div></div>
+    <div class="cv-item"><div class="when">Aug – Sep 2026</div><div class="what"><b>FBK Summer Camp</b> — the ESA JUICE mission<small>Activity on JUICE within the robotics course of the FBK summer camp (31 Aug – 4 Sep 2026)</small></div></div>
+    <div class="cv-item"><div class="when">May 2026</div><div class="what"><a href="https://magazine.fbk.eu/en/news/when-science-meets-the-next-generation-sparkle-science-day-at-fbk/"><b>SPARKLE Science Day</b></a> at FBK<small>Hands-on science day for about 100 middle-school students</small></div></div>
+    <div class="cv-item"><div class="when">May 2026</div><div class="what">Panel <a href="https://www.salonelibro.it/programma-eventi/di_chi_e_la_scienza/20047"><i>“Di chi è la scienza?”</i></a> at the <b>Salone Internazionale del Libro</b>, Turin<small>With Feltrinelli Education — how science communication connects research and society</small></div></div>
+    <div class="cv-item"><div class="when">May 2026</div><div class="what">Guest on the RAI podcast <i>Quo datis</i></div></div>
+    <div class="cv-item"><div class="when">Feb 2026</div><div class="what">Media: <i>Mattino Insieme</i> (Trentino TV), podcast <i>A caccia di AI</i> (RAI)</div></div>
+    <div class="cv-item"><div class="when">Nov 2025</div><div class="what">Talk at TEDx Trento 2025 — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i> ▶</a></div></div>
+    <div class="cv-item"><div class="when">May 2025</div><div class="what"><a href="https://magazine.fbk.eu/it/news/nexgen-il-futuro-delle-donne-nella-scienza/"><b>NEXGEN</b> — the future of women in science</a><small>FBK women researchers sharing their career paths with high-school students</small></div></div>
+    <div class="cv-item"><div class="when">Feb 2025</div><div class="what"><a href="https://magazine.fbk.eu/it/news/donne-e-ragazze-nella-scienza-il-percorso-di-michela-milano-tra-mentor-ai-e-inclusione/">Women and Girls in Science</a> — conversation with Michela Milano<small>On mentoring, AI and inclusion, for the International Day of Women and Girls in Science</small></div></div>
+    <div class="cv-item"><div class="when">Sep 2024</div><div class="what">Talk at <a href="https://www.wired.it/article/wired-next-fest-2024-trentino-rovereto-date-ospiti/">Wired Next Fest Trentino 2024</a> — <i>“Aziende in orbita”</i></div></div>
+    <div class="cv-item"><div class="when">Feb 2024</div><div class="what"><a href="https://magazine.fbk.eu/it/news/fbk-per-una-ia-human-centered/"><b>FBK for Human-Centered AI</b></a> — one of eight experts in the video series</div></div>
   </section>
 
   </div>
@@ -361,7 +367,6 @@
   "year": 2024,
   "type": "journal",
   "badge": "IEEE TGRS",
-  "selected": true,
   "title": "Super-Resolution of Radargrams With a Generative Deep Learning Model",
   "authors": "<em>E. Donini</em>, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 62, 2024",
@@ -373,9 +378,8 @@
  },
  {
   "year": 2024,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
-  "selected": true,
   "title": "Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere",
   "authors": "<em>E. Donini</em>, F. Bovolo",
   "venue": "IEEE IGARSS 2024, Athens",
@@ -384,6 +388,19 @@
   "pdf": "",
   "bib": "@inproceedings{donini2024hierarchical,\n  title={Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={IGARSS 2024},\n  pages={10988--10991},\n  year={2024},\n  doi={10.1109/IGARSS53475.2024.10642331}\n}",
   "hue": 170
+ },
+ {
+  "year": 2024,
+  "type": "proceedings",
+  "badge": "SPIE",
+  "title": "A Preliminary Study on the Multitemporal Analysis of Cryosphere Radar Sounder Data",
+  "authors": "<em>E. Donini</em>, M. Hoyo García, F. Bovolo",
+  "venue": "Proc. SPIE, Image and Signal Processing for Remote Sensing XXX, 2024",
+  "abs": "",
+  "html": "",
+  "pdf": "",
+  "bib": "@inproceedings{donini2024multitemporal,\n  title={A preliminary study on the multitemporal analysis of cryosphere radar sounder data},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXX},\n  publisher={SPIE},\n  year={2024}\n}",
+  "hue": 225
  },
  {
   "year": 2023,
@@ -400,9 +417,8 @@
  },
  {
   "year": 2023,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
-  "selected": true,
   "title": "Deep Learning for Unsupervised Denoising of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, A. Zuech, L. Bruzzone, F. Bovolo",
   "venue": "IEEE IGARSS 2023, Pasadena",
@@ -414,7 +430,7 @@
  },
  {
   "year": 2023,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "A Preliminary Statistical Analysis of Type-III Solar Burst Detections in Mars Reconnaissance Orbiter (MRO) Shallow Radar (SHARAD) Data",
   "authors": "A. Casillas, S. T. Peters, G. Steinbrügge, <em>E. Donini</em>, I. C. Jebaraj, J. Magdalenić, A. Romero-Wolf, D. D. Blankenship, C. Gerekos",
@@ -429,7 +445,6 @@
   "year": 2022,
   "type": "journal",
   "badge": "IEEE TGRS",
-  "selected": true,
   "title": "A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
@@ -443,7 +458,6 @@
   "year": 2022,
   "type": "journal",
   "badge": "IEEE TGRS",
-  "selected": true,
   "title": "An Unsupervised Fuzzy System for the Automatic Detection of Candidate Lava Tubes in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, L. Carrer, C. Gerekos, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
@@ -468,7 +482,7 @@
  },
  {
   "year": 2022,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, A. Kasibovic, M. Hoyo García, L. Bruzzone, F. Bovolo",
@@ -480,8 +494,21 @@
   "hue": 250
  },
  {
+  "year": 2022,
+  "type": "proceedings",
+  "badge": "SPIE",
+  "title": "Unsupervised Semantic Segmentation of Radar Sounder Data Using Contrastive Learning",
+  "authors": "<em>E. Donini</em>, M. Amico, L. Bruzzone, F. Bovolo",
+  "venue": "Proc. SPIE 12267, Image and Signal Processing for Remote Sensing XXVIII, 2022",
+  "abs": "Unsupervised radargram segmentation based on semantically meaningful features extracted from a deep network trained with a contrastive logic, applied to MCoRDS-3 data from Greenland.",
+  "html": "https://doi.org/10.1117/12.2636437",
+  "pdf": "",
+  "bib": "@inproceedings{donini2022contrastive,\n  title={Unsupervised semantic segmentation of radar sounder data using contrastive learning},\n  author={Donini, Elena and Amico, Mattia and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVIII},\n  volume={12267},\n  pages={171--180},\n  publisher={SPIE},\n  year={2022},\n  doi={10.1117/12.2636437}\n}",
+  "hue": 265
+ },
+ {
   "year": 2021,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo, L. Bruzzone",
@@ -494,7 +521,7 @@
  },
  {
   "year": 2021,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "Automatic Segmentation of Ice Shelves with Deep Learning",
   "authors": "M. Hoyo García, <em>E. Donini</em>, F. Bovolo",
@@ -507,7 +534,7 @@
  },
  {
   "year": 2021,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "STRATUS: A New Mission Concept for Monitoring the Subsurface of Polar and Arid Regions",
   "authors": "L. Bruzzone, F. Bovolo, L. Carrer, <em>E. Donini</em>, S. Thakur",
@@ -517,6 +544,19 @@
   "pdf": "",
   "bib": "@inproceedings{bruzzone2021stratus,\n  title={STRATUS: A new mission concept for monitoring the subsurface of polar and arid regions},\n  author={Bruzzone, Lorenzo and Bovolo, Francesca and Carrer, Leonardo and Donini, Elena and Thakur, Sanchari},\n  booktitle={IGARSS 2021},\n  pages={661--664},\n  year={2021}\n}",
   "hue": 150
+ },
+ {
+  "year": 2021,
+  "type": "proceedings",
+  "badge": "SPIE",
+  "title": "Transfer Learning for the Semantic Segmentation of Cryosphere Radargrams",
+  "authors": "M. Hoyo García, <em>E. Donini</em>, F. Bovolo",
+  "venue": "Proc. SPIE 11862, Image and Signal Processing for Remote Sensing XXVII, 2021",
+  "abs": "",
+  "html": "https://doi.org/10.1117/12.2600237",
+  "pdf": "",
+  "bib": "@inproceedings{hoyo2021transfer,\n  title={Transfer learning for the semantic segmentation of cryoshpere radargrams},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVII},\n  volume={11862},\n  pages={118620T},\n  publisher={SPIE},\n  year={2021},\n  doi={10.1117/12.2600237}\n}",
+  "hue": 175
  },
  {
   "year": 2020,
@@ -533,7 +573,7 @@
  },
  {
   "year": 2020,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "EnVision Mission to Venus: Subsurface Radar Sounding",
   "authors": "L. Bruzzone, F. Bovolo, S. Thakur, L. Carrer, <em>E. Donini</em>, C. Gerekos, S. Paterna, M. Santoni, E. Sbalchiero",
@@ -546,7 +586,7 @@
  },
  {
   "year": 2019,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "Assessing the Detection Performance on Icy Targets Acquired by an Orbiting Radar Sounder",
   "authors": "<em>E. Donini</em>, S. Thakur, F. Bovolo, L. Bruzzone",
@@ -558,8 +598,21 @@
   "hue": 205
  },
  {
+  "year": 2019,
+  "type": "proceedings",
+  "badge": "SPIE",
+  "title": "An Automatic Approach to Map Refreezing Ice in Radar Sounder Data",
+  "authors": "<em>E. Donini</em>, S. Thakur, F. Bovolo, L. Bruzzone",
+  "venue": "Proc. SPIE 11155, Image and Signal Processing for Remote Sensing XXV, 2019",
+  "abs": "",
+  "html": "https://doi.org/10.1117/12.2533169",
+  "pdf": "",
+  "bib": "@inproceedings{donini2019refreezing,\n  title={An automatic approach to map refreezing ice in radar sounder data},\n  author={Donini, Elena and Thakur, Sanchari and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={Image and Signal Processing for Remote Sensing XXV},\n  volume={11155},\n  pages={111551B},\n  publisher={SPIE},\n  year={2019},\n  doi={10.1117/12.2533169}\n}",
+  "hue": 190
+ },
+ {
   "year": 2018,
-  "type": "igarss",
+  "type": "proceedings",
   "badge": "IGARSS",
   "title": "An Approach to Lava Tube Detection in Radar Sounder Data of the Moon",
   "authors": "<em>E. Donini</em>, F. Bovolo, C. Gerekos, L. Carrer, L. Bruzzone",
@@ -593,49 +646,63 @@
     for(let i=0;i<7;i++){const y=40+i*16;l+=`<path d="M0 ${y} Q 60 ${y-10+i*2} 120 ${y+4} T 240 ${y-3}" stroke="hsl(${h} 40% ${35+i*6}%)" stroke-width="${3-i*0.3}" fill="none" opacity=".8"/>`;}
     return `<svg viewBox="0 0 240 150" preserveAspectRatio="none"><rect width="240" height="150" fill="hsl(${h} 25% 14%)"/>${l}</svg>`;
   }
+  const CATS=[["journal","Journal articles"],["proceedings","Conference proceedings"],["abstract","Extended abstracts"]];
   const el=document.getElementById("pubList");
-  function renderPubs(f,target,onlySel){
-    target=target||el;
-    let last=null, h="";
-    pubs.forEach((p,i)=>{
-      if(onlySel && !p.selected) return;
-      if(f!=="all" && p.type!==f) return;
-      if(p.year!==last){ if(last!==null) h+="</ol>"; h+=`<div class="year">${p.year}</div><ol class="pubs">`; last=p.year; }
-      h+=`<li class="pub">
-        <div class="thumb">${thumb(p.hue)}<span class="badge">${p.badge}</span></div>
-        <div>
-          <div class="ptitle">${p.title}</div>
-          <div class="authors">${p.authors}</div>
-          <div class="venue">${p.venue}</div>
-          <div class="btns">
-            ${p.abs?`<button data-t="abs${i}">Abs</button>`:""}
-            <button data-t="bib${i}">Bib</button>
-            ${p.html?`<a href="${p.html}">HTML</a>`:""}
-            ${p.pdf?`<a href="${p.pdf}">PDF</a>`:""}
-          </div>
-          ${p.abs?`<div class="hidden-box" id="abs${i}"><div class="abstract">${p.abs}</div></div>`:""}
-          <div class="hidden-box" id="bib${i}"><pre class="bib">${p.bib}</pre></div>
-        </div></li>`;
-    });
-    target.innerHTML=h+(last!==null?"</ol>":"");
+  function pubItem(p,k){
+    return `<li class="pub">
+      <div class="thumb">${thumb(p.hue)}<span class="badge">${p.badge}</span></div>
+      <div>
+        <div class="ptitle">${p.title}</div>
+        <div class="authors">${p.authors}</div>
+        <div class="venue">${p.venue}</div>
+        <div class="btns">
+          ${p.abs?`<button data-t="abs${k}">Abs</button>`:""}
+          <button data-t="bib${k}">Bib</button>
+          ${p.html?`<a href="${p.html}">HTML</a>`:""}
+          ${p.pdf?`<a href="${p.pdf}">PDF</a>`:""}
+        </div>
+        ${p.abs?`<div class="hidden-box" id="abs${k}"><div class="abstract">${p.abs}</div></div>`:""}
+        <div class="hidden-box" id="bib${k}"><pre class="bib">${p.bib}</pre></div>
+      </div></li>`;
   }
+  function byYear(list,prefix){
+    let last=null,h="";
+    list.forEach((p,n)=>{
+      if(p.year!==last){ if(last!==null) h+="</ol>"; h+=`<div class="year">${p.year}</div><ol class="pubs">`; last=p.year; }
+      h+=pubItem(p,prefix+n);
+    });
+    return h+(last!==null?"</ol>":"");
+  }
+  function renderPubs(f){
+    let h="";
+    CATS.forEach(([t,label])=>{
+      if(f!=="all" && f!==t) return;
+      const list=pubs.filter(p=>p.type===t);
+      if(!list.length) return;
+      h+=`<h3 class="cat">${label} <span>${list.length}</span></h3>`+byYear(list,t);
+    });
+    el.innerHTML=h||'<p class="desc">Coming soon.</p>';
+  }
+  // bottoni filtro: solo per le categorie che hanno pubblicazioni
+  const pf=document.getElementById("pubFilter");
+  pf.innerHTML='<button data-f="all" class="on">all</button>'+CATS.filter(([t])=>pubs.some(p=>p.type===t)).map(([t,l])=>`<button data-f="${t}">${l.toLowerCase()}</button>`).join("");
   renderPubs("all");
-  // pubblicazioni selezionate in home: ids diversi per i box Abs/Bib
-  (function(){const t=document.getElementById("selPubs");renderPubs("all",t,true);
-    t.innerHTML=t.innerHTML.replace(/(id="|data-t=")(abs|bib)(\d+)/g,"$1s$2$3");})();
-  document.getElementById("selPubs").addEventListener("click",e=>{
-    const b=e.target.closest("button[data-t]"); if(!b) return;
-    document.getElementById(b.dataset.t).classList.toggle("show"); b.classList.toggle("on");
-  });
-  el.addEventListener("click",e=>{
-    const b=e.target.closest("button[data-t]"); if(!b) return;
-    document.getElementById(b.dataset.t).classList.toggle("show"); b.classList.toggle("on");
-  });
-  document.getElementById("pubFilter").addEventListener("click",e=>{
+  pf.addEventListener("click",e=>{
     const b=e.target.closest("button[data-f]"); if(!b) return;
-    document.querySelectorAll("#pubFilter button").forEach(x=>x.classList.toggle("on",x===b));
+    pf.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));
     renderPubs(b.dataset.f);
   });
+  // home: le 5 più recenti
+  const sel=document.getElementById("selPubs");
+  sel.innerHTML=byYear(pubs.slice(0,5),"s");
+  [el,sel].forEach(c=>c.addEventListener("click",e=>{
+    const b=e.target.closest("button[data-t]"); if(!b) return;
+    document.getElementById(b.dataset.t).classList.toggle("show"); b.classList.toggle("on");
+  }));
+
+  // home: le prime 5 news, copiate dalla tab news
+  (function(){const rows=[...document.querySelectorAll('[data-page="news"] table.news tr')].slice(0,5);
+    document.getElementById("homeNews").innerHTML=rows.map(r=>r.outerHTML).join("");})();
 
   // galleria + ingrandimento
   const gg=document.getElementById("galleryGrid"), lb=document.getElementById("lightbox");
