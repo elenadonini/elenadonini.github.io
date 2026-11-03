@@ -104,6 +104,9 @@
       <li><a href="#about" class="active">about</a></li>
       <li><a href="#news">news</a></li>
       <li><a href="#publications">publications</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#teaching">teaching</a></li>
+      <li><a href="#outreach">outreach</a></li>
       <li><a href="#cv">cv</a></li>
       <li><button class="theme-btn" id="themeBtn" title="Cambia tema">◐</button></li>
     </ul>
@@ -118,8 +121,9 @@
 
     <div class="profile">
       <div class="photo">
-        <!-- Sostituisci con: <img src="foto.jpg" alt="..." style="width:100%;height:100%;object-fit:cover"> -->
-        <svg viewBox="0 0 200 200" aria-label="Foto profilo">
+        <!-- Carica nel repository una foto chiamata foto.jpg: comparirà qui. -->
+        <img src="foto.jpg" alt="Elena Donini" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <svg viewBox="0 0 200 200" style="display:none" aria-hidden="true">
           <rect width="200" height="200" fill="#d9d4dc"/>
           <circle cx="100" cy="80" r="38" fill="#a99fae"/>
           <ellipse cx="100" cy="185" rx="70" ry="55" fill="#a99fae"/>
@@ -128,13 +132,15 @@
       <div class="addr">Fondazione Bruno Kessler<br>Via Sommarive 18, Povo<br>38123 Trento, Italy</div>
     </div>
 
-    <p>I am a researcher in the <b>Remote Sensing for Digital Earth</b> unit at Fondazione Bruno Kessler (FBK) in Trento, Italy, and I collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento.</p>
-    <p>My research focuses on the <b>automatic analysis of terrestrial and planetary radar sounder data</b> with machine learning and deep learning — segmentation, denoising, super-resolution and content-based retrieval of radargrams, from the ice sheets of Greenland and Antarctica to the subsurface of Mars.</p>
-    <p>I am a member of the science teams of <b>RIME</b> (Radar for Icy Moon Exploration) on ESA's <b>JUICE</b> mission to the Jupiter system, and of the <b>Subsurface Radar Sounder (SRS)</b> on ESA's upcoming <b>EnVision</b> mission to Venus.</p>
-    <p>I received my B.Sc., M.Sc. (cum laude) and Ph.D. (cum laude) from the University of Trento in 2015, 2017 and 2021. I am happy to discuss collaborations — feel free to reach out by email.</p>
+    <p>I am a researcher at the <b>Remote Sensing for Digital Earth (RSDE)</b> unit of the Center for Digital Society, Fondazione Bruno Kessler (FBK), Trento, Italy, and I collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory (RSLab)</a> of the University of Trento.</p>
+    <p>I design <b>machine learning methods for the analysis of radar sounder data</b> for planetary exploration and Earth observation — segmentation, denoising, super-resolution, change detection and content-based retrieval of radargrams, from the ice sheets of Greenland and Antarctica to the subsurface of Mars, the Moon and the icy moons of Jupiter.</p>
+    <p>I am a member of the science teams of <b>RIME</b> on ESA's <b>JUICE</b> mission and of <b>VesPER</b> subsurface radar sounder on ESA's <b>EnVision</b> mission to Venus, and I contribute to studies for a radar sounder for the <b>moons of Uranus</b> (ASI–NASA).</p>
+    <p>I received my Ph.D. (cum laude) in Information and Communication Technology from the University of Trento and FBK in 2021, supervised by Francesca Bovolo and Lorenzo Bruzzone. I love science communication: I organize <b>Pint of Science Trento-Rovereto</b> and <b>TEDx Trento</b>, and I am an FBK Science Ambassador.</p>
+    <p class="desc" style="margin-top:1rem"><b>Research interests:</b> planetary exploration, Earth observation, radar sounding, cryosphere, desert and arid areas, machine learning, deep learning, subsurface target detection, electromagnetic target modeling.</p>
 
     <div class="socials">
       <a href="mailto:edonini@fbk.eu" title="edonini@fbk.eu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.4l8 5 8-5V7zm16 2.7-8 5-8-5V17h16z"/></svg>edonini@fbk.eu</a>
+      <a href="https://it.linkedin.com/in/elena-donini-a05381109" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>LinkedIn</a>
       <a href="https://rsde.fbk.eu/author/elenadonini/" title="FBK"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5zM4 10.5V16l8 4 8-4v-5.5l-8 4z"/></svg>FBK profile</a>
       <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 2 1 9l11 7 9-5.7V17h2V9zM5 13.2V17c0 2 3.1 4 7 4s7-2 7-4v-3.8l-7 4.5z"/></svg>Scholar</a>
     </div>
@@ -144,10 +150,13 @@
   <section>
     <h2 id="news"><a href="#news">news</a></h2>
     <table class="news">
-      <tr><td class="date">2024</td><td>🛰️ Selected as visiting scientist in ESA's <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">Archival Research Visitor Programme</a> — three months at ESTEC working on <b>Fast CARS</b> (Fast Content-based Radar soundEr Data Retrieval).</td></tr>
-      <tr><td class="date">2023</td><td>📝 “Deep Learning for Unsupervised Denoising of Radar Sounder Data” presented at IGARSS 2023, Pasadena — validated on SHARAD radargrams of Mars.</td></tr>
-      <tr><td class="date">2022</td><td>🏆 Awarded the <b>2022 Best Italian Ph.D. Thesis</b> in remote sensing by the IEEE GRSS Italy Chapter.</td></tr>
-      <tr><td class="date">2021</td><td>🎓 Ph.D. (cum laude) in ICT, University of Trento.</td></tr>
+      <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <i>A caccia di AI</i>, talking about AI and space exploration.</td></tr>
+      <tr><td class="date">2026</td><td>🎙️ Joined the organizing team of <b>TEDx Trento</b>.</td></tr>
+      <tr><td class="date">Sep 2025</td><td>🪐 Started working on scientific activities for a radar sounder for the <b>moons of Uranus</b> (ASI–NASA).</td></tr>
+      <tr><td class="date">2025</td><td>🎤 TEDx Trento talk: <i>“Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”</i>.</td></tr>
+      <tr><td class="date">2025</td><td>✈️ Received an IEEE IGARSS travel grant.</td></tr>
+      <tr><td class="date">Apr 2024</td><td>🛰️ Visiting researcher at ESA ESTEC (Noordwijk) through the <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">ESA Archival Research Visitor Programme</a>, working on content-based retrieval of MARSIS radargrams.</td></tr>
+      <tr><td class="date">2024</td><td>🗣️ Talk at <b>Wired Next Fest Trentino</b> and start of the FBK Science Ambassador program.</td></tr>
     </table>
   </section>
 
@@ -157,23 +166,83 @@
     <div id="pubList"></div>
   </section>
 
+  <!-- PROJECTS -->
+  <section>
+    <h2 id="projects"><a href="#projects">research projects</a></h2>
+    <div class="cv-item"><div class="when">2025 – now</div><div class="what">Scientific activities for a radar sounder for the moons of Uranus<small>ASI &amp; NASA — target identification, EM signature definition and detection methods in radargrams</small></div></div>
+    <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for JUICE (RIME)<small>ASI &amp; ESA — automatic analysis of radargrams acquired in icy areas</small></div></div>
+    <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for the EnVision subsurface radar sounder<small>ASI &amp; ESA — automatic analysis of radargrams acquired in arid areas</small></div></div>
+    <div class="cv-item"><div class="when">2018 – 2023</div><div class="what">STRATUS — SaTellite Radar sounder for eArTh sUb-surface Sensing<small>ASI &amp; ESA — scientific objectives, radargram analysis in icy areas, target detectability assessment, ESA EO-10 and EO-11 proposals</small></div></div>
+    <div class="cv-item"><div class="when">2018</div><div class="what">Sistema radar in banda P<small>ASI — automatic analysis of P-band radar sounder data acquired in Morocco</small></div></div>
+
+    <div class="cv-h">Collaborations</div>
+    <div class="cv-item"><div class="when">International</div><div class="what">
+      J. Paden (University of Kansas) — co-registration and change detection in multi-temporal radar sounder data<br>
+      M. Rahnemoonfar (Lehigh University) — deep learning for radar sounder data of Antarctica and Greenland<br>
+      O. Witasse (ESA) — content-based radargram retrieval in MARSIS data<br>
+      A. Romero-Wolf, G. Steinbrügge (NASA) and C. Gerekos — passive radar sounding</div></div>
+    <div class="cv-item"><div class="when">Local</div><div class="what">
+      RSLab, University of Trento (Prof. L. Bruzzone) — radar sounder data analysis<br>
+      OpenIoT unit, FBK — blockchain-based sharing of remote sensing databases (2020–2024)<br>
+      ULTRa Lab, University of Trento — COVID-19 detection in lung ultrasound data (2020–2021)</div></div>
+  </section>
+
+  <!-- TEACHING -->
+  <section>
+    <h2 id="teaching"><a href="#teaching">teaching &amp; supervision</a></h2>
+    <div class="cv-item"><div class="when">2021, 2022</div><div class="what">Teaching assistant and examiner — <i>Advanced Remote Sensing</i> (Prof. L. Bruzzone)<small>Department of Information Engineering and Computer Science, University of Trento</small></div></div>
+    <div class="cv-item"><div class="when">2017 – 2022</div><div class="what">Examiner — <i>Sistemi di Telerilevamento</i> (Prof. L. Bruzzone)<small>University of Trento</small></div></div>
+    <div class="cv-item"><div class="when">2017 – now</div><div class="what">Supervision of more than 20 M.Sc. and B.Sc. theses and internships<small>Fondazione Bruno Kessler</small></div></div>
+    <div class="cv-item"><div class="when">2018 – now</div><div class="what">High-school student internships (alternanza scuola-lavoro)<small>Fondazione Bruno Kessler</small></div></div>
+  </section>
+
+  <!-- OUTREACH -->
+  <section>
+    <h2 id="outreach"><a href="#outreach">science communication</a></h2>
+    <div class="cv-item"><div class="when">2020 – now</div><div class="what">Organizer of <b>Pint of Science</b> Trento-Rovereto</div></div>
+    <div class="cv-item"><div class="when">2026 – now</div><div class="what">Organizer of <b>TEDx Trento</b></div></div>
+    <div class="cv-item"><div class="when">2025</div><div class="what">TEDx Trento talk — <i>“Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”</i></div></div>
+    <div class="cv-item"><div class="when">2024 – now</div><div class="what">FBK Science Ambassador<small>Training with FBK, Feltrinelli Education and Scuola Holden on storytelling, media and public speaking</small></div></div>
+    <div class="cv-item"><div class="when">2024</div><div class="what">Talk at Wired Next Fest Trentino</div></div>
+    <div class="cv-item"><div class="when">2020 – now</div><div class="what">European Researchers' Night, Trento</div></div>
+    <div class="cv-item"><div class="when">2018 – now</div><div class="what">Talks on AI and space missions in middle and high schools</div></div>
+    <div class="cv-item"><div class="when">2026</div><div class="what">Media: <i>Mattino Insieme</i> (Trentino TV), podcast <i>A caccia di AI</i> (RAI)</div></div>
+  </section>
+
   <!-- CV -->
   <section>
     <h2 id="cv"><a href="#cv">cv</a></h2>
-    <div class="cv-h">Position</div>
-    <div class="cv-item"><div class="when">now</div><div class="what">Researcher, Remote Sensing for Digital Earth unit<small>Fondazione Bruno Kessler, Trento — in collaboration with the Remote Sensing Laboratory, University of Trento</small></div></div>
-    <div class="cv-item"><div class="when">2024</div><div class="what">Visiting scientist, ESA Archival Research Visitor Programme<small>ESTEC, Noordwijk, The Netherlands</small></div></div>
+    <div class="cv-h">Experience</div>
+    <div class="cv-item"><div class="when">2021 – now</div><div class="what">Researcher<small>Remote Sensing for Digital Earth (RSDE), Center for Digital Society, Fondazione Bruno Kessler — and Remote Sensing Laboratory, University of Trento</small></div></div>
+    <div class="cv-item"><div class="when">Apr 2024</div><div class="what">Visiting researcher<small>ESA ESTEC, Noordwijk, The Netherlands</small></div></div>
+
     <div class="cv-h">Education</div>
-    <div class="cv-item"><div class="when">2021</div><div class="what">Ph.D. (cum laude) in Information and Communication Technologies<small>University of Trento</small></div></div>
-    <div class="cv-item"><div class="when">2017</div><div class="what">M.Sc. (cum laude) in Telecommunication Engineering<small>University of Trento</small></div></div>
-    <div class="cv-item"><div class="when">2015</div><div class="what">B.Sc. in Electronics and Telecommunication Engineering<small>University of Trento</small></div></div>
-    <div class="cv-h">Missions</div>
-    <div class="cv-item"><div class="when">JUICE</div><div class="what">Science team, RIME — Radar for Icy Moon Exploration<small>ESA JUpiter ICy moons Explorer</small></div></div>
-    <div class="cv-item"><div class="when">EnVision</div><div class="what">Science team, SRS — Subsurface Radar Sounder<small>ESA mission to Venus</small></div></div>
-    <div class="cv-h">Awards &amp; service</div>
-    <div class="cv-item"><div class="when">2022</div><div class="what">Best Italian Ph.D. Thesis in remote sensing<small>IEEE GRSS Italy Chapter</small></div></div>
-    <div class="cv-item"><div class="when">2018</div><div class="what">Best Italian Master Thesis in remote sensing<small>IEEE GRSS Italy Chapter</small></div></div>
-    <div class="cv-item"><div class="when">Reviewer</div><div class="what">IEEE Transactions on Geoscience and Remote Sensing, Astronomy &amp; Astrophysics, and others</div></div>
+    <div class="cv-item"><div class="when">2017 – 2021</div><div class="what">Ph.D. in Information and Communication Technology, cum laude<small>University of Trento and FBK — <i>Advanced methods for simulation-based performance assessment and analysis of radar sounder data</i> — supervisors: F. Bovolo, L. Bruzzone</small></div></div>
+    <div class="cv-item"><div class="when">2015 – 2017</div><div class="what">M.Sc. in Telecommunication Engineering, 110/110 cum laude<small>University of Trento — <i>Simulation and Extraction of Lava Tube Features from Radar Sounder Data of the Moon</i></small></div></div>
+    <div class="cv-item"><div class="when">2016 – 2017</div><div class="what">Visiting Master's student (Erasmus+)<small>Tallinn University of Technology (TalTech), Estonia</small></div></div>
+    <div class="cv-item"><div class="when">2012 – 2015</div><div class="what">B.Sc. in Electronics and Telecommunication Engineering<small>University of Trento — <i>Analysis of biological data with machine learning</i></small></div></div>
+
+    <div class="cv-h">Training</div>
+    <div class="cv-item"><div class="when">2024</div><div class="what">ESA PDS4 Training Workshop<small>ESA Planetary Science Archive</small></div></div>
+    <div class="cv-item"><div class="when">2024 – now</div><div class="what">FBK Talent Development Program<small>FBK Academy — leadership, negotiation, communication</small></div></div>
+    <div class="cv-item"><div class="when">2020</div><div class="what">IEEE GRSS Summer School on Remote Sensing for Volcanoes<small>University of Hawaii</small></div></div>
+
+    <div class="cv-h">Honors &amp; awards</div>
+    <div class="cv-item"><div class="when">2025</div><div class="what">IEEE IGARSS Travel Grant</div></div>
+    <div class="cv-item"><div class="when">2023</div><div class="what">ESA Archival Research Visitor Programme</div></div>
+    <div class="cv-item"><div class="when">2021</div><div class="what">Best Italian Doctoral Thesis on Remote Sensing<small>IEEE GRSS Italy Chapter</small></div></div>
+    <div class="cv-item"><div class="when">2021</div><div class="what">Certificate of Excellence for Ph.D. Thesis<small>Fondazione Bruno Kessler</small></div></div>
+    <div class="cv-item"><div class="when">2017</div><div class="what">Best Italian Master's Thesis on Remote Sensing<small>IEEE GRSS Italy Chapter</small></div></div>
+    <div class="cv-item"><div class="when">2017</div><div class="what">Ph.D. Scholarship<small>University of Trento and FBK</small></div></div>
+    <div class="cv-item"><div class="when">2016, 2018</div><div class="what">Merit Award<small>University of Trento</small></div></div>
+    <div class="cv-item"><div class="when">2016</div><div class="what">Erasmus+ Scholarship</div></div>
+
+    <div class="cv-h">Peer review</div>
+    <div class="cv-item"><div class="when">Reviewer</div><div class="what">IEEE TGRS, IEEE GRSL, IEEE TAES, IEEE JSTARS, Annals of Glaciology, Astronomy &amp; Astrophysics, International Journal of Digital Earth, Canadian Journal of Remote Sensing, Earth Science Informatics, Scientific Reports</div></div>
+
+    <div class="cv-h">Skills</div>
+    <div class="cv-item"><div class="when">Languages</div><div class="what">Italian (native), English (C1), Spanish (B1)</div></div>
+    <div class="cv-item"><div class="when">Technical</div><div class="what">Python, C/C++, Matlab, Java, Bash · PyTorch, TensorFlow · Docker, Conda, GPU computing · PDS3/PDS4 archiving standards · SPICE Toolkit · LaTeX</div></div>
   </section>
 </main>
 
@@ -203,7 +272,7 @@
      pdf:"", code:"", html:"https://iris.unitn.it/handle/11572/322995",
      bib:"@inproceedings{donini2021unsupervised,\n  title={An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2021},\n  year={2021}\n}", hue:290},
     {year:2021, badge:"PhD Thesis", title:"Advanced Methods for Simulation-Based Performance Assessment and Analysis of Radar Sounder Data",
-     authors:"<em>E. Donini</em> — advisors: F. Bovolo, L. Bruzzone", venue:"Ph.D. thesis, University of Trento, 2021 — Best Italian Ph.D. Thesis in remote sensing 2022 (IEEE GRSS Italy)",
+     authors:"<em>E. Donini</em> — advisors: F. Bovolo, L. Bruzzone", venue:"Ph.D. thesis, University of Trento, 2021 — Best Italian Doctoral Thesis on Remote Sensing (IEEE GRSS Italy)",
      abs:"Two contributions: metrics to assess the detectability of subsurface targets in simulated orbital radargrams to guide radar sounder design, and automatic analysis methods based on fuzzy logic (e.g. lava tube detection) and deep learning.",
      pdf:"https://iris.unitn.it/bitstream/11572/304147/6/ED_PhD_Tesis_IRIS.pdf", code:"", html:"https://iris.unitn.it/handle/11572/304147",
      bib:"@phdthesis{donini2021phd,\n  title={Advanced methods for simulation-based performance assessment and analysis of radar sounder data},\n  author={Donini, Elena},\n  school={University of Trento},\n  year={2021},\n  doi={10.15168/11572_304147}\n}", hue:140},
