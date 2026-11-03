@@ -133,7 +133,7 @@
   h3.cat{font-family:"Roboto Slab",serif;font-weight:400;font-size:1.35rem;color:var(--accent);margin:2.2rem 0 0;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
   h3.cat span{font-family:Roboto,sans-serif;font-size:.8rem;color:var(--muted);font-weight:400;margin-left:.3rem}
   .au{color:var(--muted);font-size:.92em}
-  .thumb img{width:100%;height:100%;object-fit:cover;display:block;background:#fff}
+  .thumb img{width:100%;height:100%;object-fit:contain;display:block;background:#fff;padding:3px;box-sizing:border-box}
   .tile{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;
         background:linear-gradient(135deg,rgba(181,9,172,.10),rgba(181,9,172,.03));}
   .tile .tv{font-family:"Roboto Slab",serif;font-size:1.25rem;font-weight:500;color:var(--accent);text-align:center;padding:0 .5rem;line-height:1.2}
@@ -200,7 +200,7 @@
 
     <div class="profile">
       <div class="photo">
-        <img src="profilo.jpg" alt="Elena Donini" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Franceschini_ELENADONINI_-03.jpg'}">
+        <img src="img/profilo.jpg" alt="Elena Donini" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='img/Franceschini_ELENADONINI_-03.jpg'}">
       </div>
       <div class="pcredit">Photo: Franceschini / FBK</div>
     </div>
@@ -402,7 +402,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 16:45</footer>
+<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 17:00</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
@@ -415,17 +415,17 @@
   "authors": "<em>E. Donini</em>, F. Bovolo",
   "venue": "SPIE Sensors + Imaging 2026, Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII, paper 14282-34, Edinburgh",
   "abs": "Monitoring the temporal evolution of the cryosphere is essential for understanding the impacts of climate change on polar ice sheets and their contribution to sea-level rise. While remote sensing imagery provides valuable information on surface processes, radar sounders (RS) uniquely enable the investigation of the cryosphere subsurface from the surface to the basal interface. Despite recent advances in machine learning for radargram analysis, existing approaches are limited to single-date acquisitions, and multitemporal analysis remains largely unexplored. This paper presents a novel deep learning method for detecting morphological changes in multitemporal radargrams. The proposed method first learns a baseline representation of subsurface ice structures through a reconstruction network trained on a reference acquisition. During inference, the network extracts deep feature representations from two co-registered radargrams acquired over the same track at different times; Change Vector Analysis (CVA) analyzes these features to detect and characterize changes in the learned feature space. Experiments on co-registered Antarctic MCoRDS-3 radargrams acquired in 2014 and 2016 demonstrate the proposed method’s ability to detect and characterize significant stratigraphic changes.",
-  "img": "",
+  "img": "img/thumbs/2026_donini_spie_changedetection.jpg",
   "hue": 0,
-  "html": "https://spie.org/ESI26R/conferencedetails/ai-and-image-signal-processing-remote-sensing",
+  "html": "",
   "pdf": "papers/2026_donini_spie_changedetection.pdf",
   "bib": "@inproceedings{donini2026bitemporal,\n  title={Self-Supervised Deep Learning for Bitemporal Change Detection in Polar Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII},\n  publisher={SPIE},\n  year={2026}\n}"
  },
  {
   "abs": "While the expansion of planetary radar sounder (RS) archives has driven the need for automated analysis, Content-Based Image Retrieval (CBIR) methods specifically designed for radargrams remain largely unexplored compared to other automated tasks. This paper proposes a deep-learning method for fast and accurate retrieval of dual-frequency RS data, enabling identification based on the semantic content of the most similar radargrams to a query that represents geologically significant subsurface reflections. We employ a Masked Autoencoder (MAE) to learn robust and semantically meaningful features of surface and subsurface reflections in a self-supervised manner, addressing the scarcity of labeled planetary data. The MAE projects radargrams into an embedding space, where retrieval is performed via cosine-similarity ranking. The proposed method is successfully validated on MARSIS radargrams spanning diverse geological targets. The results demonstrate strong generalization: when queried with North Polar icy stratigraphy, it effectively retrieves analogous features from the South Pole and equatorial ice-rich region.",
-  "img": "",
+  "img": "img/thumbs/2026_donini_igarss_dualfrequency.jpg",
   "hue": 0,
-  "html": "",
+  "html": "https://ieeexplore.ieee.org/abstract/document/11730384",
   "pdf": "papers/2026_donini_igarss_dualfrequency.pdf",
   "year": 2026,
   "type": "proceedings",
@@ -437,7 +437,7 @@
  },
  {
   "abs": "Ongoing planetary missions and future endeavors, such as JUICE to the Jovian moons, EnVision to Venus, and envisioned missions to the moons of Uranus, highlight the growing importance of Radar Sounders (RSs) for planetary science. RSs are active remote sensors capable of imaging dielectric discontinuities in the subsurface and recording them in depth images known as radargrams. While manual radargram analysis has led to important discoveries, such as the evolution of Martian troughs, efficiently exploiting the increasingly vast RS datasets necessitates automated methods. Currently, most automated approaches focus on segmentation or detection of linear reflections, yet there remains a need for methods that can analyze and semantically aggregate radargrams performing a large scale analysis. We conduct large scale analysis by leveraging on Martian RS data as a primary planetary analogue for future planned and envisioned missions to the icy moons of Jupiter and Uranus. We utilize Shallow Radar (SHARAD) data acquired over the North Polar Layered Deposits (NPLD) (latitude &gt; 77.5°). SHARAD achieves a vertical resolution of about 15 m in vacuum with a maximum penetration of about 1 km. At the NPLD, SHARAD images icy targets, characterized by horizontal stratigraphy and oblique structures, that closely resemble the data expected from future and envisioned RS missions. Our analysis focuses on mapping troughs, which are depressions following a spiral pattern with depths of 400-1000 m. Troughs expose the NPLD internal stratigraphy and record Martian climate processes within the Trough Migration Paths (TMPs). TMPs are subsurface unconformities that trace the trough displacement since their formation. Their development followed distinct evolutionary paths across eight geographical regions, each characterized by unique morphological traits of TMPs and troughs. We selected 488 EDR SHARAD radargrams that are processed with squinted SAR focusing. This approach optimizes the detection of non-horizontal reflections by aligning the RS line of sight with the subsurface dipping interfaces, such as trough walls and TMPs, which might otherwise be poorly resolved. We consider 11 squint angles, ranging from -2.5° to +2.5° in 0.5° steps. Radargrams are partitioned into patches of dimension 512 x 128 x 11, in the range, azimuth, and squint angle directions, and are divided into training and validation sets of 6,871 and 2,017 patches, respectively. Each patch is linked to one of the NPLD region based on the morphological characteristics of the troughs and TMPs in the patch. Given a query radargram imaging a trough and/or a TMP, the goal is to retrieve radargrams with similar geological signatures, enabling the mapping of known and previously uncharacterized troughs and TMPs across the NPLD.",
-  "img": "",
+  "img": "img/thumbs/2026_borsi_epsc_spiraltroughs.jpg",
   "hue": 0,
   "html": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-1165.html",
   "pdf": "papers/2026_borsi_epsc_spiraltroughs.pdf",
@@ -451,7 +451,7 @@
  },
  {
   "abs": "Characterizing the planetary subsurface through Radar Sounder (RS) data is fundamental to reconstructing the evolutionary history of the Solar System. However, the increasing volume of RS archives, which will be further expanded by upcoming and prospective missions to the Jovian and Uranian icy moons, necessitates a shift toward automated extraction methods. Although recent machine learning applications in RS stratigraphy have successfully automated the detection of isochronous layers, a significant methodological gap remains in detecting localized non-horizontal reflections. Features such as Martian troughs and Trough Migration Paths (TMPs) can serve as analogs for oblique geometries. Troughs are migratory valleys in the Martian North Polar Layered Deposit (NPLD), and their evolution provides a unique record of the history, including katabatic winds, sublimation, and cyclical climate forcing. Their historical migration is encoded in the subsurface as Trough Migration Paths (TMPs), which are morpho-stratigraphic unconformities that truncate isochronous layers and track the trough floor over geological timescales. While the joint analysis of high-resolution optical imagery (HiRISE/CTX) and RS (SHARAD) is essential for mapping these features, it relies heavily on manual tracing, which limits scalability. We introduce a two-stage deep learning strategy based on a physics-informed contrastive pre-training phase, followed by supervised fine-tuning that mitigates class imbalance between troughs, TMPs, and horizontal stratigraphy. For the pre-training stage, we utilize a Momentum Contrast (MoCo) framework. MoCo forces a network to learn discriminative feature representations by maximizing the similarity between distinct views of the same image. However, rather than relying on computer vision augmentations, we leverage squinted Synthetic Aperture Radar (SAR) focusing to generate physically consistent views of the same subsurface at distinct squint angles. This forces the network to learn latent structural representations that are strictly invariant to angle-dependent radiometry. This approach desensitizes the model to the overwhelmingly dominant horizontal stratigraphy of the Martian polar regions, enabling it to capture the dipping signatures of troughs and TMPs without human supervision.",
-  "img": "",
+  "img": "img/thumbs/2026_donini_epsc_dipping.jpg",
   "hue": 0,
   "html": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-1141.html",
   "pdf": "papers/2026_donini_epsc_dipping.pdf",
@@ -475,7 +475,7 @@
   "pdf": "papers/2025_donini_igarss_coregistration.pdf",
   "bib": "@inproceedings{donini2025coregistration,\n  title={Co-Registration Analysis of Coherent Multitemporal Radargrams},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Paden, John and Bovolo, Francesca},\n  booktitle={IGARSS 2025},\n  pages={9258--9262},\n  year={2025},\n  doi={10.1109/IGARSS55030.2025.11243308}\n}",
   "hue": 215,
-  "img": ""
+  "img": "img/thumbs/2025_donini_igarss_coregistration.jpg"
  },
  {
   "year": 2025,
@@ -489,7 +489,7 @@
   "pdf": "papers/2025_bergamasco_migars_glof.pdf",
   "bib": "@inproceedings{bergamasco2025glof,\n  title={A Preliminary Study on the Detection of Glacial Lake Outburst Flood in Norway Using Sentinel 2 Imagery},\n  author={Bergamasco, Luca and Donini, Elena and Lappe, Ronja and Calovi, Martina and Bovolo, Francesca},\n  booktitle={2025 International Conference on Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS)},\n  pages={1--4},\n  year={2025},\n  doi={10.1109/MIGARS67156.2025.11232078}\n}",
   "hue": 160,
-  "img": ""
+  "img": "img/thumbs/2025_bergamasco_migars_glof.jpg"
  },
  {
   "year": 2024,
@@ -503,7 +503,7 @@
   "pdf": "papers/2024_donini_tgrs_superresolution.pdf",
   "bib": "@article{donini2024superres,\n  title={Super-Resolution of Radargrams With a Generative Deep Learning Model},\n  author={Donini, Elena and Bruzzone, Lorenzo and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={62},\n  pages={1--17},\n  year={2024},\n  doi={10.1109/TGRS.2024.3378576}\n}",
   "hue": 200,
-  "img": ""
+  "img": "img/thumbs/2024_donini_tgrs_superresolution.jpg"
  },
  {
   "year": 2024,
@@ -531,7 +531,7 @@
   "pdf": "papers/2024_donini_igarss_hierarchical.pdf",
   "bib": "@inproceedings{donini2024hierarchical,\n  title={Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={IGARSS 2024},\n  pages={10988--10991},\n  year={2024},\n  doi={10.1109/IGARSS53475.2024.10642331}\n}",
   "hue": 170,
-  "img": ""
+  "img": "img/thumbs/2024_donini_igarss_hierarchical.jpg"
  },
  {
   "year": 2024,
@@ -545,7 +545,7 @@
   "pdf": "papers/2024_donini_spie_multitemporal.pdf",
   "bib": "@inproceedings{donini2024multitemporal,\n  title={A preliminary study on the multitemporal analysis of cryosphere radar sounder data},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXX},\n  publisher={SPIE},\n  year={2024}\n}",
   "hue": 225,
-  "img": ""
+  "img": "img/thumbs/2024_donini_spie_multitemporal.jpg"
  },
  {
   "year": 2023,
@@ -559,7 +559,7 @@
   "pdf": "papers/2023_hoyogarcia_tgrs_weaklysupervised.pdf",
   "bib": "@article{hoyo2023weakly,\n  title={A Weakly Supervised Transfer Learning Approach for Radar Sounder Data Segmentation},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={61},\n  pages={1--18},\n  year={2023},\n  doi={10.1109/TGRS.2023.3252939}\n}",
   "hue": 230,
-  "img": ""
+  "img": "img/thumbs/2023_hoyogarcia_tgrs_weaklysupervised.jpg"
  },
  {
   "year": 2023,
@@ -587,7 +587,7 @@
   "pdf": "papers/2023_donini_igarss_denoising.pdf",
   "bib": "@inproceedings{donini2023denoising,\n  title={Deep Learning for Unsupervised Denoising of Radar Sounder Data},\n  author={Donini, Elena and Zuech, Alessandro and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2023},\n  pages={7804--7807},\n  year={2023},\n  doi={10.1109/IGARSS52108.2023.10282302}\n}",
   "hue": 20,
-  "img": ""
+  "img": "img/thumbs/2023_donini_igarss_denoising.jpg"
  },
  {
   "year": 2023,
@@ -657,7 +657,7 @@
   "pdf": "papers/2022_donini_igarss_superres.pdf",
   "bib": "@inproceedings{donini2022superres,\n  title={An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data},\n  author={Donini, Elena and Kasibovic, Amar and Hoyo Garc{\\'i}a, Miguel and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2022},\n  pages={1696--1699},\n  year={2022},\n  doi={10.1109/IGARSS46834.2022.9884343}\n}",
   "hue": 250,
-  "img": ""
+  "img": "img/thumbs/2022_donini_igarss_superres.jpg"
  },
  {
   "year": 2022,
@@ -671,7 +671,7 @@
   "pdf": "papers/2022_donini_spie_contrastive.pdf",
   "bib": "@inproceedings{donini2022contrastive,\n  title={Unsupervised semantic segmentation of radar sounder data using contrastive learning},\n  author={Donini, Elena and Amico, Mattia and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVIII},\n  volume={12267},\n  pages={171--180},\n  publisher={SPIE},\n  year={2022},\n  doi={10.1117/12.2636437}\n}",
   "hue": 265,
-  "img": ""
+  "img": "img/thumbs/2022_donini_spie_contrastive.jpg"
  },
  {
   "year": 2022,
@@ -769,7 +769,7 @@
   "pdf": "papers/2021_donini_igarss_targetdetection.pdf",
   "bib": "@inproceedings{donini2021unsupervised,\n  title={An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2021},\n  pages={2955--2958},\n  year={2021}\n}",
   "hue": 290,
-  "img": ""
+  "img": "img/thumbs/2021_donini_igarss_targetdetection.jpg"
  },
  {
   "year": 2021,
@@ -783,7 +783,7 @@
   "pdf": "papers/2021_hoyogarcia_igarss_iceshelves.pdf",
   "bib": "@inproceedings{hoyo2021iceshelves,\n  title={Automatic Segmentation of Ice Shelves with Deep Learning},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  booktitle={IGARSS 2021},\n  pages={4833--4836},\n  year={2021},\n  doi={10.1109/IGARSS47720.2021.9553610}\n}",
   "hue": 185,
-  "img": ""
+  "img": "img/thumbs/2021_hoyogarcia_igarss_iceshelves.jpg"
  },
  {
   "year": 2021,
@@ -811,7 +811,7 @@
   "pdf": "papers/2021_hoyogarcia_spie_transferlearning.pdf",
   "bib": "@inproceedings{hoyo2021transfer,\n  title={Transfer learning for the semantic segmentation of cryoshpere radargrams},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVII},\n  volume={11862},\n  pages={118620T},\n  publisher={SPIE},\n  year={2021},\n  doi={10.1117/12.2600237}\n}",
   "hue": 175,
-  "img": ""
+  "img": "img/thumbs/2021_hoyogarcia_spie_transferlearning.jpg"
  },
  {
   "year": 2020,
@@ -839,7 +839,7 @@
   "pdf": "papers/2020_bruzzone_igarss_envision.pdf",
   "bib": "@inproceedings{bruzzone2020envision,\n  title={EnVision Mission to Venus: Subsurface Radar Sounding},\n  author={Bruzzone, Lorenzo and Bovolo, Francesca and Thakur, Sanchari and Carrer, Leonardo and Donini, Elena and others},\n  booktitle={IGARSS 2020},\n  pages={5960--5963},\n  year={2020}\n}",
   "hue": 30,
-  "img": ""
+  "img": "img/thumbs/2020_bruzzone_igarss_envision.jpg"
  },
  {
   "year": 2020,
@@ -852,7 +852,7 @@
   "pdf": "papers/2020_pincheira_lagirs_blockchain.pdf",
   "bib": "@inproceedings{pincheira2020blockchain,\n  title={A Blockchain-Based Approach to Enable Remote Sensing Trusted Data},\n  author={Pincheira, Miguel and Donini, Elena and Giaffreda, Raffaele and Vecchio, Massimo},\n  booktitle={2020 IEEE Latin American GRSS \\& ISPRS Remote Sensing Conference (LAGIRS)},\n  pages={652--657},\n  year={2020}\n}",
   "abs": "Remote sensing considerably benefits from the fusion of open data from different sources, including far-range sensors mounted on satellites and short-range sensors on drones or Internet of Things devices. Open data is an emerging philosophy attracting an increasing number of data owners willing to share. However, most of the data owners are unknown and thus, untrustable, which makes shared data likely unreliable and possibly compromising associated outcomes. Currently, there exist tools that distribute open data, acting as intermediaries connecting data owners and users. However, these tools are managed by central authorities that set rules for data ownership, access, and integrity, limiting data owners and users. Therefore, a need emerges for a decentralized system to share and retrieve data without intermediaries limiting participants. Here, we propose a blockchain-based system to share and retrieve data without the need for a central authority. The proposed architecture (i) allows sharing data, (ii) maintains the data history (origin and updates), and (iii) allows retrieving and evaluating the data adding trustworthiness. To this end, the blockchain network enables the direct connection of data owners and users. Furthermore, blockchain automatically interacts with participants and keeps a transparent record of their actions. Hence, blockchain provides a decentralized database that enables trust among the participants without a central authority. We analyzed the potentials and critical issues of the architecture in a remote sensing use case of precision farming. The analysis shows that participants benefit from the properties of the blockchain in providing trusted data for remote sensing applications.",
-  "img": "",
+  "img": "img/thumbs/2020_pincheira_lagirs_blockchain.jpg",
   "hue": 0
  },
  {
@@ -895,7 +895,7 @@
   "pdf": "papers/2019_donini_igarss_detection.pdf",
   "bib": "@inproceedings{donini2019detection,\n  title={Assessing the Detection Performance on Icy Targets Acquired by an Orbiting Radar Sounder},\n  author={Donini, Elena and Thakur, Sanchari and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2019},\n  pages={997--1000},\n  year={2019}\n}",
   "hue": 205,
-  "img": ""
+  "img": "img/thumbs/2019_donini_igarss_detection.jpg"
  },
  {
   "year": 2019,
@@ -909,7 +909,7 @@
   "pdf": "papers/2019_donini_spie_refreezing.pdf",
   "bib": "@inproceedings{donini2019refreezing,\n  title={An automatic approach to map refreezing ice in radar sounder data},\n  author={Donini, Elena and Thakur, Sanchari and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={Image and Signal Processing for Remote Sensing XXV},\n  volume={11155},\n  pages={111551B},\n  publisher={SPIE},\n  year={2019},\n  doi={10.1117/12.2533169}\n}",
   "hue": 190,
-  "img": ""
+  "img": "img/thumbs/2019_donini_spie_refreezing.jpg"
  },
  {
   "abs": "The Italian Space Agency (ASI) has recently entrusted CO.RI.S.T.A. with the development of a radar system that can be mounted onboard small airplanes or helicopters and may operate, at different frequencies belonging to the P-Band, either as Synthetic Aperture Radar (SAR) or as Sounder. In this work, we present preliminary results of the helicopter-borne desert campaign carried out with this system in 2018 over the Erfoud area, Morocco, in the frame of a project that has involved different public Italian Research Institutes and Universities.",
@@ -951,57 +951,57 @@
   "pdf": "papers/2018_donini_igarss_lavatube.pdf",
   "bib": "@inproceedings{donini2018lavatube,\n  title={An Approach to Lava Tube Detection in Radar Sounder Data of the Moon},\n  author={Donini, Elena and Bovolo, Francesca and Gerekos, Christopher and Carrer, Leonardo and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2018},\n  pages={8424--8427},\n  year={2018},\n  doi={10.1109/IGARSS.2018.8519146}\n}",
   "hue": 0,
-  "img": ""
+  "img": "img/thumbs/2018_donini_igarss_lavatube.jpg"
  }
 ];
 
   // ---- GALLERIA: per aggiungere una foto, caricala nel repository e aggiungi una riga qui ----
   const gallery = [
  {
-  "src": "salone2026.jpg",
+  "src": "img/salone2026.jpg",
   "cap": "Panel <a href=\"https://www.salonelibro.it/programma-eventi/di_chi_e_la_scienza/20047\">“Di chi è la scienza?”</a> at the Salone Internazionale del Libro, Turin",
   "date": "14 May 2026",
   "credit": "Photo: Feltrinelli Education"
  },
  {
-  "src": "tedx2.jpg",
+  "src": "img/tedx2.jpg",
   "credit": "Photo: Marco Parisi",
   "cap": "On stage at TEDx Trento 2025 — <a href=\"https://www.youtube.com/watch?v=G3pvwAiTzNk\">“Space, Ice and AI: When the Future Becomes Radar” ▶</a>",
   "date": "13 November 2025"
  },
  {
-  "src": "54917835387_63de9e1719_c.jpg",
+  "src": "img/54917835387_63de9e1719_c.jpg",
   "cap": "TEDx Trento 2025 — “Fuori Campo, oltre il limite”",
   "date": "13 November 2025"
  },
  {
-  "src": "pint%202025.jpg",
+  "src": "img/pint%202025.jpg",
   "cap": "<a href=\"https://www.pintofscience.it/team/Team%20Trento/\">Pint of Science</a> Trento-Rovereto 2025",
   "date": "May 2025"
  },
  {
-  "src": "wired%20photo_2026-11-03_15-04-58.jpg",
+  "src": "img/wired%20photo_2026-11-03_15-04-58.jpg",
   "cap": "Panel <i>“Aziende in orbita”</i> at <a href=\"https://www.wired.it/article/wired-next-fest-2024-trentino-rovereto-date-ospiti/\">Wired Next Fest Trentino 2024</a>, Rovereto",
   "date": "29 September 2024"
  },
  {
-  "src": "IMG_0265.JPEG",
+  "src": "img/IMG_0265.JPEG",
   "cap": "Inside the Columbus module at ESA",
   "date": "May 2024"
  },
  {
-  "src": "pint2024.jpg",
+  "src": "img/pint2024.jpg",
   "cap": "<a href=\"https://www.pintofscience.it/team/Team%20Trento/\">Pint of Science</a> Trento-Rovereto 2024",
   "date": "May 2024"
  },
  {
-  "src": "image.png",
+  "src": "img/image.png",
   "fit": "contain",
   "cap": "Celebrating the launch of ESA's <a href=\"https://www.esa.int/Science_Exploration/Space_Science/Juice\">JUICE</a> mission",
   "date": "14 April 2023"
  },
  {
-  "src": "lancio%20di%20juice.jpg",
+  "src": "img/lancio%20di%20juice.jpg",
   "cap": "With a model of the <a href=\"https://www.esa.int/Science_Exploration/Space_Science/Juice\">JUICE</a> spacecraft at the launch event",
   "date": "14 April 2023"
  }
@@ -1076,7 +1076,7 @@
   const gg=document.getElementById("galleryGrid"), lb=document.getElementById("lightbox");
   gallery.forEach(g=>{
     const f=document.createElement("figure");
-    f.innerHTML=`<img src="${g.src}"${g.src==="salone2026.jpg"?` onerror="this.onerror=null;this.src='Feltrinelli%20Education%20-%2014%20maggio-5.jpg'"`:""} alt="" loading="lazy"${g.fit?` style="object-fit:${g.fit};background:var(--soft)"`:""}><figcaption>${g.cap}${g.date?`<span class="gdate">${g.date}</span>`:""}${g.credit?`<span class="gcredit">${g.credit}</span>`:""}</figcaption>`;
+    f.innerHTML=`<img src="${g.src}"${g.src==="img/salone2026.jpg"?` onerror="this.onerror=null;this.src='img/Feltrinelli%20Education%20-%2014%20maggio-5.jpg'"`:""} alt="" loading="lazy"${g.fit?` style="object-fit:${g.fit};background:var(--soft)"`:""}><figcaption>${g.cap}${g.date?`<span class="gdate">${g.date}</span>`:""}${g.credit?`<span class="gcredit">${g.credit}</span>`:""}</figcaption>`;
     f.querySelector("img").alt=g.cap.replace(/<[^>]+>/g,"");
     f.onclick=()=>{lb.querySelector("img").src=g.src;lb.querySelector("p").innerHTML=g.cap+(g.date?" · "+g.date:"")+(g.credit?" · "+g.credit:"");lb.classList.add("show");};
     gg.appendChild(f);
