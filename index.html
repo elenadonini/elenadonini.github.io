@@ -11,11 +11,11 @@
 <style>
   :root{
     --accent:#b509ac; --text:#212529; --muted:#6c757d; --bg:#ffffff;
-    --line:#e5e5e5; --soft:#f6f6f8; --code:#f3f3f5;
+    --line:#e5e5e5; --soft:#f6f6f8; --code:#f3f3f5; --logo1:#14213d; --logo2:#b8322a;
   }
   html[data-theme="dark"]{
     --accent:#2698ba; --text:#e8e8e8; --muted:#a0a0a0; --bg:#1c1c1d;
-    --line:#3a3a3c; --soft:#262628; --code:#2a2a2c;
+    --line:#3a3a3c; --soft:#262628; --code:#2a2a2c; --logo1:#9fb6e3; --logo2:#f2876b;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -54,10 +54,10 @@
   .profile .photo svg{width:100%;height:100%;display:block}
   .profile .addr{font-size:.85rem;color:var(--muted);margin-top:.6rem;line-height:1.4}
   @media(max-width:600px){.profile{float:none;width:60%;margin:0 auto 1.2rem}}
-  .socials{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2rem 0 .5rem}
+  .socials{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:center;margin:2rem 0 .5rem}
   .socials a{display:inline-flex;align-items:center;gap:.4rem;color:var(--text);font-weight:400;font-size:.95rem}
   .socials a:hover{color:var(--accent);text-decoration:none}
-  .socials svg{width:20px;height:20px;fill:currentColor}
+  .socials svg{width:28px;height:28px;fill:currentColor}
 
   /* news */
   table.news{width:100%;border-collapse:collapse}
@@ -96,7 +96,8 @@
   html[data-theme="dark"] .ph{background:rgba(38,152,186,.15)}
 
   .brand{display:inline-flex;align-items:center;gap:.5rem}
-  .brand svg{width:30px;height:30px}
+  .brand svg{width:32px;height:32px}
+  .brand .b{fill:var(--logo1)} .brand .bs{fill:none;stroke:var(--logo1)} .brand .w{fill:var(--logo2)} .brand .ws{fill:none;stroke:var(--logo2)}
   .profile .photo img{width:100%;height:100%;object-fit:cover;display:block}
   .collab{margin:1.2rem 0 0;padding:.8rem 1rem;border-left:3px solid var(--accent);background:var(--soft);border-radius:0 4px 4px 0}
   .pubfilter{display:flex;gap:.4rem;flex-wrap:wrap;margin:-.3rem 0 .4rem}
@@ -111,6 +112,14 @@
   .lightbox.show{display:flex}
   .lightbox img{max-width:100%;max-height:85vh;border-radius:4px}
   .lightbox p{color:#ddd;margin:0;font-size:.9rem;text-align:center}
+  .page{display:none}
+  .page.show{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .page-head{margin-bottom:1.6rem;border-bottom:1px solid var(--line);padding-bottom:.6rem}
+  .ptitle-big{font-family:"Roboto Slab",serif;font-weight:400;font-size:2.4rem;margin:0}
+  .page-head .desc{margin:.3rem 0 0}
+  .more{text-align:right;margin:.6rem 0 0;font-size:.9rem}
+  .page[data-page="about"] h2:first-of-type{margin-top:2.2rem}
 </style>
 </head>
 <body>
@@ -157,8 +166,9 @@
 </nav>
 
 <main>
+  <div class="page" data-page="about">
   <!-- ABOUT -->
-  <section id="about" class="about">
+  <section class="about">
     <h1><b>Elena</b> Donini</h1>
     <p class="desc">Researcher @ <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth</a>, <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a></p>
 
@@ -166,27 +176,42 @@
       <div class="photo">
         <img src="profilo.jpg" alt="Elena Donini" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Franceschini_ELENADONINI_-03.jpg'}">
       </div>
-      <div class="addr">Fondazione Bruno Kessler<br>Via Sommarive 18, Povo<br>38123 Trento, Italy</div>
     </div>
 
-    <p>I am a researcher at the <a href="https://rsde.fbk.eu/"><b>Remote Sensing for Digital Earth (RSDE)</b></a> unit of the Center for Digital Society, <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler (FBK)</a>, Trento, Italy, and I collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory (RSLab)</a> of the University of Trento.</p>
-    <p>I design <b>machine learning methods for the analysis of radar sounder data</b> for planetary exploration and Earth observation — segmentation, denoising, super-resolution, change detection and content-based retrieval of radargrams, from the ice sheets of Greenland and Antarctica to the subsurface of Mars, the Moon and the icy moons of Jupiter.</p>
-    <p>I am a member of the science teams of <b>RIME</b> on ESA's <b>JUICE</b> mission and of <b>VesPER</b>, the subsurface radar sounder on ESA's <b>EnVision</b> mission to Venus, and I contributed to studies for a radar sounder for the <b>moons of Uranus</b> (ASI–NASA).</p>
-    <p>I received my Ph.D. (cum laude) in Information and Communication Technology from the University of Trento and FBK in 2021, supervised by Francesca Bovolo and Lorenzo Bruzzone. I love science communication: I organize <b>Pint of Science Trento-Rovereto</b> and <b>TEDx Trento</b>.</p>
-    <p class="collab">🤝 <b>Let's collaborate!</b> I am always happy to start new collaborations on radar sounder data, planetary exploration and machine learning for remote sensing — drop me an email at <a href="mailto:edonini@fbk.eu">edonini@fbk.eu</a>.</p>
-    <p class="desc" style="margin-top:1rem"><b>Research interests:</b> planetary exploration, Earth observation, radar sounding, cryosphere, desert and arid areas, machine learning, deep learning, subsurface target detection, electromagnetic target modeling.</p>
+    <p>I am a researcher at the <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth (RSDE)</a> unit of <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> and collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento. I develop <b>machine learning methods for radar sounder data</b>, to explore the subsurface of the Earth's ice sheets, Mars, the Moon and the icy moons of Jupiter. I am a member of the science teams of <b>RIME</b> on ESA's <b>JUICE</b> mission and of the subsurface radar sounder on ESA's <b>EnVision</b> mission to Venus. I received my Ph.D. cum laude from the University of Trento in 2021, and I love science communication — I organize Pint of Science Trento-Rovereto and TEDx Trento.</p>
+    <p>I work and live in Trento, Italy. I am always happy to start new collaborations — <a href="mailto:edonini@fbk.eu">drop me an email</a>!</p>
 
     <div class="socials">
-      <a href="mailto:edonini@fbk.eu" title="edonini@fbk.eu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.4l8 5 8-5V7zm16 2.7-8 5-8-5V17h16z"/></svg>edonini@fbk.eu</a>
-      <a href="https://it.linkedin.com/in/elena-donini-a05381109" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 2 1 9l11 7 9-5.7V17h2V9zM5 13.2V17c0 2 3.1 4 7 4s7-2 7-4v-3.8l-7 4.5z"/></svg>Scholar</a>
-      <a href="https://rsde.fbk.eu/author/elenadonini/" title="FBK"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5zM4 10.5V16l8 4 8-4v-5.5l-8 4z"/></svg>FBK profile</a>
+      <a href="mailto:edonini@fbk.eu" title="edonini@fbk.eu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.4l8 5 8-5V7zm16 2.7-8 5-8-5V17h16z"/></svg></a>
+      <a href="https://it.linkedin.com/in/elena-donini-a05381109" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+      <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 2 1 9l11 7 9-5.7V17h2V9zM5 13.2V17c0 2 3.1 4 7 4s7-2 7-4v-3.8l-7 4.5z"/></svg></a>
+      <a href="https://rsde.fbk.eu/author/elenadonini/" title="FBK"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5zM4 10.5V16l8 4 8-4v-5.5l-8 4z"/></svg></a>
     </div>
   </section>
 
-  <!-- NEWS -->
+
   <section>
-    <h2 id="news"><a href="#news">news</a></h2>
+    <h2><a href="#news">news</a></h2>
+    <table class="news">
+      <tr><td class="date">Jul 2026</td><td>📄 Papers accepted at <b>SPIE Remote Sensing 2026</b> and <b>EPSC 2026</b>.</td></tr>
+      <tr><td class="date">May 2026</td><td>📄 Papers accepted at <b>IGARSS 2026</b>.</td></tr>
+      <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <i>A caccia di AI</i>, talking about AI and space exploration.</td></tr>
+      <tr><td class="date">2026</td><td>🎙️ Joined the organizing team of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a>.</td></tr>
+      <tr><td class="date">Nov 2025</td><td>🎤 Talk at <a href="https://www.ted.com/tedx/events/62670">TEDx Trento 2025</a>: <i>“Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”</i>.</td></tr>
+    </table>
+    <p class="more"><a href="#news">all news →</a></p>
+  </section>
+
+  <section>
+    <h2><a href="#publications">selected publications</a></h2>
+    <div id="selPubs"></div>
+    <p class="more"><a href="#publications">all publications →</a></p>
+  </section>
+  </div>
+
+  <div class="page" data-page="news">
+    <header class="page-head"><h1 class="ptitle-big">news</h1><p class="desc">Updates on research, talks and outreach.</p></header>
+  <section>
     <table class="news">
       <tr><td class="date">Jul 2026</td><td>📄 Papers accepted at <b>SPIE Remote Sensing 2026</b> and <b>EPSC 2026</b>.</td></tr>
       <tr><td class="date">May 2026</td><td>📄 Papers accepted at <b>IGARSS 2026</b>.</td></tr>
@@ -198,22 +223,26 @@
       <tr><td class="date">Apr 2024</td><td>🛰️ Visiting researcher at ESA ESTEC (Noordwijk) through the <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">ESA Archival Research Visitor Programme</a>, working on content-based retrieval of MARSIS radargrams.</td></tr>
     </table>
   </section>
+  </div>
 
-  <!-- PUBLICATIONS -->
+  <div class="page" data-page="publications">
+    <header class="page-head"><h1 class="ptitle-big">publications</h1><p class="desc">Journal articles and IGARSS papers. Full list on <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en">Google Scholar</a>.</p></header>
+  
   <section>
-    <h2 id="publications"><a href="#publications">selected publications</a></h2>
     <div class="pubfilter" id="pubFilter">
       <button data-f="all" class="on">all</button>
       <button data-f="journal">journals</button>
       <button data-f="igarss">IGARSS</button>
     </div>
     <div id="pubList"></div>
-    <p class="desc" style="margin-top:1rem">Full list on <a href="https://scholar.google.com/citations?user=KHVBKA0AAAAJ&amp;hl=en">Google Scholar</a>.</p>
   </section>
 
-  <!-- PROJECTS -->
+  </div>
+
+  <div class="page" data-page="projects">
+    <header class="page-head"><h1 class="ptitle-big">research projects</h1><p class="desc">Projects funded by the Italian Space Agency, ESA and NASA.</p></header>
+  
   <section>
-    <h2 id="projects"><a href="#projects">research projects</a></h2>
     <div class="cv-item"><div class="when">2025 – 2026</div><div class="what">Scientific activities for a radar sounder for the moons of Uranus<small>ASI &amp; NASA — target identification, EM signature definition and detection methods in radargrams</small></div></div>
     <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for JUICE (RIME)<small>ASI &amp; ESA — automatic analysis of radargrams acquired in icy areas</small></div></div>
     <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for the EnVision subsurface radar sounder<small>ASI &amp; ESA — automatic analysis of radargrams acquired in arid areas</small></div></div>
@@ -221,9 +250,12 @@
     <div class="cv-item"><div class="when">2018</div><div class="what">Sistema radar in banda P<small>ASI — automatic analysis of P-band radar sounder data acquired in Morocco</small></div></div>
   </section>
 
-  <!-- OUTREACH -->
+  </div>
+
+  <div class="page" data-page="outreach">
+    <header class="page-head"><h1 class="ptitle-big">science communication</h1><p class="desc">Bringing space research to the public.</p></header>
+  
   <section>
-    <h2 id="outreach"><a href="#outreach">science communication</a></h2>
     <div class="cv-item"><div class="when">2020 – now</div><div class="what">Organizer of <b>Pint of Science</b> Trento-Rovereto</div></div>
     <div class="cv-item"><div class="when">2026 – now</div><div class="what">Organizer of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a></div></div>
     <div class="cv-item"><div class="when">2025</div><div class="what">Talk at <a href="https://www.ted.com/tedx/events/62670">TEDx Trento 2025</a> — <i>“Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”</i></div></div>
@@ -233,15 +265,21 @@
     <div class="cv-item"><div class="when">2026</div><div class="what">Media: <i>Mattino Insieme</i> (Trentino TV), podcast <i>A caccia di AI</i> (RAI)</div></div>
   </section>
 
-  <!-- GALLERY -->
+  </div>
+
+  <div class="page" data-page="gallery">
+    <header class="page-head"><h1 class="ptitle-big">gallery</h1><p class="desc">Moments from talks, events and missions.</p></header>
+  
   <section>
-    <h2 id="gallery"><a href="#gallery">gallery</a></h2>
     <div class="gallery" id="galleryGrid"></div>
   </section>
 
-  <!-- CV -->
+  </div>
+
+  <div class="page" data-page="cv">
+    <header class="page-head"><h1 class="ptitle-big">cv</h1><p class="desc">Experience, education, training and awards.</p></header>
+  
   <section>
-    <h2 id="cv"><a href="#cv">cv</a></h2>
     <div class="cv-h">Experience</div>
     <div class="cv-item"><div class="when">2021 – now</div><div class="what">Researcher<small><a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth (RSDE)</a>, Center for Digital Society, <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> — and Remote Sensing Laboratory, University of Trento</small></div></div>
     <div class="cv-item"><div class="when">Apr 2024</div><div class="what">Visiting researcher<small>ESA ESTEC, Noordwijk, The Netherlands</small></div></div>
@@ -268,6 +306,8 @@
     <div class="cv-item"><div class="when">2016, 2018</div><div class="what">Merit Award<small>University of Trento</small></div></div>
     <div class="cv-item"><div class="when">2016</div><div class="what">Erasmus+ Scholarship</div></div>
   </section>
+  </div>
+
 </main>
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
@@ -281,6 +321,7 @@
   "year": 2024,
   "type": "journal",
   "badge": "IEEE TGRS",
+  "selected": true,
   "title": "Super-Resolution of Radargrams With a Generative Deep Learning Model",
   "authors": "<em>E. Donini</em>, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 62, 2024",
@@ -294,6 +335,7 @@
   "year": 2024,
   "type": "igarss",
   "badge": "IGARSS",
+  "selected": true,
   "title": "Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere",
   "authors": "<em>E. Donini</em>, F. Bovolo",
   "venue": "IEEE IGARSS 2024, Athens",
@@ -320,6 +362,7 @@
   "year": 2023,
   "type": "igarss",
   "badge": "IGARSS",
+  "selected": true,
   "title": "Deep Learning for Unsupervised Denoising of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, A. Zuech, L. Bruzzone, F. Bovolo",
   "venue": "IEEE IGARSS 2023, Pasadena",
@@ -346,6 +389,7 @@
   "year": 2022,
   "type": "journal",
   "badge": "IEEE TGRS",
+  "selected": true,
   "title": "A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
@@ -359,6 +403,7 @@
   "year": 2022,
   "type": "journal",
   "badge": "IEEE TGRS",
+  "selected": true,
   "title": "An Unsupervised Fuzzy System for the Automatic Detection of Candidate Lava Tubes in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, L. Carrer, C. Gerekos, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
@@ -509,9 +554,11 @@
     return `<svg viewBox="0 0 240 150" preserveAspectRatio="none"><rect width="240" height="150" fill="hsl(${h} 25% 14%)"/>${l}</svg>`;
   }
   const el=document.getElementById("pubList");
-  function renderPubs(f){
+  function renderPubs(f,target,onlySel){
+    target=target||el;
     let last=null, h="";
     pubs.forEach((p,i)=>{
+      if(onlySel && !p.selected) return;
       if(f!=="all" && p.type!==f) return;
       if(p.year!==last){ if(last!==null) h+="</ol>"; h+=`<div class="year">${p.year}</div><ol class="pubs">`; last=p.year; }
       h+=`<li class="pub">
@@ -530,9 +577,16 @@
           <div class="hidden-box" id="bib${i}"><pre class="bib">${p.bib}</pre></div>
         </div></li>`;
     });
-    el.innerHTML=h+(last!==null?"</ol>":"");
+    target.innerHTML=h+(last!==null?"</ol>":"");
   }
   renderPubs("all");
+  // pubblicazioni selezionate in home: ids diversi per i box Abs/Bib
+  (function(){const t=document.getElementById("selPubs");renderPubs("all",t,true);
+    t.innerHTML=t.innerHTML.replace(/(id="|data-t=")(abs|bib)(\d+)/g,"$1s$2$3");})();
+  document.getElementById("selPubs").addEventListener("click",e=>{
+    const b=e.target.closest("button[data-t]"); if(!b) return;
+    document.getElementById(b.dataset.t).classList.toggle("show"); b.classList.toggle("on");
+  });
   el.addEventListener("click",e=>{
     const b=e.target.closest("button[data-t]"); if(!b) return;
     document.getElementById(b.dataset.t).classList.toggle("show"); b.classList.toggle("on");
@@ -568,13 +622,17 @@
     try{ localStorage.setItem("theme",root.dataset.theme); }catch(e){}
   };
 
-  // sezione attiva nel menu
+  // tab: mostra una pagina alla volta in base all'indirizzo (#about, #publications, ...)
+  const pages=[...document.querySelectorAll(".page")];
   const navA=[...document.querySelectorAll(".links a")];
-  const secs=navA.map(a=>document.querySelector(a.getAttribute("href")));
-  addEventListener("scroll",()=>{
-    let cur=0; secs.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top<120) cur=i; });
-    navA.forEach((a,i)=>a.classList.toggle("active",i===cur));
-  },{passive:true});
+  function route(){
+    let id=(location.hash||"#about").slice(1);
+    if(!pages.some(p=>p.dataset.page===id)) id="about";
+    pages.forEach(p=>p.classList.toggle("show",p.dataset.page===id));
+    navA.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+id));
+    scrollTo(0,0);
+  }
+  addEventListener("hashchange",route); route();
 </script>
 </body>
 </html>
