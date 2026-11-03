@@ -120,6 +120,16 @@
   .page-head .desc{margin:.3rem 0 0}
   .more{text-align:right;margin:.6rem 0 0;font-size:.9rem}
   .page[data-page="about"] h2:first-of-type{margin-top:2.2rem}
+  .videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-bottom:1.8rem}
+  .vid{display:block;border:1px solid var(--line);border-radius:6px;overflow:hidden;color:var(--text);background:var(--soft)}
+  .vid:hover{text-decoration:none;border-color:var(--accent)}
+  .vthumb{position:relative;aspect-ratio:16/9;background:#111;overflow:hidden}
+  .vthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .vid:hover .vthumb img{transform:scale(1.04)}
+  .play{position:absolute;inset:0;margin:auto;width:56px;height:40px;border-radius:10px;background:rgba(181,9,172,.9);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .vcap{padding:.6rem .8rem}
+  .vcap b{display:block;font-weight:500}
+  .vcap small{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -197,7 +207,7 @@
       <tr><td class="date">May 2026</td><td>📄 Papers accepted at <b>IGARSS 2026</b>.</td></tr>
       <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <i>A caccia di AI</i>, talking about AI and space exploration.</td></tr>
       <tr><td class="date">2026</td><td>🎙️ Joined the organizing team of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a>.</td></tr>
-      <tr><td class="date">Nov 2025</td><td>🎤 Talk at <a href="https://www.ted.com/tedx/events/62670">TEDx Trento 2025</a>: <i>“Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”</i>.</td></tr>
+      <tr><td class="date">Nov 2025</td><td>🎤 Talk at TEDx Trento 2025: <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i></a> — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk">watch it on YouTube ▶</a></td></tr>
     </table>
     <p class="more"><a href="#news">all news →</a></p>
   </section>
@@ -217,10 +227,27 @@
       <tr><td class="date">May 2026</td><td>📄 Papers accepted at <b>IGARSS 2026</b>.</td></tr>
       <tr><td class="date">Feb 2026</td><td>📺 Guest on <i>Mattino Insieme</i> (Trentino TV) and on the RAI podcast <i>A caccia di AI</i>, talking about AI and space exploration.</td></tr>
       <tr><td class="date">2026</td><td>🎙️ Joined the organizing team of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a>.</td></tr>
-      <tr><td class="date">Nov 2025</td><td>🎤 Talk at <a href="https://www.ted.com/tedx/events/62670">TEDx Trento 2025</a>: <i>“Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”</i>.</td></tr>
+      <tr><td class="date">Nov 2025</td><td>🎤 Talk at TEDx Trento 2025: <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i></a> — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk">watch it on YouTube ▶</a></td></tr>
       <tr><td class="date">2025</td><td>✈️ Received an IEEE IGARSS travel grant.</td></tr>
       <tr><td class="date">Sep 2024</td><td>🗣️ Talk at <b>Wired Next Fest Trentino</b>.</td></tr>
-      <tr><td class="date">Apr 2024</td><td>🛰️ Visiting researcher at ESA ESTEC (Noordwijk) through the <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">ESA Archival Research Visitor Programme</a>, working on content-based retrieval of MARSIS radargrams.</td></tr>
+      <tr><td class="date">Jul 2024</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2024</b> — multitemporal analysis of cryosphere radar sounder data.</td></tr>
+      <tr><td class="date">May 2024</td><td>📄 1 paper accepted at <b>IGARSS 2024</b> (Athens) — hierarchical learning for unsupervised radargram segmentation.</td></tr>
+      <tr><td class="date">Apr 2024</td><td>🛰️ Visiting researcher at ESA ESTEC (Noordwijk) through the <a href="https://www.cosmos.esa.int/web/esdc/visitor-programme">ESA Archival Research Visitor Programme</a>, working on content-based retrieval of MARSIS radargrams — <a href="https://www.youtube.com/watch?v=zHX4FNCI2ZI">watch the FBK video ▶</a></td></tr>
+      <tr><td class="date">2024</td><td>📰 Paper published in <b>IEEE Transactions on Geoscience and Remote Sensing</b> — super-resolution of radargrams with generative deep learning.</td></tr>
+      <tr><td class="date">May 2023</td><td>📄 2 papers accepted at <b>IGARSS 2023</b> (Pasadena) — unsupervised denoising of radar sounder data and Type-III solar bursts in SHARAD data.</td></tr>
+      <tr><td class="date">2023</td><td>📰 Paper published in <b>IEEE Transactions on Geoscience and Remote Sensing</b> — weakly supervised transfer learning for radargram segmentation.</td></tr>
+      <tr><td class="date">Jul 2022</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2022</b> — unsupervised segmentation of radar sounder data with contrastive learning.</td></tr>
+      <tr><td class="date">May 2022</td><td>📄 1 paper accepted at <b>IGARSS 2022</b> (Kuala Lumpur) — unsupervised super-resolution of radar sounder data.</td></tr>
+      <tr><td class="date">2021</td><td>📰 3 papers published in <b>IEEE Transactions on Geoscience and Remote Sensing</b> — semantic segmentation of radargrams, lava tube detection, and target detectability from satellite radar sounders.</td></tr>
+      <tr><td class="date">Jul 2021</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2021</b> — transfer learning for the segmentation of cryosphere radargrams.</td></tr>
+      <tr><td class="date">May 2021</td><td>🎓 Ph.D. (cum laude) in ICT at the University of Trento and FBK.</td></tr>
+      <tr><td class="date">May 2021</td><td>📄 3 papers accepted at <b>IGARSS 2021</b> (Brussels) — subsurface target detection, ice shelf segmentation, and the STRATUS mission concept.</td></tr>
+      <tr><td class="date">May 2020</td><td>📄 1 paper accepted at <b>IGARSS 2020</b> — subsurface radar sounding for the EnVision mission to Venus.</td></tr>
+      <tr><td class="date">2020</td><td>📰 Paper published in <b>IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control</b> — COVID-19 scoring from lung ultrasound data.</td></tr>
+      <tr><td class="date">Jul 2019</td><td>📄 1 paper accepted at <b>SPIE Remote Sensing 2019</b> — mapping refreezing ice in radar sounder data.</td></tr>
+      <tr><td class="date">May 2019</td><td>📄 1 paper accepted at <b>IGARSS 2019</b> (Yokohama) — detection performance on icy targets from an orbiting radar sounder.</td></tr>
+      <tr><td class="date">May 2018</td><td>📄 1 paper accepted at <b>IGARSS 2018</b> (Valencia) — lava tube detection in radar sounder data of the Moon.</td></tr>
+      <tr><td class="date">Nov 2017</td><td>🚀 Started my Ph.D. at the University of Trento and FBK.</td></tr>
     </table>
   </section>
   </div>
@@ -254,11 +281,24 @@
 
   <div class="page" data-page="outreach">
     <header class="page-head"><h1 class="ptitle-big">science communication</h1><p class="desc">Bringing space research to the public.</p></header>
+  <section>
+    <div class="videos">
+      <a class="vid" href="https://www.youtube.com/watch?v=G3pvwAiTzNk">
+        <div class="vthumb"><img src="https://img.youtube.com/vi/G3pvwAiTzNk/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play">▶</span></div>
+        <div class="vcap"><b>Space, Ice and AI: When the Future Becomes Radar</b><small>TEDx Trento · 2025</small></div>
+      </a>
+      <a class="vid" href="https://www.youtube.com/watch?v=zHX4FNCI2ZI">
+        <div class="vthumb"><img src="https://img.youtube.com/vi/zHX4FNCI2ZI/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play">▶</span></div>
+        <div class="vcap"><b>Elena Donini, visiting scientist @ESA</b><small>FBK · 2024</small></div>
+      </a>
+    </div>
+  </section>
+
   
   <section>
     <div class="cv-item"><div class="when">2020 – now</div><div class="what">Organizer of <b>Pint of Science</b> Trento-Rovereto</div></div>
     <div class="cv-item"><div class="when">2026 – now</div><div class="what">Organizer of <a href="https://www.tedxtrento.com/"><b>TEDx Trento</b></a></div></div>
-    <div class="cv-item"><div class="when">2025</div><div class="what">Talk at <a href="https://www.ted.com/tedx/events/62670">TEDx Trento 2025</a> — <i>“Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”</i></div></div>
+    <div class="cv-item"><div class="when">2025</div><div class="what">Talk at TEDx Trento 2025 — <a href="https://www.youtube.com/watch?v=G3pvwAiTzNk"><i>“Space, Ice and AI: When the Future Becomes Radar”</i> ▶</a></div></div>
     <div class="cv-item"><div class="when">2024</div><div class="what">Talk at Wired Next Fest Trentino</div></div>
     <div class="cv-item"><div class="when">2020 – now</div><div class="what">European Researchers' Night, Trento</div></div>
     <div class="cv-item"><div class="when">2018 – now</div><div class="what">Talks on AI and space missions in middle and high schools</div></div>
@@ -282,7 +322,7 @@
   <section>
     <div class="cv-h">Experience</div>
     <div class="cv-item"><div class="when">2021 – now</div><div class="what">Researcher<small><a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth (RSDE)</a>, Center for Digital Society, <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> — and Remote Sensing Laboratory, University of Trento</small></div></div>
-    <div class="cv-item"><div class="when">Apr 2024</div><div class="what">Visiting researcher<small>ESA ESTEC, Noordwijk, The Netherlands</small></div></div>
+    <div class="cv-item"><div class="when">Apr 2024</div><div class="what">Visiting researcher — ESA Archival Research Visitor Programme<small>ESA ESTEC, Noordwijk, The Netherlands — <a href="https://www.youtube.com/watch?v=zHX4FNCI2ZI">video ▶</a></small></div></div>
 
     <div class="cv-h">Education</div>
     <div class="cv-item"><div class="when">2017 – 2021</div><div class="what">Ph.D. in Information and Communication Technology, cum laude<small>University of Trento and FBK — <i>Advanced methods for simulation-based performance assessment and analysis of radar sounder data</i> — supervisors: F. Bovolo, L. Bruzzone</small></div></div>
@@ -536,7 +576,7 @@
   const gallery = [
  {
   "src": "tedx2.jpg",
-  "cap": "On stage at TEDx Trento 2025 — “Spazio, Ghiaccio e AI: quando il Futuro si fa Radar”"
+  "cap": "On stage at TEDx Trento 2025 — <a href=\"https://www.youtube.com/watch?v=G3pvwAiTzNk\">“Space, Ice and AI: When the Future Becomes Radar” ▶</a>"
  },
  {
   "src": "54917835387_63de9e1719_c.jpg",
