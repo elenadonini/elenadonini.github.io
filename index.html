@@ -402,7 +402,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 15:55</footer>
+<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 16:10</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
@@ -652,9 +652,9 @@
   "title": "An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, A. Kasibovic, M. Hoyo García, L. Bruzzone, F. Bovolo",
   "venue": "IEEE IGARSS 2022, Kuala Lumpur",
-  "abs": "",
+  "abs": "Radar sounders (RSs) are widely used to image profiles (radargrams) of the subsurface of planetary bodies and the Earth. However, despite the huge scientific return from radargram analyses, their horizontal and vertical resolutions are limited by technical factors. Even if methods exist for improving the resolution, these are still limited by technical factors and introduce artifacts. This paper proposes an unsupervised deep-learning method that synthesizes accurate super-resolved radargrams overcoming these limitations. The method adopts the Cycle-Consistent Adversarial Network (CyleGAN) that learns the mapping function between the lowand high-resolution data distributions. The network is adapted to match the lowand high-resolution radargram characteristics, including the differences in dimensions and radiometric properties. The proposed method was successfully validated on airborne data at higher resolution and simulated data with lower resolution.",
   "html": "https://doi.org/10.1109/IGARSS46834.2022.9884343",
-  "pdf": "",
+  "pdf": "papers/2022_donini_igarss_superres.pdf",
   "bib": "@inproceedings{donini2022superres,\n  title={An Unsupervised Deep Learning Method for the Super-Resolution of Radar Sounder Data},\n  author={Donini, Elena and Kasibovic, Amar and Hoyo Garc{\\'i}a, Miguel and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2022},\n  pages={1696--1699},\n  year={2022},\n  doi={10.1109/IGARSS46834.2022.9884343}\n}",
   "hue": 250,
   "img": ""
@@ -764,9 +764,9 @@
   "title": "An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE IGARSS 2021, Brussels",
-  "abs": "",
+  "abs": "Radar sounder data are widely used for investigating geological structures and processes in the subsurface of icy and arid areas. Visual interpretation is one of the main techniques used in the literature to extract information from radargrams. There exist some automatic approaches but mostly supervised. However, no methods exploit deep learning in an unsupervised way. Here, we propose an automatic and unsupervised technique for extracting information on the subsurface geological targets. The technique is built upon three steps: i) generation of a coarse segmentation map based on the radargram statistical properties, ii) refinement of the coarse map with deep learning to detect target reflections, and iii) analysis of the deep features to identify buried targets. We tested the proposed method on MARSIS radar data acquired near the South Pole of Mars. The experimental results prove the effectiveness of the proposed method.",
   "html": "https://iris.unitn.it/handle/11572/322995",
-  "pdf": "",
+  "pdf": "papers/2021_donini_igarss_targetdetection.pdf",
   "bib": "@inproceedings{donini2021unsupervised,\n  title={An Unsupervised Deep Learning Method for Subsurface Target Detection in Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2021},\n  pages={2955--2958},\n  year={2021}\n}",
   "hue": 290,
   "img": ""
@@ -806,9 +806,9 @@
   "title": "Transfer Learning for the Semantic Segmentation of Cryosphere Radargrams",
   "authors": "M. Hoyo García, <em>E. Donini</em>, F. Bovolo",
   "venue": "Proc. SPIE 11862, Image and Signal Processing for Remote Sensing XXVII, pp. 223–233, 2021",
-  "abs": "",
+  "abs": "Radar sounders (RSs) mounted on airborne platforms are active sensors widely employed to acquire subsurface data of the cryosphere for Earth observation. RS data, also called radargrams, provide information on the buried geology by identifying dielectric discontinuities in the subsurface. Recently, a strong effort can be observed in designing automatic techniques to identify the main targets of the cryosphere. However, most of the methods are based on target-specific handcrafted features. Newly convolutional neural networks (CNNs) automatically extract meaningful features from data. However, supervised training requires numerous labeled data that are hard to retrieve in the RS domain. In this work, we adopt a CNN pre-trained in domains other than RS for automatically segmenting cryosphere radargrams. To adapt to the radargram characteristics, we introduce convolutional layers at the beginning of the pre-trained network. We modify the top layers of the network to a Ufashion autoencoder to extract relevant features for the target task. The new layers are fine-tuned with few labeled radargrams to identify and segment five targets: free space, continental ice layering, floating ice, bedrock, and EFZ and thermal noise. The pre-trained weights are not updated during fine-tuning. We applied the proposed approach to radargrams from Antarctica acquired by MCoRDS3, obtaining high overall accuracy. These results demonstrate the effectiveness of the method in segmenting radargrams and discriminating continental and coastal ice structures.",
   "html": "https://doi.org/10.1117/12.2600237",
-  "pdf": "",
+  "pdf": "papers/2021_hoyogarcia_spie_transferlearning.pdf",
   "bib": "@inproceedings{hoyo2021transfer,\n  title={Transfer learning for the semantic segmentation of cryoshpere radargrams},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVII},\n  volume={11862},\n  pages={118620T},\n  publisher={SPIE},\n  year={2021},\n  doi={10.1117/12.2600237}\n}",
   "hue": 175,
   "img": ""
@@ -834,9 +834,9 @@
   "title": "EnVision Mission to Venus: Subsurface Radar Sounding",
   "authors": "L. Bruzzone, F. Bovolo, S. Thakur, L. Carrer, <em>E. Donini</em>, C. Gerekos, S. Paterna, M. Santoni, E. Sbalchiero",
   "venue": "IEEE IGARSS 2020",
-  "abs": "",
+  "abs": "This paper presents the Subsurface Radar Sounder (SRS) instrument onboard European Space Agency’s (ESA) EnVision mission. EnVision is one of the three candidates selected for the Cosmic Vision 2015-2025 M5 medium-class missions. It is aimed at exploring the activity, the geologic history and the atmosphere of Venus. SRS is an orbital ground-penetrating radar with the unique science objectives of understanding the evolution of Venus’ surface by searching for subsurface dielectric interfaces in the top hundreds of metres of the crust. In the paper, we describe the main science objectives of SRS, the performance evaluation under expected target conditions, the instrument design and the acquisition strategy that maximize the scientific returns.",
   "html": "https://doi.org/10.1109/IGARSS39084.2020.9324279",
-  "pdf": "",
+  "pdf": "papers/2020_bruzzone_igarss_envision.pdf",
   "bib": "@inproceedings{bruzzone2020envision,\n  title={EnVision Mission to Venus: Subsurface Radar Sounding},\n  author={Bruzzone, Lorenzo and Bovolo, Francesca and Thakur, Sanchari and Carrer, Leonardo and Donini, Elena and others},\n  booktitle={IGARSS 2020},\n  pages={5960--5963},\n  year={2020}\n}",
   "hue": 30,
   "img": ""
@@ -849,9 +849,9 @@
   "authors": "M. Pincheira, <em>E. Donini</em>, R. Giaffreda, M. Vecchio",
   "venue": "2020 IEEE Latin American GRSS &amp; ISPRS Remote Sensing Conference (LAGIRS), pp. 652–657",
   "html": "https://doi.org/10.5194/isprs-annals-IV-3-W2-2020-35-2020",
-  "pdf": "https://isprs-annals.copernicus.org/articles/IV-3-W2-2020/35/2020/isprs-annals-IV-3-W2-2020-35-2020.pdf",
+  "pdf": "papers/2020_pincheira_lagirs_blockchain.pdf",
   "bib": "@inproceedings{pincheira2020blockchain,\n  title={A Blockchain-Based Approach to Enable Remote Sensing Trusted Data},\n  author={Pincheira, Miguel and Donini, Elena and Giaffreda, Raffaele and Vecchio, Massimo},\n  booktitle={2020 IEEE Latin American GRSS \\& ISPRS Remote Sensing Conference (LAGIRS)},\n  pages={652--657},\n  year={2020}\n}",
-  "abs": "",
+  "abs": "Remote sensing considerably benefits from the fusion of open data from different sources, including far-range sensors mounted on satellites and short-range sensors on drones or Internet of Things devices. Open data is an emerging philosophy attracting an increasing number of data owners willing to share. However, most of the data owners are unknown and thus, untrustable, which makes shared data likely unreliable and possibly compromising associated outcomes. Currently, there exist tools that distribute open data, acting as intermediaries connecting data owners and users. However, these tools are managed by central authorities that set rules for data ownership, access, and integrity, limiting data owners and users. Therefore, a need emerges for a decentralized system to share and retrieve data without intermediaries limiting participants. Here, we propose a blockchain-based system to share and retrieve data without the need for a central authority. The proposed architecture (i) allows sharing data, (ii) maintains the data history (origin and updates), and (iii) allows retrieving and evaluating the data adding trustworthiness. To this end, the blockchain network enables the direct connection of data owners and users. Furthermore, blockchain automatically interacts with participants and keeps a transparent record of their actions. Hence, blockchain provides a decentralized database that enables trust among the participants without a central authority. We analyzed the potentials and critical issues of the architecture in a remote sensing use case of precision farming. The analysis shows that participants benefit from the properties of the blockchain in providing trusted data for remote sensing applications.",
   "img": "",
   "hue": 0
  },
@@ -890,9 +890,9 @@
   "title": "Assessing the Detection Performance on Icy Targets Acquired by an Orbiting Radar Sounder",
   "authors": "<em>E. Donini</em>, S. Thakur, F. Bovolo, L. Bruzzone",
   "venue": "IEEE IGARSS 2019, Yokohama",
-  "abs": "",
+  "abs": "Radar sounders (RS) can be used to acquire data on ice sheets and provide direct evidence of the structures in the subsurface. Many acquisitions are available from airborne RS in the Antarctica and Greenland. However, airborne data are costly, have limited spatial coverage, and non homogeneous characteristics. To overcome these limitations, a potential satellite-mounted RS could provide uniform coverage and consistent data quality at the cost of lower resolution and higher path loss. In this paper, we assess the performance of a possible Earth-orbiting RS by simulating and analyzing its radargrams. The simulation approach reprocesses existing airborne RS to match the orbital RS characteristics. The simulated radargrams are analyzed to estimate the losses and understand the detection performance of icy targets using state-of-the-art data analysis techniques. The preliminary analysis of the simulated radargrams indicates that, under the simplified assumptions, an orbiting RS will be capable of imaging the investigated subsurface targets.",
   "html": "https://doi.org/10.1109/IGARSS.2019.8897857",
-  "pdf": "",
+  "pdf": "papers/2019_donini_igarss_detection.pdf",
   "bib": "@inproceedings{donini2019detection,\n  title={Assessing the Detection Performance on Icy Targets Acquired by an Orbiting Radar Sounder},\n  author={Donini, Elena and Thakur, Sanchari and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2019},\n  pages={997--1000},\n  year={2019}\n}",
   "hue": 205,
   "img": ""
@@ -904,9 +904,9 @@
   "title": "An Automatic Approach to Map Refreezing Ice in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, S. Thakur, F. Bovolo, L. Bruzzone",
   "venue": "Proc. SPIE 11155, Image and Signal Processing for Remote Sensing XXV, pp. 433–442, 2019",
-  "abs": "",
+  "abs": "Radar sounders mounted on airborne platforms have acquired data on the subsurface of the Earth’s icy areas over the last decades. These data, called radargrams, contain information on the dielectric discontinuities in the ice sheets, and thus on the buried geological structures and the related processes. Conventionally, these structures have been characterized and mapped by visually inspecting the radargrams. However, visual inspection is subjective and time-consuming and can lead to misinterpretations. Recently, state-of-the-art automatic techniques are proposed to map the position of the bedrock, the ice layering, and the noise in the radargram. However, there are no automatic techniques for mapping the basal refreezing, which is an important ice target that controls the rate of sea-ward flow of the ice sheets. This paper proposes an automatic method to map the refreezing ice in radargrams. We model the refreezing ice considering its geophysical and radiometric properties. Then, we design a set of features considering this model to perform a classification of the radargrams into four classes, i.e., ice layering, echo-free zone (EFZ) and thermal noise, bedrock, and the refreezing ice. We applied the proposed method to radargrams acquired in north Greenland by a Multichannel Coherent Radar Depth Sounder (MCoRDS3), a radar sounder designed by the Center for Remote Sensing of Ice Sheets (CReSIS). The results indicate a good overall accuracy. The accuracy of refreezing ice is high, while that of the other classes is comparable with state-of-the-art techniques. The results indicate the effectiveness of the proposed features in mapping the refreezing ice.",
   "html": "https://doi.org/10.1117/12.2533169",
-  "pdf": "",
+  "pdf": "papers/2019_donini_spie_refreezing.pdf",
   "bib": "@inproceedings{donini2019refreezing,\n  title={An automatic approach to map refreezing ice in radar sounder data},\n  author={Donini, Elena and Thakur, Sanchari and Bovolo, Francesca and Bruzzone, Lorenzo},\n  booktitle={Image and Signal Processing for Remote Sensing XXV},\n  volume={11155},\n  pages={111551B},\n  publisher={SPIE},\n  year={2019},\n  doi={10.1117/12.2533169}\n}",
   "hue": 190,
   "img": ""
@@ -946,9 +946,9 @@
   "title": "An Approach to Lava Tube Detection in Radar Sounder Data of the Moon",
   "authors": "<em>E. Donini</em>, F. Bovolo, C. Gerekos, L. Carrer, L. Bruzzone",
   "venue": "IEEE IGARSS 2018, Valencia",
-  "abs": "",
+  "abs": "Lunar lava tubes are buried channels that contained thermally insulated lava during the volcanic period of the Moon. Nowadays, they are believed to be empty and thus, identified as potential habitats for humans. In recent years, numerous studies investigated the possible locations of these tubes by taking into account the distribution of gravity anomalies and the volcanic features of the surface. In this paper, we model lava tubes according to their electromagnetic behavior, and we propose a novel approach to locate lava tubes and estimate their physical properties. The method analyzes the subsurface reflections stored in radargrams to extract the desired features automatically. Then, these features and their relationships are processed by a fuzzy rule-based system to detect the presence or absence of lava tubes. The strategy was implemented and successfully tested on simulated radargrams with various surface properties and tunnel dimensions.",
   "html": "https://doi.org/10.1109/IGARSS.2018.8519146",
-  "pdf": "",
+  "pdf": "papers/2018_donini_igarss_lavatube.pdf",
   "bib": "@inproceedings{donini2018lavatube,\n  title={An Approach to Lava Tube Detection in Radar Sounder Data of the Moon},\n  author={Donini, Elena and Bovolo, Francesca and Gerekos, Christopher and Carrer, Leonardo and Bruzzone, Lorenzo},\n  booktitle={IGARSS 2018},\n  pages={8424--8427},\n  year={2018},\n  doi={10.1109/IGARSS.2018.8519146}\n}",
   "hue": 0,
   "img": ""
@@ -998,6 +998,11 @@
   "src": "image.png",
   "fit": "contain",
   "cap": "Celebrating the launch of ESA's <a href=\"https://www.esa.int/Science_Exploration/Space_Science/Juice\">JUICE</a> mission",
+  "date": "14 April 2023"
+ },
+ {
+  "src": "lancio%20di%20juice.jpg",
+  "cap": "With a model of the <a href=\"https://www.esa.int/Science_Exploration/Space_Science/Juice\">JUICE</a> spacecraft at the launch event",
   "date": "14 April 2023"
  }
 ];
