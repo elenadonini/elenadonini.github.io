@@ -402,7 +402,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 15:16</footer>
+<footer>© 2026 Elena Donini. · Last updated: 3 November 2026, 15:55</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
@@ -414,19 +414,19 @@
   "title": "Self-Supervised Deep Learning for Bitemporal Change Detection in Polar Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo",
   "venue": "SPIE Sensors + Imaging 2026, Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII, paper 14282-34, Edinburgh",
-  "abs": "",
+  "abs": "Monitoring the temporal evolution of the cryosphere is essential for understanding the impacts of climate change on polar ice sheets and their contribution to sea-level rise. While remote sensing imagery provides valuable information on surface processes, radar sounders (RS) uniquely enable the investigation of the cryosphere subsurface from the surface to the basal interface. Despite recent advances in machine learning for radargram analysis, existing approaches are limited to single-date acquisitions, and multitemporal analysis remains largely unexplored. This paper presents a novel deep learning method for detecting morphological changes in multitemporal radargrams. The proposed method first learns a baseline representation of subsurface ice structures through a reconstruction network trained on a reference acquisition. During inference, the network extracts deep feature representations from two co-registered radargrams acquired over the same track at different times; Change Vector Analysis (CVA) analyzes these features to detect and characterize changes in the learned feature space. Experiments on co-registered Antarctic MCoRDS-3 radargrams acquired in 2014 and 2016 demonstrate the proposed method’s ability to detect and characterize significant stratigraphic changes.",
   "img": "",
   "hue": 0,
   "html": "https://spie.org/ESI26R/conferencedetails/ai-and-image-signal-processing-remote-sensing",
-  "pdf": "",
+  "pdf": "papers/2026_donini_spie_changedetection.pdf",
   "bib": "@inproceedings{donini2026bitemporal,\n  title={Self-Supervised Deep Learning for Bitemporal Change Detection in Polar Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII},\n  publisher={SPIE},\n  year={2026}\n}"
  },
  {
-  "abs": "",
+  "abs": "While the expansion of planetary radar sounder (RS) archives has driven the need for automated analysis, Content-Based Image Retrieval (CBIR) methods specifically designed for radargrams remain largely unexplored compared to other automated tasks. This paper proposes a deep-learning method for fast and accurate retrieval of dual-frequency RS data, enabling identification based on the semantic content of the most similar radargrams to a query that represents geologically significant subsurface reflections. We employ a Masked Autoencoder (MAE) to learn robust and semantically meaningful features of surface and subsurface reflections in a self-supervised manner, addressing the scarcity of labeled planetary data. The MAE projects radargrams into an embedding space, where retrieval is performed via cosine-similarity ranking. The proposed method is successfully validated on MARSIS radargrams spanning diverse geological targets. The results demonstrate strong generalization: when queried with North Polar icy stratigraphy, it effectively retrieves analogous features from the South Pole and equatorial ice-rich region.",
   "img": "",
   "hue": 0,
   "html": "",
-  "pdf": "",
+  "pdf": "papers/2026_donini_igarss_dualfrequency.pdf",
   "year": 2026,
   "type": "proceedings",
   "badge": "IGARSS",
@@ -436,32 +436,32 @@
   "bib": "@inproceedings{donini2026dualfreq,\n  title={A Deep Learning Method for Dual-Frequency Radar Sounder Data Retrieval},\n  author={Donini, Elena and Borsi, Sonia and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2026},\n  year={2026}\n}"
  },
  {
-  "abs": "",
+  "abs": "Ongoing planetary missions and future endeavors, such as JUICE to the Jovian moons, EnVision to Venus, and envisioned missions to the moons of Uranus, highlight the growing importance of Radar Sounders (RSs) for planetary science. RSs are active remote sensors capable of imaging dielectric discontinuities in the subsurface and recording them in depth images known as radargrams. While manual radargram analysis has led to important discoveries, such as the evolution of Martian troughs, efficiently exploiting the increasingly vast RS datasets necessitates automated methods. Currently, most automated approaches focus on segmentation or detection of linear reflections, yet there remains a need for methods that can analyze and semantically aggregate radargrams performing a large scale analysis. We conduct large scale analysis by leveraging on Martian RS data as a primary planetary analogue for future planned and envisioned missions to the icy moons of Jupiter and Uranus. We utilize Shallow Radar (SHARAD) data acquired over the North Polar Layered Deposits (NPLD) (latitude &gt; 77.5°). SHARAD achieves a vertical resolution of about 15 m in vacuum with a maximum penetration of about 1 km. At the NPLD, SHARAD images icy targets, characterized by horizontal stratigraphy and oblique structures, that closely resemble the data expected from future and envisioned RS missions. Our analysis focuses on mapping troughs, which are depressions following a spiral pattern with depths of 400-1000 m. Troughs expose the NPLD internal stratigraphy and record Martian climate processes within the Trough Migration Paths (TMPs). TMPs are subsurface unconformities that trace the trough displacement since their formation. Their development followed distinct evolutionary paths across eight geographical regions, each characterized by unique morphological traits of TMPs and troughs. We selected 488 EDR SHARAD radargrams that are processed with squinted SAR focusing. This approach optimizes the detection of non-horizontal reflections by aligning the RS line of sight with the subsurface dipping interfaces, such as trough walls and TMPs, which might otherwise be poorly resolved. We consider 11 squint angles, ranging from -2.5° to +2.5° in 0.5° steps. Radargrams are partitioned into patches of dimension 512 x 128 x 11, in the range, azimuth, and squint angle directions, and are divided into training and validation sets of 6,871 and 2,017 patches, respectively. Each patch is linked to one of the NPLD region based on the morphological characteristics of the troughs and TMPs in the patch. Given a query radargram imaging a trough and/or a TMP, the goal is to retrieve radargrams with similar geological signatures, enabling the mapping of known and previously uncharacterized troughs and TMPs across the NPLD.",
   "img": "",
   "hue": 0,
-  "html": "https://www.epsc2026.eu",
-  "pdf": "",
+  "html": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-1165.html",
+  "pdf": "papers/2026_borsi_epsc_spiraltroughs.pdf",
   "year": 2026,
   "type": "abstract",
   "badge": "EPSC",
   "title": "Towards Large-Scale Mapping of Subsurface Targets: Case Study of Spiral Troughs",
   "authors": "S. Borsi, <em>E. Donini</em>, F. Bovolo",
-  "venue": "Europlanet Science Congress (EPSC) 2026, The Hague — Copernicus Meetings",
-  "bib": "@inproceedings{borsi2026epsc,\n  title={Towards Large-Scale Mapping of Subsurface Targets: Case Study of Spiral Troughs},\n  author={Borsi, Sonia and Donini, Elena and Bovolo, Francesca},\n  booktitle={Europlanet Science Congress 2026},\n  year={2026}\n}"
+  "venue": "Europlanet Science Congress (EPSC) 2026, The Hague, EPSC2026-1165",
+  "bib": "@inproceedings{borsi2026epsc,\n  title={Towards Large-Scale Mapping of Subsurface Targets: Case Study of Spiral Troughs},\n  author={Borsi, Sonia and Donini, Elena and Bovolo, Francesca},\n  booktitle={Europlanet Science Congress 2026},\n  pages={EPSC2026-1165},\n  year={2026},\n  doi={10.5194/epsc2026-1165}\n}"
  },
  {
-  "abs": "",
+  "abs": "Characterizing the planetary subsurface through Radar Sounder (RS) data is fundamental to reconstructing the evolutionary history of the Solar System. However, the increasing volume of RS archives, which will be further expanded by upcoming and prospective missions to the Jovian and Uranian icy moons, necessitates a shift toward automated extraction methods. Although recent machine learning applications in RS stratigraphy have successfully automated the detection of isochronous layers, a significant methodological gap remains in detecting localized non-horizontal reflections. Features such as Martian troughs and Trough Migration Paths (TMPs) can serve as analogs for oblique geometries. Troughs are migratory valleys in the Martian North Polar Layered Deposit (NPLD), and their evolution provides a unique record of the history, including katabatic winds, sublimation, and cyclical climate forcing. Their historical migration is encoded in the subsurface as Trough Migration Paths (TMPs), which are morpho-stratigraphic unconformities that truncate isochronous layers and track the trough floor over geological timescales. While the joint analysis of high-resolution optical imagery (HiRISE/CTX) and RS (SHARAD) is essential for mapping these features, it relies heavily on manual tracing, which limits scalability. We introduce a two-stage deep learning strategy based on a physics-informed contrastive pre-training phase, followed by supervised fine-tuning that mitigates class imbalance between troughs, TMPs, and horizontal stratigraphy. For the pre-training stage, we utilize a Momentum Contrast (MoCo) framework. MoCo forces a network to learn discriminative feature representations by maximizing the similarity between distinct views of the same image. However, rather than relying on computer vision augmentations, we leverage squinted Synthetic Aperture Radar (SAR) focusing to generate physically consistent views of the same subsurface at distinct squint angles. This forces the network to learn latent structural representations that are strictly invariant to angle-dependent radiometry. This approach desensitizes the model to the overwhelmingly dominant horizontal stratigraphy of the Martian polar regions, enabling it to capture the dipping signatures of troughs and TMPs without human supervision.",
   "img": "",
   "hue": 0,
-  "html": "https://www.epsc2026.eu",
-  "pdf": "",
+  "html": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-1141.html",
+  "pdf": "papers/2026_donini_epsc_dipping.pdf",
   "year": 2026,
   "type": "abstract",
   "badge": "EPSC",
   "title": "A Deep Learning Method for Mapping Dipping Subsurface Features",
   "authors": "<em>E. Donini</em>, G. Mitton, F. Bovolo",
-  "venue": "Europlanet Science Congress (EPSC) 2026, The Hague — Copernicus Meetings",
-  "bib": "@inproceedings{donini2026epsc,\n  title={A Deep Learning Method for Mapping Dipping Subsurface Features},\n  author={Donini, Elena and Mitton, Guilhem and Bovolo, Francesca},\n  booktitle={Europlanet Science Congress 2026},\n  year={2026}\n}"
+  "venue": "Europlanet Science Congress (EPSC) 2026, The Hague, EPSC2026-1141",
+  "bib": "@inproceedings{donini2026epsc,\n  title={A Deep Learning Method for Mapping Dipping Subsurface Features},\n  author={Donini, Elena and Mitton, Guilhem and Bovolo, Francesca},\n  booktitle={Europlanet Science Congress 2026},\n  pages={EPSC2026-1141},\n  year={2026},\n  doi={10.5194/epsc2026-1141}\n}"
  },
  {
   "year": 2025,
@@ -470,9 +470,9 @@
   "title": "Co-Registration Analysis of Coherent Multitemporal Radargrams",
   "authors": "<em>E. Donini</em>, M. Hoyo García, J. Paden, F. Bovolo",
   "venue": "IEEE IGARSS 2025, Brisbane",
-  "abs": "",
+  "abs": "Radar Sounder data provide insights into subsurface geology and are typically analyzed using automatic techniques on single-pass acquisitions. A few preliminary studies have explored multitemporal RS data from the cryosphere. However, challenges related to data co-registration exist because of the acquisition geometry and the characteristics of the targets. This paper examines co-registration accuracy in overlapping bi-temporal RS acquisitions co-registered with coherent and non-coherent approaches to evaluate the importance of the phase signal. We project and co-register overlapping radargram pairs to mitigate the horizontal changes related to the ice motion and vertical variations in mass balance. We used the log ratio to compare the co-registered data and highlight backscattering differences in the radargrams due to residual misregistration (and morphological changes). We analyze overlapping radargram pairs acquired in Antarctica in 2014 and 2016.",
   "html": "https://doi.org/10.1109/IGARSS55030.2025.11243308",
-  "pdf": "",
+  "pdf": "papers/2025_donini_igarss_coregistration.pdf",
   "bib": "@inproceedings{donini2025coregistration,\n  title={Co-Registration Analysis of Coherent Multitemporal Radargrams},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Paden, John and Bovolo, Francesca},\n  booktitle={IGARSS 2025},\n  pages={9258--9262},\n  year={2025},\n  doi={10.1109/IGARSS55030.2025.11243308}\n}",
   "hue": 215,
   "img": ""
@@ -484,9 +484,9 @@
   "title": "A Preliminary Study on the Detection of Glacial Lake Outburst Flood in Norway Using Sentinel 2 Imagery",
   "authors": "L. Bergamasco, <em>E. Donini</em>, R. Lappe, M. Calovi, F. Bovolo",
   "venue": "International Conference on Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS), 2025",
-  "abs": "",
+  "abs": "Over recent decades, glacier retreat has altered dynamics and increased hazards, such as glacial lake outburst floods (GLOFs), leading to severe downstream flooding. While GLOFs are typically detected through on-site monitoring, existing remote sensing methods primarily map glacial lakes, without identifying GLOF events. This paper proposes an unsupervised approach to detect GLOFs using Sentinel-2 image time series. We train a deep network to model non-draining lake time series, preventing them from appearing as anomalies when drained. The model, based on convolutional Long-Short-Term Memory and a 3D convolutional neural network, reconstructs non-draining lake time series. Inference errors reveal draining lakes. Preliminary experiments on Norwegian glacial lakes show promising results for automated GLOF detection.",
   "html": "https://doi.org/10.1109/MIGARS67156.2025.11232078",
-  "pdf": "",
+  "pdf": "papers/2025_bergamasco_migars_glof.pdf",
   "bib": "@inproceedings{bergamasco2025glof,\n  title={A Preliminary Study on the Detection of Glacial Lake Outburst Flood in Norway Using Sentinel 2 Imagery},\n  author={Bergamasco, Luca and Donini, Elena and Lappe, Ronja and Calovi, Martina and Bovolo, Francesca},\n  booktitle={2025 International Conference on Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS)},\n  pages={1--4},\n  year={2025},\n  doi={10.1109/MIGARS67156.2025.11232078}\n}",
   "hue": 160,
   "img": ""
@@ -498,9 +498,9 @@
   "title": "Super-Resolution of Radargrams With a Generative Deep Learning Model",
   "authors": "<em>E. Donini</em>, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 62, 2024",
-  "abs": "",
+  "abs": "Radar sounder profiles are essential for imaging the subsurface of planetary bodies and the Earth as they provide valuable geological insights. However, the limited availability of high-resolution radargrams poses challenges. This paper proposes a novel method based on generative models to super-resolve radargrams. Our approach addresses the illposed and ill-conditioned nature of the super-resolution problem by training a neural network to learn the correlation between radargrams at different scales. The network learns a proxy for the mapping function between ambiguous low-resolution radargrams and more detailed high-resolution ones, considering the data’s geological and statistical properties. The mapping function enables the super-resolution of previously unseen low-resolution radargrams acquired in comparable conditions to those in the training and imaging of similar underlying geology. To achieve this, we adopt a generative Cycle-Consistent Adversarial Network (CycleGAN), explicitly designed to match properties between lowand high-resolution radargrams, accounting for variations in dimensions and radiometric properties. Furthermore, we enhance the network performance by incorporating skip connections, a ResNet module, and attention mechanisms. The proposed method is validated using MCoRDS3 radargrams acquired in Greenland and Antarctica as high-resolution data. As low-resolution data, we used simulated radargrams representing what is expected by an Earth-orbiting low-resolution radar sounder to have a controlled experiment. The results are evaluated qualitatively and quantitatively, focusing on the areas with reflections with complex shapes that may generate artifacts and unrealistic geological features.",
   "html": "https://doi.org/10.1109/TGRS.2024.3378576",
-  "pdf": "",
+  "pdf": "papers/2024_donini_tgrs_superresolution.pdf",
   "bib": "@article{donini2024superres,\n  title={Super-Resolution of Radargrams With a Generative Deep Learning Model},\n  author={Donini, Elena and Bruzzone, Lorenzo and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={62},\n  pages={1--17},\n  year={2024},\n  doi={10.1109/TGRS.2024.3378576}\n}",
   "hue": 200,
   "img": ""
@@ -526,9 +526,9 @@
   "title": "Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere",
   "authors": "<em>E. Donini</em>, F. Bovolo",
   "venue": "IEEE IGARSS 2024, Athens, pp. 10988–10991",
-  "abs": "",
+  "abs": "In the radar sounder literature, extracting subsurface geological information relies on supervised deep learning with large labeled datasets. While some methods reduce the need for extensive labels through weak supervision, there remains a gap in the availability of unsupervised segmentation techniques. This paper proposes a novel method for unsupervised radargram segmentation based on incremental learning (IL). The method involves the prior geophysical modeling of the cryosphere subsurface targets into a class hierarchy. Through several IL steps, a network is trained to progressively extract semantically meaningful features that are analyzed to compute the segmentation map. Each step refines the segmentation map by considering the new targets from the following level of the class hierarchy that details the targets at the previous level. To enhance the training process, contrastive learning is incorporated, along with techniques for distilling information from prior iterations to recall the network the properties of previously seen classes. To validate the effectiveness of the proposed method, we conducted successful experiments on MCoRDS-3 data acquired in Greenland.",
   "html": "https://doi.org/10.1109/IGARSS53475.2024.10642331",
-  "pdf": "",
+  "pdf": "papers/2024_donini_igarss_hierarchical.pdf",
   "bib": "@inproceedings{donini2024hierarchical,\n  title={Hierarchical Learning for the Unsupervised Segmentation of Radar Sounder Data Acquired on the Cryosphere},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={IGARSS 2024},\n  pages={10988--10991},\n  year={2024},\n  doi={10.1109/IGARSS53475.2024.10642331}\n}",
   "hue": 170,
   "img": ""
@@ -540,9 +540,9 @@
   "title": "A Preliminary Study on the Multitemporal Analysis of Cryosphere Radar Sounder Data",
   "authors": "<em>E. Donini</em>, M. Hoyo García, F. Bovolo",
   "venue": "Proc. SPIE 13196, Artificial Intelligence and Image and Signal Processing for Remote Sensing XXX, pp. 208–216, 2024",
-  "abs": "",
+  "abs": "Radar Sounder (RS) data contain information on subsurface geology and are analyzed mostly with automatic techniques on single-pass acquisitions. A few preliminary studies on multitemporal RS data acquired on the cryosphere focus on possible advances in ad-hoc data acquisition strategy and ice-sheet monitoring, such as the percolation zone. However, challenges related to data corregistration and the inherent characteristics of the target hinder the multitemporal analysis. This paper analyzes bi-temporal radargrams with partially overlapping footprints (thus showing information from neighboring geographical areas) in the cryosphere and defines a strategy to estimate candidate changes. The paper proposes projecting and locally corregistering the radargram pairs at different depths to identify the expected changes due to glacier displacement and snow accumulation. Comparing the corregistered radargrams, we identify candidate unexpected changes in the ice sheet morphology that glaciologists should further validate. The proposed method is validated on several radargram pairs acquired by MCoRDS-3 in Antarctica in 2014 and 2016.",
   "html": "https://spie.org/Publications/Proceedings/Volume/13196",
-  "pdf": "",
+  "pdf": "papers/2024_donini_spie_multitemporal.pdf",
   "bib": "@inproceedings{donini2024multitemporal,\n  title={A preliminary study on the multitemporal analysis of cryosphere radar sounder data},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXX},\n  publisher={SPIE},\n  year={2024}\n}",
   "hue": 225,
   "img": ""
@@ -554,9 +554,9 @@
   "title": "A Weakly Supervised Transfer Learning Approach for Radar Sounder Data Segmentation",
   "authors": "M. Hoyo García, <em>E. Donini</em>, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 61, 2023",
-  "abs": "",
+  "abs": "Airborne Radar Sounders (RSs) are active sensors that acquire subsurface data for Earth observation. RS data (radargrams) provide information on buried geology by imaging subsurface dielectric discontinuities. Recently, several automatic RS target identification techniques have been proposed, being convolutional neural network (CNN)-based methods the most promising. However, they require numerous labeled data that are hard to retrieve in the subsurface environment targeted by RS. Further, they are not designed to effectively deal with problems showing unbalanced classes like RS segmentation. We introduce newer cryosphere subsurface targets in the inland and coastal areas that can have a very low probability. To deal with the higher complexity and variability than previous works, we propose a transfer learning framework for RS data to mitigate the need for a large amount of labeled data and handle extremely unbalanced target classes. Herewith, we propose two transfer learning-based mechanisms for radargram segmentation. The first uses a lightweight architecture whose pre-training is supervised with a large labeled dataset from other domains. The second mechanism uses a deep architecture pre-trained in the RS domain, considering the pretest task of radargram reconstruction. The architectures are modified to deal with the characteristics of RS data and the radargram segmentation task. Finally, both methods are fine-tuned with a few labeled radargrams to learn radargram features useful for segmentation. We reveal experimental results on radargrams acquired in Antarctica by MCoRDS-1 and MCoRDS-3. The results demonstrate the effectiveness of transfer learning for radargram segmentation.",
   "html": "https://doi.org/10.1109/TGRS.2023.3252939",
-  "pdf": "https://rslab.disi.unitn.it/web/wp-content/uploads/2023/03/Hoyo2023-compressed.pdf",
+  "pdf": "papers/2023_hoyogarcia_tgrs_weaklysupervised.pdf",
   "bib": "@article{hoyo2023weakly,\n  title={A Weakly Supervised Transfer Learning Approach for Radar Sounder Data Segmentation},\n  author={Hoyo Garc{\\'i}a, Miguel and Donini, Elena and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={61},\n  pages={1--18},\n  year={2023},\n  doi={10.1109/TGRS.2023.3252939}\n}",
   "hue": 230,
   "img": ""
@@ -582,9 +582,9 @@
   "title": "Deep Learning for Unsupervised Denoising of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, A. Zuech, L. Bruzzone, F. Bovolo",
   "venue": "IEEE IGARSS 2023, Pasadena",
-  "abs": "",
+  "abs": "Analyzing radar sounder (RS) profiles allows the retrieval of critical information on subsurface geology. However, radargrams suffer from several noise contributions, adversely affecting the data quality and reliability. In the remote sensing literature, there are no methods for denoising radargrams, and those for optical data denoising and SAR and GPR data despeckling are based on assumptions that are not valid in the RS domain. This paper analyses the statistical distributions of the noisy contributions in radargrams at different levels of processing. It proposes a novel method to denoise complex raw radargrams using a generative network (diffusion probabilistic model) that learns the noise statistical properties. The model is iteratively trained to learn the information loss as a function of the noise level increment in the data. By reversing the process, the network estimates the noise statistical properties and denoises unseen radargrams. The method has been successfully validated on the raw Experiment Data Record (EDR) radargrams of Mars that the Shallow Radar (SHARAD) acquired.",
   "html": "https://doi.org/10.1109/IGARSS52108.2023.10282302",
-  "pdf": "",
+  "pdf": "papers/2023_donini_igarss_denoising.pdf",
   "bib": "@inproceedings{donini2023denoising,\n  title={Deep Learning for Unsupervised Denoising of Radar Sounder Data},\n  author={Donini, Elena and Zuech, Alessandro and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2023},\n  pages={7804--7807},\n  year={2023},\n  doi={10.1109/IGARSS52108.2023.10282302}\n}",
   "hue": 20,
   "img": ""
@@ -666,9 +666,9 @@
   "title": "Unsupervised Semantic Segmentation of Radar Sounder Data Using Contrastive Learning",
   "authors": "<em>E. Donini</em>, M. Amico, L. Bruzzone, F. Bovolo",
   "venue": "Proc. SPIE 12267, Image and Signal Processing for Remote Sensing XXVIII, 2022",
-  "abs": "",
+  "abs": "Radar Sounders (RSs) are active sensors widely used for planetary exploration and Earth observation that probe the subsurface in a non-intrusive way by acquiring vertical profiles, called radargrams. Radargrams contain information on subsurface geology and are analyzed with neural networks for segmentation and target detection. However, most of these methods rely on supervised training, which requires a large amount of labeled data that is hard to retrieve. Hence, a need emerges for a novel method for unsupervised radargram segmentation. This paper proposes a novel method for unsupervised radargram segmentation by analyzing semantically meaningful features extracted from a deep network trained with a contrastive logic. First, the network (encoder) is trained using a pretext task to extract meaningful features (query). Considering a dictionary of possible features (keys), the encoder training loss can be defined as a dictionary look-up problem. Each query is matched to a key in a large and consistent dictionary. Although such a dictionary is not available for RS data, it is dynamically computed by extracting meaningful features with another deep network called the momentum encoder. Secondly, deep feature vectors are extracted from the encoder for all radargram pixels. After the feature selection, the feature vectors are binarized. Since pixels of the same class are expected to have similar feature vectors, we compute the similarity between the feature vectors to generate a cluster of pixels for each class. We applied the proposed method to segment radargrams acquired in Greenland by the MCoRDS-3 sensor, achieving good overall accuracy.",
   "html": "https://doi.org/10.1117/12.2636437",
-  "pdf": "",
+  "pdf": "papers/2022_donini_spie_contrastive.pdf",
   "bib": "@inproceedings{donini2022contrastive,\n  title={Unsupervised semantic segmentation of radar sounder data using contrastive learning},\n  author={Donini, Elena and Amico, Mattia and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={Image and Signal Processing for Remote Sensing XXVIII},\n  volume={12267},\n  pages={171--180},\n  publisher={SPIE},\n  year={2022},\n  doi={10.1117/12.2636437}\n}",
   "hue": 265,
   "img": ""
@@ -722,7 +722,7 @@
   "title": "A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
-  "abs": "",
+  "abs": "During the last decades, radar sounders provided direct measurements (radargrams) of the Earth’s polar caps’ subsurface. Radargrams are of critical importance for a better understanding of glaciologic structures and processes of the ice sheet in the framework of climate change. This article aims to automatically extract information on basal boundary conditions given their substantial relevance for modeling the ice-sheet processes, such as the sliding. We introduce a novel automatic method based on deep learning to detect the basal layer and basal units in radargrams acquired in the inland of icy areas. Radargrams are segmented into englacial layers, bedrock, basal units, and noise-limited regions; the latter includes the echo-free zone (EFZ), thermal noise, and signal perturbation. The network is a U-Net with attention gates and the Atrous Spatial Pyramid Pooling (ASPP) module that automatically extract semantically meaningful features at different scales. Experimental results on two datasets acquired in north Greenland and west Antarctica by the Multichannel Coherent Radar Depth Sounder (MCoRDS3) indicate a high overall segmentation accuracy. The accuracy of basal ice and signal perturbation detection is high, and that of the other classes is comparable with the literature techniques based on handcrafted features. The results show the effectiveness of the proposed method in automatically extracting semantically meaningful features to segment radargrams and map the basal layer and basal units.",
   "html": "https://doi.org/10.1109/TGRS.2021.3125773",
   "pdf": "https://rslab.disi.unitn.it/web/wp-content/uploads/2022/03/Donini_TGRS_2022.pdf",
   "bib": "@article{donini2022segmentation,\n  title={A Deep Learning Architecture for Semantic Segmentation of Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={60},\n  pages={1--14},\n  year={2022},\n  doi={10.1109/TGRS.2021.3125773}\n}",
@@ -736,7 +736,7 @@
   "title": "An Unsupervised Fuzzy System for the Automatic Detection of Candidate Lava Tubes in Radar Sounder Data",
   "authors": "<em>E. Donini</em>, L. Carrer, C. Gerekos, L. Bruzzone, F. Bovolo",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
-  "abs": "",
+  "abs": "Lava tubes are buried channels that transport thermally insulated lava. Nowadays, lava tubes on the Moon are believed to be empty and thus indicated as potential habitats for humankind. In recent years, several studies investigated possible lava tube locations, considering the gravity anomaly distribution and surficial volcanic features. This article proposes a novel and unsupervised method to map candidate buried empty lava tubes in radar sounder data (radargrams) and extract their physical properties. The approach relies on a model that describes the geometrical and electromagnetic (EM) properties of lava tubes in radargrams. According to this model, reflections in radargrams are automatically detected and analyzed with a fuzzy system to identify those associated with lava tube boundaries and reject the others. The fuzzy rules consider the EM and geometrical properties of lava tubes, and thus, their appearance in radargrams. The proposed method can address the complex task of identifying candidate lava tubes on a large number of radargrams in an automatic, fast, and objective way. The final decision on candidate lava tubes should be taken in postprocessing by expert planetologists. The proposed method is tested on both a real and a simulated data set of radargrams acquired on the Moon by the Lunar Radar Sounder (LRS). Identified candidate lava tubes are processed to extract geometrical parameters, such as the depth and the thickness of the crust (roof).",
   "html": "https://doi.org/10.1109/TGRS.2021.3062753",
   "pdf": "https://rslab.disi.unitn.it/web/wp-content/uploads/2021/11/An_Unsupervised_Fuzzy_System_for_the_Automatic_Detection_of_Candidate_Lava_Tubes_in_Radar_Sounder_Data.pdf",
   "bib": "@article{donini2022lavatubes,\n  title={An Unsupervised Fuzzy System for the Automatic Detection of Candidate Lava Tubes in Radar Sounder Data},\n  author={Donini, Elena and Carrer, Leonardo and Gerekos, Christopher and Bruzzone, Lorenzo and Bovolo, Francesca},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={60},\n  pages={1--19},\n  year={2022},\n  doi={10.1109/TGRS.2021.3062753}\n}",
@@ -750,7 +750,7 @@
   "title": "An Approach to the Assessment of Detectability of Subsurface Targets in Polar Ice From Satellite Radar Sounders",
   "authors": "S. Thakur, <em>E. Donini</em>, F. Bovolo, L. Bruzzone",
   "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 60, 2022",
-  "abs": "",
+  "abs": "A satellite mission onboard a radar sounder for the observation of the earth’s polar regions can greatly support the monitoring of the cryosphere and climate change analyses. Several studies are in progress proposing the design and demonstrating the performance of such an earth-orbiting radar sounder (EORS). However, one critical aspect of the cryospheric targets that are often ignored and simplified in these studies is the complex geoelectrical nature of the polar ice. In this article, we present a performance assessment of the polar ice target detectability by focusing on their realistic representation. This is obtained by simulating the orbital radargrams corresponding to different regions of the polar cryosphere by leveraging the data available from airborne campaigns in Antarctica and Greenland. We propose novel performance metrics to analyze the detectability of the internal reflecting horizons (IRHs), the basal interface, and to analyze the nature of the basal interface. This performance assessment strategy can be applied to guide the design of the signal-to-noise ratio (SNR) budget at the surface, which can further support the selection of the main orbital instrument parameters, such as the transmitted power, the two-way antenna gain, and the processing gains.",
   "html": "https://doi.org/10.1109/TGRS.2021.3119047",
   "pdf": "https://rslab.disi.unitn.it/web/wp-content/uploads/2021/11/An_Approach_to_the_Assessment_of_Detectability_of_Subsurface_Targets_in_Polar_Ice_From_Satellite_Radar_Sounders.pdf",
   "bib": "@article{thakur2022detectability,\n  title={An Approach to the Assessment of Detectability of Subsurface Targets in Polar Ice From Satellite Radar Sounders},\n  author={Thakur, Sanchari and Donini, Elena and Bovolo, Francesca and Bruzzone, Lorenzo},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={60},\n  pages={1--21},\n  year={2022},\n  doi={10.1109/TGRS.2021.3119047}\n}",
