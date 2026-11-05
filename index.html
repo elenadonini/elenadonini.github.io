@@ -226,7 +226,6 @@
     <p>I am a member of the science teams of <a href="https://rslab.disi.unitn.it/rime/"><b>RIME</b></a> on ESA's <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice"><b>JUICE</b></a> mission and of <b>VesPER</b>, the subsurface radar sounder on ESA's <a href="https://www.cosmos.esa.int/web/envision"><b>EnVision</b></a> mission to Venus, and I contributed to studies for a radar sounder for the <b>moons of Uranus</b> (ASI–NASA).</p>
     <p>I received my Ph.D. (cum laude) in Information and Communication Technology from the University of Trento and FBK in 2021, supervised by Francesca Bovolo and Lorenzo Bruzzone. I love science communication — I organize <a href="https://www.pintofscience.it/team/Team%20Trento/">Pint of Science Trento-Rovereto</a> and I am a curator of <a href="https://www.tedxtrento.com/">TEDx Trento</a>.</p>
     <p>I have supervised Bachelor's and Master's students, and I am always happy to start new collaborations. There are many open topics, from monitoring glaciers and ice sheets in the cryosphere to the study of Mars and its subsurface — if you are interested, <a href="mailto:edonini@fbk.eu">drop me an email</a>!</p>
-    <p>I work and live in Trento, Italy.</p>
 
     <div class="socials">
       <a href="mailto:edonini@fbk.eu" title="edonini@fbk.eu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.4l8 5 8-5V7zm16 2.7-8 5-8-5V17h16z"/></svg></a>
@@ -444,7 +443,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 5 November 2026, 14:40</footer>
+<footer>© 2026 Elena Donini. · Last updated: 5 November 2026, 17:30</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
@@ -1102,7 +1101,11 @@
   sel.innerHTML=byYear(pubs.filter(p=>p.type!=="review").slice(0,5),"s");
   [el,sel].forEach(c=>c.addEventListener("click",e=>{
     const b=e.target.closest("button[data-t]"); if(!b) return;
-    document.getElementById(b.dataset.t).classList.toggle("show"); b.classList.toggle("on");
+    const box=document.getElementById(b.dataset.t), wasOpen=box.classList.contains("show");
+    // chiude qualsiasi Abs/Bib aperto prima, poi apre quello cliccato
+    c.querySelectorAll(".hidden-box.show").forEach(x=>x.classList.remove("show"));
+    c.querySelectorAll("button[data-t].on").forEach(x=>x.classList.remove("on"));
+    if(!wasOpen){ box.classList.add("show"); b.classList.add("on"); }
   }));
 
   // home: le prime 5 news, copiate dalla tab news
