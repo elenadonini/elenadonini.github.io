@@ -171,6 +171,10 @@
   [data-page="outreach"] .what b{font-weight:inherit}
   .gcredit{display:block;font-size:.72rem;font-style:italic;opacity:.7;margin-top:.1rem}
   .pcredit{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:.4rem}
+  [data-page="cv"] .cv-item{border-bottom:none;padding:.3rem 0;grid-template-columns:110px 1fr}
+  [data-page="cv"] .cv-item .when{font-weight:400;color:var(--muted);font-size:.92rem;padding-top:.08rem}
+  [data-page="cv"] .cv-h{font-family:"Roboto Slab",serif;font-weight:400;font-size:1.3rem;color:var(--accent);margin:2.2rem 0 .7rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
+  [data-page="cv"] section > .cv-h:first-child{margin-top:.6rem}
 </style>
 </head>
 <body>
@@ -207,7 +211,7 @@
       <li><a href="#about" class="active">about</a></li>
       <li><a href="#news">news</a></li>
       <li><a href="#publications">publications</a></li>
-      <li><a href="#service">service</a></li>
+      <li><a href="#service">editorial &amp; review</a></li>
       <li><a href="#outreach">outreach</a></li>
       <li><a href="#gallery">gallery</a></li>
       <li><a href="#cv">cv</a></li>
@@ -221,7 +225,7 @@
   <!-- ABOUT -->
   <section class="about">
     <h1><b>Elena</b> Donini</h1>
-    <p class="desc">Researcher @ <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth</a>, <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a></p>
+    <p class="desc">Tenure-track Researcher @ <a href="https://rsde.fbk.eu/">Remote Sensing for Digital Earth</a>, <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a></p>
 
     <div class="profile">
       <div class="photo">
@@ -230,12 +234,9 @@
       <div class="pcredit">Photo: Franceschini / FBK</div>
     </div>
 
-    <p>I am a researcher at the <a href="https://rsde.fbk.eu/"><b>Remote Sensing for Digital Earth (RSDE)</b></a> unit of the Center for Digital Society, <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler (FBK)</a>, Trento, Italy, and I collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory (RSLab)</a> of the University of Trento.</p>
-    <p>I design <b>machine learning methods for the analysis of radar sounder data</b> for planetary exploration and Earth observation — segmentation, denoising, super-resolution, change detection and content-based retrieval of radargrams, from the ice sheets of Greenland and Antarctica to the subsurface of Mars, the Moon and the icy moons of Jupiter.</p>
-    <p>I am a member of the science teams of <a href="https://rslab.disi.unitn.it/rime/"><b>RIME</b></a> on ESA's <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice"><b>JUICE</b></a> mission and of <b>VesPER</b>, the subsurface radar sounder on ESA's <a href="https://www.cosmos.esa.int/web/envision"><b>EnVision</b></a> mission to Venus, and I contributed to studies for a radar sounder for the <b>moons of Uranus</b> (ASI–NASA).</p>
-    <p>I received my Ph.D. (cum laude) in Information and Communication Technology from the University of Trento and FBK in 2021, supervised by Francesca Bovolo and Lorenzo Bruzzone. I love science communication — I organize <a href="https://www.pintofscience.it/team/Team%20Trento/">Pint of Science Trento-Rovereto</a> and I am a curator of <a href="https://www.tedxtrento.com/">TEDx Trento</a>.</p>
-    <p>I have supervised Bachelor's and Master's students, and I am always happy to start new collaborations. There are many open topics, from monitoring glaciers and ice sheets in the cryosphere to the study of Mars and its subsurface — if you are interested, <a href="mailto:edonini@fbk.eu">drop me an email</a>!</p>
-
+    <p>I am a tenure-track researcher at the <a href="https://rsde.fbk.eu/"><b>Remote Sensing for Digital Earth (RSDE)</b></a> unit of <a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a> in Trento, Italy, and I collaborate with the <a href="https://rslab.disi.unitn.it/">Remote Sensing Laboratory</a> of the University of Trento. I develop <b>machine learning methods for radar sounder data</b>, from the ice sheets of Greenland and Antarctica to the subsurface of Mars, the Moon and Jupiter's icy moons.</p>
+    <p>I am a science team member of <a href="https://rslab.disi.unitn.it/rime/"><b>RIME</b></a> on ESA's <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice"><b>JUICE</b></a> and of <b>VesPER</b> on ESA's <a href="https://www.cosmos.esa.int/web/envision"><b>EnVision</b></a>. Outside the lab, I organize <a href="https://www.pintofscience.it/team/Team%20Trento/">Pint of Science Trento-Rovereto</a> and curate <a href="https://www.tedxtrento.com/">TEDx Trento</a>.</p>
+    <p>There are many open topics, from glacier monitoring to the subsurface of Mars — if you are interested in a collaboration or an internship, <a href="mailto:edonini@fbk.eu">drop me an email</a>!</p>
     <div class="socials">
       <a href="mailto:edonini@fbk.eu" title="edonini@fbk.eu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.4l8 5 8-5V7zm16 2.7-8 5-8-5V17h16z"/></svg></a>
       <a href="https://it.linkedin.com/in/elena-donini-a05381109" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
@@ -337,7 +338,7 @@
   </div>
 
   <div class="page" data-page="service">
-    <header class="page-head"><h1 class="ptitle-big">academic service</h1><p class="desc">Editorial roles, conference committees and peer review for international journals.</p></header>
+    <header class="page-head"><h1 class="ptitle-big">editorial &amp; review</h1><p class="desc">Editorial roles, conference committees and peer review for international journals.</p></header>
   
      <section>
      <h2 class="cv-h">Editorial activities</h2>
@@ -446,10 +447,20 @@
     <div class="cv-item"><div class="when">2018</div><div class="what">Sistema radar in banda P<small>ASI — automatic analysis of P-band radar sounder data acquired in Morocco</small></div></div>
 
     <div class="cv-h">Education</div>
-    <div class="cv-item"><div class="when">2017 – 2021</div><div class="what">Ph.D. in Information and Communication Technology, cum laude<small>University of Trento and FBK — <i>Advanced methods for simulation-based performance assessment and analysis of radar sounder data</i> — supervisors: F. Bovolo, L. Bruzzone</small></div></div>
-    <div class="cv-item"><div class="when">2015 – 2017</div><div class="what">M.Sc. in Telecommunication Engineering, 110/110 cum laude<small>University of Trento — <i>Simulation and Extraction of Lava Tube Features from Radar Sounder Data of the Moon</i></small></div></div>
-    <div class="cv-item"><div class="when">2016 – 2017</div><div class="what">Visiting Master's student (Erasmus+)<small>Tallinn University of Technology (TalTech), Estonia</small></div></div>
-    <div class="cv-item"><div class="when">2012 – 2015</div><div class="what">B.Sc. in Electronics and Telecommunication Engineering<small>University of Trento — <i>Analysis of biological data with machine learning</i></small></div></div>
+    <div class="cv-org">
+      <div class="org-head"><a href="https://www.unitn.it/en">University of Trento</a><small>Trento, Italy</small></div>
+      <div class="roles">
+        <div class="role"><b>Ph.D. in Information and Communication Technology, cum laude</b><span>2017 – 2021 · with FBK — <i>Advanced methods for simulation-based performance assessment and analysis of radar sounder data</i> — supervisors: F. Bovolo, L. Bruzzone</span></div>
+        <div class="role"><b>M.Sc. in Telecommunication Engineering, 110/110 cum laude</b><span>2015 – 2017 · <i>Simulation and Extraction of Lava Tube Features from Radar Sounder Data of the Moon</i></span></div>
+        <div class="role"><b>B.Sc. in Electronics and Telecommunication Engineering</b><span>2012 – 2015 · <i>Analysis of biological data with machine learning</i></span></div>
+      </div>
+    </div>
+    <div class="cv-org">
+      <div class="org-head"><a href="https://taltech.ee/en">Tallinn University of Technology (TalTech)</a><small>Tallinn, Estonia</small></div>
+      <div class="roles">
+        <div class="role"><b>Visiting Master's student (Erasmus+)</b><span>2016 – 2017</span></div>
+      </div>
+    </div>
 
     <div class="cv-h">Training</div>
     <div class="cv-item"><div class="when">2024 – 2025</div><div class="what">FBK Science Ambassador Training<small>FBK, Feltrinelli Education and Scuola Holden — storytelling, media training and public speaking</small></div></div>
@@ -458,7 +469,7 @@
     <div class="cv-item"><div class="when">2020</div><div class="what">IEEE GRSS Summer School on Remote Sensing for Volcanoes<small>University of Hawaii</small></div></div>
 
     <div class="cv-h">Honors &amp; awards</div>
-    <div class="cv-item"><div class="when">2025</div><div class="what">IEEE IGARSS Travel Grant</div></div>
+    <div class="cv-item"><div class="when">Jul 2025</div><div class="what">IEEE IGARSS Travel Grant</div></div>
     <div class="cv-item"><div class="when">Jan 2024</div><div class="what">ESA Archival Research Visitor Programme</div></div>
     <div class="cv-item"><div class="when">2021</div><div class="what"><a href="https://rslab.disi.unitn.it/web/5214-2/">Best Italian Doctoral Thesis on Remote Sensing</a><small>IEEE GRSS Italy Chapter</small></div></div>
     <div class="cv-item"><div class="when">2021</div><div class="what">Certificate of Excellence for Ph.D. Thesis<small>Fondazione Bruno Kessler</small></div></div>
@@ -473,7 +484,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 11 November 2026, 17:45</footer>
+<footer>© 2026 Elena Donini. · Last updated: 11 November 2026, 18:05</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
