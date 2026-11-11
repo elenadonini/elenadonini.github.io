@@ -105,6 +105,9 @@
   .cv-org .role::before{content:"";position:absolute;left:calc(-1rem - 6px);top:.62rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
   .cv-org .role b{display:block;font-weight:400}
   .cv-org .role span{display:block;font-size:.88rem;color:var(--muted)}
+  .journals{columns:2;column-gap:2.5rem;padding-left:1.1rem;margin:.6rem 0 0}
+  .journals li{break-inside:avoid;padding:.18rem 0;font-weight:300}
+  @media (max-width:700px){.journals{columns:1}}
   .cv-h{font-weight:500;margin:1.4rem 0 .3rem;font-size:1.05rem}
 
   footer{border-top:1px solid var(--line);text-align:center;font-size:.82rem;color:var(--muted);padding:1.2rem}
@@ -198,7 +201,7 @@
       <li><a href="#about" class="active">about</a></li>
       <li><a href="#news">news</a></li>
       <li><a href="#publications">publications</a></li>
-      <li><a href="#projects">projects</a></li>
+      <li><a href="#projects">projects &amp; service</a></li>
       <li><a href="#outreach">outreach</a></li>
       <li><a href="#gallery">gallery</a></li>
       <li><a href="#cv">cv</a></li>
@@ -327,15 +330,36 @@
   </div>
 
   <div class="page" data-page="projects">
-    <header class="page-head"><h1 class="ptitle-big">research projects</h1><p class="desc">Projects funded by the Italian Space Agency, ESA and NASA.</p></header>
+    <header class="page-head"><h1 class="ptitle-big">projects &amp; service</h1><p class="desc">Research projects funded by the Italian Space Agency, ESA and NASA, and service to the scientific community.</p></header>
   
   <section>
+    <h2 class="cv-h">Research projects</h2>
     <div class="cv-item"><div class="when">2025 – 2026</div><div class="what">Scientific activities for a radar sounder for the moons of Uranus<small>ASI &amp; NASA — target identification, EM signature definition and detection methods in radargrams</small></div></div>
     <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for <a href="https://www.esa.int/Science_Exploration/Space_Science/Juice"><b>JUICE</b></a> (<a href="https://rslab.disi.unitn.it/rime/">RIME</a>)<small>ASI &amp; ESA — automatic analysis of radargrams acquired in icy areas</small></div></div>
     <div class="cv-item"><div class="when">2018 – now</div><div class="what">Scientific activities for <a href="https://www.cosmos.esa.int/web/envision"><b>EnVision</b></a> (VesPER)<small>ASI &amp; ESA — automatic analysis of radargrams acquired in arid areas</small></div></div>
     <div class="cv-item"><div class="when">2018 – 2023</div><div class="what">STRATUS — SaTellite Radar sounder for eArTh sUb-surface Sensing<small>ASI &amp; ESA — scientific objectives, radargram analysis in icy areas, target detectability assessment</small></div></div>
     <div class="cv-item"><div class="when">2018</div><div class="what">Sistema radar in banda P<small>ASI — automatic analysis of P-band radar sounder data acquired in Morocco</small></div></div>
   </section>
+   <section>
+     <h2 class="cv-h">Editorial activities</h2>
+     <div class="cv-item"><div class="when">Editor</div><div class="what">Topic Editor, <i>Frontiers in Imaging</i></div></div>
+     <div class="cv-item"><div class="when">Committee</div><div class="what">Technical Program Committee member, EUSAR 2026 (European Conference on Synthetic Aperture Radar)</div></div>
+   </section>
+   <section>
+     <h2 class="cv-h">Reviewer for</h2>
+     <ul class="journals">
+       <li>IEEE Transactions on Geoscience and Remote Sensing</li>
+       <li>IEEE Geoscience and Remote Sensing Letters</li>
+       <li>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</li>
+       <li>IEEE Transactions on Aerospace and Electronic Systems</li>
+       <li>Astronomy &amp; Astrophysics</li>
+       <li>Annals of Glaciology</li>
+       <li>Scientific Reports</li>
+       <li>Earth Science Informatics</li>
+       <li>International Journal of Digital Earth</li>
+       <li>Canadian Journal of Remote Sensing</li>
+     </ul>
+   </section>
 
   </div>
 
@@ -446,7 +470,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 6 November 2026, 14:20</footer>
+<footer>© 2026 Elena Donini. · Last updated: 11 November 2026, 16:20</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
