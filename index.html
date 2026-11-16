@@ -485,7 +485,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 11 November 2026, 18:30</footer>
+<footer>© 2026 Elena Donini. · Last updated: 16 November 2026, 18:00</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
@@ -496,27 +496,27 @@
   "badge": "SPIE",
   "title": "Self-Supervised Deep Learning for Bitemporal Change Detection in Polar Radar Sounder Data",
   "authors": "<em>E. Donini</em>, F. Bovolo",
-  "venue": "SPIE Sensors + Imaging 2026, Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII, paper 14282-34, Edinburgh",
+  "venue": "Proc. SPIE 14282, Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII, pp. 257–269, 2026",
   "abs": "Monitoring the temporal evolution of the cryosphere is essential for understanding the impacts of climate change on polar ice sheets and their contribution to sea-level rise. While remote sensing imagery provides valuable information on surface processes, radar sounders (RS) uniquely enable the investigation of the cryosphere subsurface from the surface to the basal interface. Despite recent advances in machine learning for radargram analysis, existing approaches are limited to single-date acquisitions, and multitemporal analysis remains largely unexplored. This paper presents a novel deep learning method for detecting morphological changes in multitemporal radargrams. The proposed method first learns a baseline representation of subsurface ice structures through a reconstruction network trained on a reference acquisition. During inference, the network extracts deep feature representations from two co-registered radargrams acquired over the same track at different times; Change Vector Analysis (CVA) analyzes these features to detect and characterize changes in the learned feature space. Experiments on co-registered Antarctic MCoRDS-3 radargrams acquired in 2014 and 2016 demonstrate the proposed method’s ability to detect and characterize significant stratigraphic changes.",
   "img": "img/thumbs/2026_donini_spie_changedetection.jpg",
   "hue": 0,
-  "html": "",
+  "html": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/14282/142820Z/Self-supervised-deep-learning-for-bitemporal-change-detection-in-polar/10.1117/12.3117033.short",
   "pdf": "papers/2026_donini_spie_changedetection.pdf",
-  "bib": "@inproceedings{donini2026bitemporal,\n  title={Self-Supervised Deep Learning for Bitemporal Change Detection in Polar Radar Sounder Data},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII},\n  publisher={SPIE},\n  year={2026}\n}"
+  "bib": "@inproceedings{donini2026self,\n  title={Self-supervised deep learning for bitemporal change detection in polar radar sounder data},\n  author={Donini, Elena and Bovolo, Francesca},\n  booktitle={Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXII},\n  volume={14282},\n  pages={257--269},\n  year={2026},\n  organization={SPIE},\n  doi={10.1117/12.3117033}\n}"
  },
  {
   "abs": "While the expansion of planetary radar sounder (RS) archives has driven the need for automated analysis, Content-Based Image Retrieval (CBIR) methods specifically designed for radargrams remain largely unexplored compared to other automated tasks. This paper proposes a deep-learning method for fast and accurate retrieval of dual-frequency RS data, enabling identification based on the semantic content of the most similar radargrams to a query that represents geologically significant subsurface reflections. We employ a Masked Autoencoder (MAE) to learn robust and semantically meaningful features of surface and subsurface reflections in a self-supervised manner, addressing the scarcity of labeled planetary data. The MAE projects radargrams into an embedding space, where retrieval is performed via cosine-similarity ranking. The proposed method is successfully validated on MARSIS radargrams spanning diverse geological targets. The results demonstrate strong generalization: when queried with North Polar icy stratigraphy, it effectively retrieves analogous features from the South Pole and equatorial ice-rich region.",
   "img": "img/thumbs/2026_donini_igarss_dualfrequency.jpg",
   "hue": 0,
-  "html": "https://ieeexplore.ieee.org/abstract/document/11730384",
+  "html": "https://doi.org/10.1109/IGARSS60577.2026.11730384",
   "pdf": "papers/2026_donini_igarss_dualfrequency.pdf",
   "year": 2026,
   "type": "proceedings",
   "badge": "IGARSS",
   "title": "A Deep Learning Method for Dual-Frequency Radar Sounder Data Retrieval",
   "authors": "<em>E. Donini</em>, S. Borsi, L. Bruzzone, F. Bovolo",
-  "venue": "IEEE IGARSS 2026, Washington, D.C.",
-  "bib": "@inproceedings{donini2026dualfreq,\n  title={A Deep Learning Method for Dual-Frequency Radar Sounder Data Retrieval},\n  author={Donini, Elena and Borsi, Sonia and Bruzzone, Lorenzo and Bovolo, Francesca},\n  booktitle={IGARSS 2026},\n  year={2026}\n}"
+  "venue": "IEEE IGARSS 2026, Washington, D.C., pp. 5600–5604",
+  "bib": "@inproceedings{donini2026dualfrequency,\n  author={Donini, Elena and Borsi, Sonia and Bruzzone, Lorenzo and Bovolo, Francesca},\n  title={A Deep Learning Method for Dual-Frequency Radar Sounder Data Retrieval},\n  booktitle={IGARSS 2026 - 2026 IEEE International Geoscience and Remote Sensing Symposium},\n  pages={5600--5604},\n  year={2026},\n  doi={10.1109/IGARSS60577.2026.11730384}\n}"
  },
  {
   "abs": "Ongoing planetary missions and future endeavors, such as JUICE to the Jovian moons, EnVision to Venus, and envisioned missions to the moons of Uranus, highlight the growing importance of Radar Sounders (RSs) for planetary science. RSs are active remote sensors capable of imaging dielectric discontinuities in the subsurface and recording them in depth images known as radargrams. While manual radargram analysis has led to important discoveries, such as the evolution of Martian troughs, efficiently exploiting the increasingly vast RS datasets necessitates automated methods. Currently, most automated approaches focus on segmentation or detection of linear reflections, yet there remains a need for methods that can analyze and semantically aggregate radargrams performing a large scale analysis. We conduct large scale analysis by leveraging on Martian RS data as a primary planetary analogue for future planned and envisioned missions to the icy moons of Jupiter and Uranus. We utilize Shallow Radar (SHARAD) data acquired over the North Polar Layered Deposits (NPLD) (latitude &gt; 77.5°). SHARAD achieves a vertical resolution of about 15 m in vacuum with a maximum penetration of about 1 km. At the NPLD, SHARAD images icy targets, characterized by horizontal stratigraphy and oblique structures, that closely resemble the data expected from future and envisioned RS missions. Our analysis focuses on mapping troughs, which are depressions following a spiral pattern with depths of 400-1000 m. Troughs expose the NPLD internal stratigraphy and record Martian climate processes within the Trough Migration Paths (TMPs). TMPs are subsurface unconformities that trace the trough displacement since their formation. Their development followed distinct evolutionary paths across eight geographical regions, each characterized by unique morphological traits of TMPs and troughs. We selected 488 EDR SHARAD radargrams that are processed with squinted SAR focusing. This approach optimizes the detection of non-horizontal reflections by aligning the RS line of sight with the subsurface dipping interfaces, such as trough walls and TMPs, which might otherwise be poorly resolved. We consider 11 squint angles, ranging from -2.5° to +2.5° in 0.5° steps. Radargrams are partitioned into patches of dimension 512 x 128 x 11, in the range, azimuth, and squint angle directions, and are divided into training and validation sets of 6,871 and 2,017 patches, respectively. Each patch is linked to one of the NPLD region based on the morphological characteristics of the troughs and TMPs in the patch. Given a query radargram imaging a trough and/or a TMP, the goal is to retrieve radargrams with similar geological signatures, enabling the mapping of known and previously uncharacterized troughs and TMPs across the NPLD.",
@@ -552,11 +552,11 @@
   "badge": "IGARSS",
   "title": "Co-Registration Analysis of Coherent Multitemporal Radargrams",
   "authors": "<em>E. Donini</em>, M. Hoyo García, J. Paden, F. Bovolo",
-  "venue": "IEEE IGARSS 2025, Brisbane",
+  "venue": "IEEE IGARSS 2025, Brisbane, pp. 9258–9262",
   "abs": "Radar Sounder data provide insights into subsurface geology and are typically analyzed using automatic techniques on single-pass acquisitions. A few preliminary studies have explored multitemporal RS data from the cryosphere. However, challenges related to data co-registration exist because of the acquisition geometry and the characteristics of the targets. This paper examines co-registration accuracy in overlapping bi-temporal RS acquisitions co-registered with coherent and non-coherent approaches to evaluate the importance of the phase signal. We project and co-register overlapping radargram pairs to mitigate the horizontal changes related to the ice motion and vertical variations in mass balance. We used the log ratio to compare the co-registered data and highlight backscattering differences in the radargrams due to residual misregistration (and morphological changes). We analyze overlapping radargram pairs acquired in Antarctica in 2014 and 2016.",
   "html": "https://doi.org/10.1109/IGARSS55030.2025.11243308",
   "pdf": "papers/2025_donini_igarss_coregistration.pdf",
-  "bib": "@inproceedings{donini2025coregistration,\n  title={Co-Registration Analysis of Coherent Multitemporal Radargrams},\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Paden, John and Bovolo, Francesca},\n  booktitle={IGARSS 2025},\n  pages={9258--9262},\n  year={2025},\n  doi={10.1109/IGARSS55030.2025.11243308}\n}",
+  "bib": "@inproceedings{donini2025coregistration,\n  author={Donini, Elena and Hoyo Garc{\\'i}a, Miguel and Paden, John and Bovolo, Francesca},\n  title={Co-Registration Analysis of Coherent Multitemporal Radargrams},\n  booktitle={IGARSS 2025 - 2025 IEEE International Geoscience and Remote Sensing Symposium},\n  pages={9258--9262},\n  year={2025},\n  doi={10.1109/IGARSS55030.2025.11243308}\n}",
   "hue": 215,
   "img": "img/thumbs/2025_donini_igarss_coregistration.jpg"
  },
