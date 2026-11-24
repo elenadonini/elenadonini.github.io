@@ -91,6 +91,11 @@
   .hidden-box{display:none;margin-top:.6rem;font-size:.9rem}
   .hidden-box.show{display:block}
   .abstract{border-left:3px solid var(--accent);padding:.3rem .8rem;background:var(--soft)}
+  .bibwrap{position:relative}
+  .bibwrap pre.bib{padding-right:5.5rem}
+  .copybib{position:absolute;top:.45rem;right:.45rem;display:inline-flex;align-items:center;gap:.3rem;font:inherit;font-size:.75rem;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.2rem .5rem;cursor:pointer;opacity:.85}
+  .copybib:hover{color:var(--accent);border-color:var(--accent);opacity:1}
+  .copybib.done{color:var(--accent);border-color:var(--accent)}
   pre.bib{background:var(--code);padding:.7rem .9rem;border-radius:4px;overflow:auto;font-size:.8rem;margin:0}
 
   /* cv / teaching */
@@ -487,7 +492,7 @@
 
 <div class="lightbox" id="lightbox"><img alt=""><p></p></div>
 
-<footer>© 2026 Elena Donini. · Last updated: 19 November 2026, 23:00</footer>
+<footer>© 2026 Elena Donini. · Last updated: 24 November 2026, 11:40</footer>
 
 <script>
   // ---- PUBBLICAZIONI: per aggiungerne una, copia un blocco {...} e modificalo ----
@@ -1120,7 +1125,7 @@
           ${p.pdf?`<a href="${p.pdf}">PDF</a>`:""}
         </div>
         ${p.abs?`<div class="hidden-box" id="abs${k}"><div class="abstract">${p.abs}</div></div>`:""}
-        <div class="hidden-box" id="bib${k}"><pre class="bib">${p.bib}</pre></div>
+        <div class="hidden-box" id="bib${k}"><div class="bibwrap"><button class="copybib" type="button" title="Copy BibTeX" aria-label="Copy BibTeX"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>copy</span></button><pre class="bib">${p.bib}</pre></div></div>
       </div></li>`;
   }
   function byYear(list,prefix){
@@ -1207,6 +1212,14 @@
 
 // open every external link and PDF in a new tab
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');if(!h||h.charAt(0)==='#'||/^(mailto|tel|javascript):/i.test(h))return;a.target='_blank';a.rel='noopener';},true);
+
+// copia la BibTeX negli appunti
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.copybib');if(!b)return;e.preventDefault();e.stopPropagation();
+  var t=b.parentNode.querySelector('pre.bib').textContent,lab=b.querySelector('span');
+  function ok(){b.classList.add('done');lab.textContent='copied!';setTimeout(function(){b.classList.remove('done');lab.textContent='copy';},1600);}
+  function fallback(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(_){}document.body.removeChild(ta);}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fallback);}else{fallback();}
+},true);
 </script>
 </body>
 </html>
